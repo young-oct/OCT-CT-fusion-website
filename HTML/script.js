@@ -69,7 +69,7 @@ class CTViewer {
   }
 
   getImageUrl(index) {
-      return `${this.imagePath}/image_${String(index).padStart(5, '0')}.png`;
+      return `${this.imagePath}/image_${String(index).padStart(5, '0')}.jpg`;
   }
 
   updateImage() {
