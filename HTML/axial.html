@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>axial view</title>
+    <title>Coronal View</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="ctViewer">
+    <div id="axialViewer">
       <img
         id="axialImage"
         src="images/03_06_20230206(L)/axial_FOV(25)/cropped/image_00000.png"
         alt="axial CT Scan"
       />
-      <div id="infoOverlay">image 1 of 100</div>
+      <div id="infoOverlay">Image 1 of 100</div>
     </div>
+    <button id="axial_switchButton">annotation ON/OFF</button>
     <img
       id="axes"
       src="images/design elements/RSA arrow(A).png"
@@ -26,9 +26,7 @@
       src="images/design elements/logo(transparent).png"
       alt="earlab lego"
     />
-
     <div class="image-link-container">
-      <!-- Linking the image to the axial view page -->
       <a href="coronal.html">
         <img
           id="Timage"
@@ -37,9 +35,7 @@
         />
       </a>
     </div>
-
     <div class="image-link-container">
-      <!-- Linking the image to the axial view page -->
       <a href="sagittal.html">
         <img
           id="Mimage"
@@ -48,7 +44,15 @@
         />
       </a>
     </div>
+    <div class="expandable-text">
+      Imaging protocol
+      <span class="hidden-text">
+        CT: Siemens Somatom Definition Flash - 120 kVp 164 mA 0.6 mm
+        <br />ME-OCT: 1550 nm OCT - 0.22 vol/s (30&deg; &#xd7; 30&deg; &#xd7;
+        10.9 mm), 40&#181;m
+      </span>
+    </div>
 
-    <script src="js_script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

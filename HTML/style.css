@@ -29,7 +29,7 @@ nav a {
     font-size: 18px;
 }
 
-#ctViewer {
+#coronalViewer,#axialViewer, #sagittalViewer {
     width: 100%;
     height: 100%;
     display: flex;
@@ -151,3 +151,34 @@ nav a {
 .expandable-text:hover::before {
     opacity: 0; /* Hide arrow on hover */
 }
+
+/* Container for the image and button */
+.image-container {
+    position: relative; /* This makes the positioning of the button relative to this container */
+}
+
+
+#coronal_switchButton,#axial_switchButton,#sagittal_switchButton {
+
+    position: absolute; /* Absolute position within the .image-container */
+    top: 20px; /* Distance from the top of the container */
+    right: 20px; /* Distance from the right of the container */
+    
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#coronal_switchButton:hover ,#axial_switchButton:hover , #sagittal_switchButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+#coronal_switchButton:active ,#axial_switchButton:active , #sagittal_switchButton:active {
+    background-color: #397d35; /* Even darker green when active/pressed */
+}
+
