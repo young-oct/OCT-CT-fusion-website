@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>sagittal view</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="ctViewer">
+      <img
+        id="sagittalImage"
+        src="images/03_06_20230206(L)/sagittal_FOV(25)/cropped/image_00000.png"
+        alt="sagittal CT Scan"
+      />
+      <div id="infoOverlay">image 1 of 100</div>
+    </div>
+    <img
+      id="axes"
+      src="images/design elements/ARS arrow(S).png"
+      alt="ARS axes"
+    />
+    <img
+      id="lego"
+      src="images/design elements/logo(transparent).png"
+      alt="earlab lego"
+    />
+
+    <div class="image-link-container">
+      <!-- Linking the image to the axial view page -->
+      <a href="axial.html">
+        <img
+          id="Timage"
+          src="images/03_06_20230206(L)/axial_FOV(25)/cropped/image_00015.png"
+          alt="go to axial view"
+        />
+      </a>
+    </div>
+    <div class="image-link-container">
+      <!-- Linking the image to the axial view page -->
+      <a href="coronal.html">
+        <img
+          id="Mimage"
+          src="images/03_06_20230206(L)/coronal_FOV(25)/cropped/image_00015.png"
+          alt="go to coronal view"
+        />
+      </a>
+    </div>
+    <script src="js_script.js"></script>
+  </body>
+</html>
