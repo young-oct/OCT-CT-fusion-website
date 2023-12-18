@@ -58,7 +58,7 @@ nav li {
 nav a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 1.5rem;
     padding: 5px 10px;
 }
 
@@ -118,7 +118,7 @@ footer {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -140,7 +140,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     transition: all 0.3s ease; /* Corrected transition property */
 }
 .expandable-text {
@@ -157,7 +157,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
 
 }
 
