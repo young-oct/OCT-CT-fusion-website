@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sagittal view</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navigation Bar -->
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="interactive-atlas.html">Interactive Atlas</a></li>
+          <li>
+            <a href="case2-sagittal.html" class="active"
+              >case 2: sagittal view</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="c2_sagittalViewer" class="fusedviewer_style">
+      <img
+        id="c2_sagittalImage"
+        class="fusedimage_style"
+        src="images/03_23_20230309(R)/sagittal_FOV(25)/cropped/image_00000.jpg"
+        alt="sagittal CT Scan"
+      />
+      <div id="c2_sagittalinfoOverlay" class="infoOverlay_style"></div>
+    </div>
+    <button id="c2_sagittal_switchButton" class="switch-button_style">
+      annotation ON/OFF
+    </button>
+
+    <img
+      class="axes"
+      src="images/design elements/ARS arrow(S).png"
+      alt="ARS axes"
+    />
+    <img
+      class="lego"
+      src="images/design elements/logo(transparent).png"
+      alt="earlab lego"
+    />
+    <div class="image-link-container">
+      <a href="case2-axial.html">
+        <img
+          class="Timage"
+          src="images/03_23_20230309(R)/axial_FOV(25)/cropped/image_00014.jpg"
+          alt="go to axial view"
+        />
+      </a>
+    </div>
+    <div class="image-link-container">
+      <a href="case2-coronal.html">
+        <img
+          class="Mimage"
+          src="images/03_23_20230309(R)/coronal_FOV(25)/cropped/image_00014.jpg"
+          alt="go to coronal view"
+        />
+      </a>
+    </div>
+    <div class="expandable-text">
+      Imaging protocol
+      <span class="hidden-text">
+        CT: Siemens Somatom Definition Flash - 120 kVp 164 mA 0.6 mm
+        <br />ME-OCT: 1550 nm OCT - 0.22 vol/s (30&deg; &#xd7; 30&deg; &#xd7;
+        10.9 mm), 40&#181;m
+      </span>
+    </div>
+
+    <footer>
+      <!-- Footer content -->
+      <p>&copy; 2023 Interactive OCT/CT Atlas - case 2 sagittal view</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

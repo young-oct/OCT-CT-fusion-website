@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coronal view</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navigation Bar -->
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="interactive-atlas.html">Interactive Atlas</a></li>
+          <li>
+            <a href="case3-coronal.html" class="active">case 3: coronal view</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="c3_coronalViewer" class="fusedviewer_style">
+      <img
+        id="c3_coronalImage"
+        class="fusedimage_style"
+        src="images/03_37_20230322(L)/coronal_FOV(25)/cropped/image_00000.jpg"
+        alt="coronal CT Scan"
+      />
+      <div id="c3_coronalinfoOverlay" class="infoOverlay_style"></div>
+    </div>
+    <button id="c3_coronal_switchButton" class="switch-button_style">
+      annotation ON/OFF
+    </button>
+
+    <img
+      class="axes"
+      src="images/design elements/RAS arrow(C).png"
+      alt="RAS axes"
+    />
+    <img
+      class="lego"
+      src="images/design elements/logo(transparent).png"
+      alt="earlab lego"
+    />
+    <div class="image-link-container">
+      <a href="case3-axial.html">
+        <img
+          class="Timage"
+          src="images/03_37_20230322(L)/axial_FOV(25)/cropped/image_00014.jpg"
+          alt="go to axial view"
+        />
+      </a>
+    </div>
+    <div class="image-link-container">
+      <a href="case3-sagittal.html">
+        <img
+          class="Mimage"
+          src="images/03_37_20230322(L)/sagittal_FOV(25)/cropped/image_00015.jpg"
+          alt="go to sagittal view"
+        />
+      </a>
+    </div>
+    <div class="expandable-text">
+      Imaging protocol
+      <span class="hidden-text">
+        CT: Siemens Definition Edge - 120 kVp 127 mA 1.0 mm
+        <br />ME-OCT: 1550 nm OCT - 0.22 vol/s (30&deg; &#xd7; 30&deg; &#xd7;
+        10.9 mm), 40&#181;m
+      </span>
+    </div>
+
+    <footer>
+      <!-- Footer content -->
+      <p>&copy; 2023 Interactive OCT/CT Atlas - case 3 coronal view</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

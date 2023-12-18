@@ -1,7 +1,7 @@
-class CTViewer {
+class fusedViewer {
   constructor(viewerId, imageId, overlayId, originalImagePath, alternateImagePath) {
       this.viewer = document.getElementById(viewerId);
-      this.ctImage = document.getElementById(imageId);
+      this.fusedImage = document.getElementById(imageId);
       this.infoOverlay = document.getElementById(overlayId);
       this.originalImagePath = originalImagePath;
       this.alternateImagePath = alternateImagePath;
@@ -73,14 +73,20 @@ class CTViewer {
   }
 
   updateImage() {
-    if (this.ctImage) {
-        this.ctImage.src = this.getImageUrl(this.imageIndex);
-        this.infoOverlay.textContent = `Image ${this.imageIndex + 1} of ${this.totalImages}`;
+    if (this.fusedImage) {
+        this.fusedImage.src = this.getImageUrl(this.imageIndex);
+
+        // Set the onload function for the image
+        this.fusedImage.onload = () => {
+            // Update the text content of infoOverlay once the image has loaded
+            this.infoOverlay.textContent = `Image ${this.imageIndex + 1} of ${this.totalImages}`;
+        };
     } else {
-        console.error('CT image element not found');
+        console.error('image element not found');
     }
-}
-}
+}}
+
+
 
 class SwitchButton {
   constructor(buttonId, viewer) {
@@ -102,37 +108,103 @@ class SwitchButton {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const coronalViewer = new CTViewer(
-      'coronalViewer',
-      'coronalImage',
-      'infoOverlay',
+
+  const c1_coronalViewer = new fusedViewer(
+      'c1_coronalViewer',
+      'c1_coronalImage',
+      'c1_coronalinfoOverlay',
       'images/03_06_20230206(L)/coronal_FOV(25)/cropped',
       'images/03_06_20230206(L)/coronal_FOV(25)/raw'
   );
 
+  const c2_coronalViewer = new fusedViewer(
+    'c2_coronalViewer',
+    'c2_coronalImage',
+    'c2_coronalinfoOverlay',
+    'images/03_23_20230309(R)/coronal_FOV(25)/cropped',
+    'images/03_23_20230309(R)/coronal_FOV(25)/raw'
+);
+const c3_coronalViewer = new fusedViewer(
+    'c3_coronalViewer',
+    'c3_coronalImage',
+    'c3_coronalinfoOverlay',
+    'images/03_37_20230322(L)/coronal_FOV(25)/cropped',
+    'images/03_37_20230322(L)/coronal_FOV(25)/raw'
+);
 
-  const axialViewer = new CTViewer(
-    'axialViewer',
-    'axialImage',
-    'infoOverlay',
+const c1_axialViewer = new fusedViewer(
+    'c1_axialViewer',
+    'c1_axialImage',
+    'c1_axialinfoOverlay',
     'images/03_06_20230206(L)/axial_FOV(25)/cropped',
     'images/03_06_20230206(L)/axial_FOV(25)/raw'
 );
 
-const sagittalViewer = new CTViewer(
-  'sagittalViewer',
-  'sagittalImage',
-  'infoOverlay',
+const c2_axialViewer = new fusedViewer(
+    'c2_axialViewer',
+    'c2_axialImage',
+    'c2_axialinfoOverlay',
+    'images/03_23_20230309(R)/axial_FOV(25)/cropped',
+    'images/03_23_20230309(R)/axial_FOV(25)/raw'
+);
+
+const c3_axialViewer = new fusedViewer(
+    'c3_axialViewer',
+    'c3_axialImage',
+    'c3_axialinfoOverlay',
+    'images/03_37_20230322(L)/axial_FOV(25)/cropped',
+    'images/03_37_20230322(L)/axial_FOV(25)/raw'
+);
+
+
+const c1_sagittalViewer = new fusedViewer(
+  'c1_sagittalViewer',
+  'c1_sagittalImage',
+  'c1_sagittalinfoOverlay',
   'images/03_06_20230206(L)/sagittal_FOV(25)/cropped',
   'images/03_06_20230206(L)/sagittal_FOV(25)/raw'
 );
-  coronalViewer.init();
-  axialViewer.init();
-  sagittalViewer.init();
 
-  const coronal_switchButton = new SwitchButton('coronal_switchButton', coronalViewer);
-  const axial_switchButton = new SwitchButton('axial_switchButton', axialViewer);
-  const sagittal_switchButton = new SwitchButton('sagittal_switchButton', sagittalViewer);
+const c2_sagittalViewer = new fusedViewer(
+    'c2_sagittalViewer',
+    'c2_sagittalImage',
+    'c2_sagittalinfoOverlay',
+    'images/03_23_20230309(R)/sagittal_FOV(25)/cropped',
+    'images/03_23_20230309(R)/sagittal_FOV(25)/raw'
+  );
+
+const c3_sagittalViewer = new fusedViewer(
+    'c3_sagittalViewer',
+    'c3_sagittalImage',
+    'c3_sagittalinfoOverlay',
+    'images/03_37_20230322(L)/sagittal_FOV(25)/cropped',
+    'images/03_37_20230322(L)/sagittal_FOV(25)/raw'
+  );
+
+  c1_coronalViewer.init();
+  c2_coronalViewer.init();
+  c3_coronalViewer.init();
+
+  c1_axialViewer.init();
+  c2_axialViewer.init();
+  c3_axialViewer.init();
+
+  c1_sagittalViewer.init();
+  c2_sagittalViewer.init();
+  c3_sagittalViewer.init();
+
+
+  const c1_coronal_switchButton = new SwitchButton('c1_coronal_switchButton', c1_coronalViewer);
+  const c2_coronal_switchButton = new SwitchButton('c2_coronal_switchButton', c2_coronalViewer);
+  const c3_coronal_switchButton = new SwitchButton('c3_coronal_switchButton', c3_coronalViewer);
+
+  const c1_axial_switchButton = new SwitchButton('c1_axial_switchButton', c1_axialViewer);
+  const c2_axial_switchButton = new SwitchButton('c2_axial_switchButton', c2_axialViewer);
+  const c3_axial_switchButton = new SwitchButton('c3_axial_switchButton', c3_axialViewer);
+
+  const c1_sagittal_switchButton = new SwitchButton('c1_sagittal_switchButton', c1_sagittalViewer);
+  const c2_sagittal_switchButton = new SwitchButton('c2_sagittal_switchButton', c2_sagittalViewer);
+  const c3_sagittal_switchButton = new SwitchButton('c3_sagittal_switchButton', c3_sagittalViewer);
 
 
 });
