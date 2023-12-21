@@ -1,0 +1,125 @@
+*{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.navbar-header{
+    background-color: white;
+    height: 5rem;
+    width: 100%;
+
+}
+.logo{
+    color: white;
+    height: 3.5rem;
+    float: left;
+    line-height: 5rem;
+    margin: 0.5rem 0 0 0.5rem; 
+}
+
+.nav-links{
+
+    float: left;
+    margin-right: 1.25rem;
+}
+.nav-links li {
+    display: inline-block;
+    line-height: 5rem;
+    margin: 0 0.3125rem;
+
+}
+.nav-links li a {
+    color: black;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 0.1875rem;
+    padding: 0.4375rem 0.8125rem;
+
+}
+.nav-links li a.active {
+    background: #29ABE2;
+    transition: 0.3s ease;
+    color: white;
+}
+.nav-links li a:hover{
+    background: #D9D9D9;
+    transition: 0.3s ease;
+}
+
+#menu-bar{
+    font-size: 1.875rem;
+    color: #202020;
+    float: right;
+    line-height: 5rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 925px) {
+    .logo{
+        font-size: 2rem;
+        padding-left: 3.125rem;
+    }
+    
+    a{
+        font-size: 1rem;
+
+    }
+}
+@media (max-width: 858px) {
+
+    #menu-bar{
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #262626;
+        top: 5rem;
+        left: 0%;
+        text-align: center;
+        transition: 0.3s ease;
+    }
+    .nav-links li {
+        display: block;
+        margin:  3.125rem 0;
+        line-height: 1.875rem;
+
+    }
+    .nav-links li a {
+        /* font-size: 1.25rem; */
+        background: none;
+        color: white;
+        font-size: 1.25rem;
+
+    }
+
+    .nav-links li a.active, .nav-links li a:hover{
+        background: none;
+        color: #29ABE2;
+    }
+
+    .nav-links li a:hover{
+        font-size: 1.4rem;
+
+    }
+    /* .nav-links li a:hover{
+        color: #29ABE2;
+    } */
+
+    .nav-links.active{
+        left: -100%;
+        transition: 0.3s ease;
+    }
+
+}
