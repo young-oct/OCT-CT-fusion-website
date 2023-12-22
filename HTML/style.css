@@ -36,7 +36,7 @@ body {
 
 }
 .nav-links li a {
-    color: black;
+    color: #333;
     font-size: 1.1rem;
     text-transform: uppercase;
     border-radius: 0.1875rem;
@@ -55,7 +55,7 @@ body {
 
 #menu-bar{
     font-size: 1.875rem;
-    color: #202020;
+    color:#333;
     float: right;
     line-height: 5rem;
     margin-right: 2.5rem;
