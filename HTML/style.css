@@ -62,6 +62,47 @@ body {
     cursor: pointer;
     display: none;
 }
+.footer {
+    background-color: #f2f2f2;
+    padding: 0.625rem 0;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.footer-content {
+    color: #333;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.content {
+    margin: 1.25rem; /* controls the spacing  bewteeen content and other elements*/
+}
+.title {
+    color: black; 
+    font-size: 1.25rem; 
+    margin-bottom: 0.3rem;
+    font-weight: normal;
+
+}
+.subtitle {
+    font-size: 1rem; 
+    color: #335; 
+    font-weight: normal; 
+    margin-top: 0.1rem;
+    margin-bottom: 0.625rem;
+    font-style: italic;
+    opacity: 0.6;
+}
+.paragraph {
+    color: #333; /* Dark gray text for the paragraph */
+    font-size: 1rem; /* adjust as needed */
+    line-height: 1.5rem; /* Adjust for readability */
+    margin-bottom: 1.5rem; /* spacing between paragraphs */
+    text-align: justify;
+}
 
 @media (max-width: 925px) {
     .logo{
