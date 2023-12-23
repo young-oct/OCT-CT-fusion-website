@@ -1,55 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      .container {
-        position: relative;
-        width: 50%;
-        max-width: 100%;
-      }
-
-      .image {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-
-      .overlay {
-        position: absolute;
-        bottom: 0;
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.5); /* Black see-through */
-        color: #f1f1f1;
-        width: 100%;
-        transition: 0.5s ease;
-        opacity: 0;
-        color: white;
-        font-size: 1rem;
-        padding: 1rem;
-        text-align: center;
-      }
-
-      .container:hover .overlay {
-        opacity: 1;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/design-elements/lego-square.png"
+    />
+    <script
+      src="https://kit.fontawesome.com/68e9d88b8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
   </head>
   <body>
-    <h2>Image Overlay Title</h2>
-    <p>Hover over the image to see the effect.</p>
-
-    <div class="container">
+    <nav id="navbar-header" class="navbar-header">
       <img
-        src="images/design elements/mockup image.png"
-        alt="Avatar"
-        class="image"
+        class="logo"
+        src="images/design-elements/logo-transparent.png"
+        alt="logo"
       />
-      <div class="overlay">My Name is John</div>
-    </div>
+      <i id="menu-bar" class="fa-solid fa-bars"></i>
+      <ul id="nav-links" class="nav-links">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <!-- More sections as required -->
+      </ul>
+    </nav>
+
+    <main class="content">
+      <h1 class="title-h1">
+        Interactive OCT and CT Image Fusion Module for Clinical Otology
+      </h1>
+      <h2 class="subtitle">Anatomy and Pathology</h2>
+      <p class="paragraph" id="firstOCT">
+        Optical coherence tomography (OCT) is a promising imaging modality for
+        clinical otology...
+      </p>
+
+      <div class="image-container">
+        <div class="left-img-container">
+          <img
+            class="left-img"
+            src="images/design-elements/me-OCT-spiral-scan-loop.gif"
+            alt="ME-OCT spiral scanning"
+          />
+        </div>
+        <div class="right-img-container">
+          <img
+            class="right-img"
+            src="images/design-elements/mockup-image.png"
+            alt=""
+          />
+          <div class="right-img-overlay">
+            <h2 class="title-h2">Clinical Middle Ear OCT System</h2>
+            <p class="image-caption">
+              Dr. David P Morris using the OCT handpiece to image Young's ear.
+            </p>
+          </div>
+          <figcaption class="right-img-caption">
+            Middle ear OCT enables real-time, point-of-care structural imaging
+            of the middle ear in two and three dimensions...
+          </figcaption>
+        </div>
+      </div>
+
+      <p class="paragraph">
+        This web-based interactive educational module on temporal bone and
+        middle ear anatomy addresses this gap...
+      </p>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-content">
+        Content &copy; by Junzhe "Young" Wang,
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        . All rights reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

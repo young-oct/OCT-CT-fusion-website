@@ -1,294 +1,290 @@
-*{
-    padding:0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
-
-
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.navbar-header{
-    margin-left: 4vw;
-    margin-right: 4vw;
-    background-color: white;
-    height: 5rem;
-    width: 100%;
-
-
+.navbar-header {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  background-color: white;
+  height: 5rem;
+  width: 100%;
 }
-.logo{
-    color: white;
-    height: 3.5rem;
-    float: left;
-    line-height: 5rem;
-    margin: 0.5rem 0 0 0.5rem; 
+.logo {
+  color: white;
+  height: 3.5rem;
+  float: left;
+  line-height: 5rem;
+  margin: 0.5rem 0 0 0.5rem;
 }
 
-.nav-links{
-    float: left;
-    margin-right: 1.25rem;
+.nav-links {
+  float: left;
+  margin-right: 1.25rem;
 }
 .nav-links li {
-    display: inline-block;
-    line-height: 5rem;
-    margin: 0 0.3125rem;
-
+  display: inline-block;
+  line-height: 5rem;
+  margin: 0 0.3125rem;
 }
 .nav-links li a {
-    color: #333;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    border-radius: 0.1875rem;
-    padding: 0.4375rem 0.8125rem;
-
+  color: #333;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 0.1875rem;
+  padding: 0.4375rem 0.8125rem;
 }
 .nav-links li a.active {
-    background: #29ABE2;
-    transition: 0.3s ease;
-    color: white;
+  background: #29abe2;
+  transition: 0.3s ease;
+  color: white;
 }
-.nav-links li a:hover{
-    background: #D9D9D9;
-    transition: 0.3s ease;
+.nav-links li a:hover {
+  background: #d9d9d9;
+  transition: 0.3s ease;
 }
 
-.image_container{
-    /* display: flex; this makes them side by side  */
-    display: flex; /* Use flexbox */
+.image_container {
+  /* display: flex; this makes them side by side  */
+  display: flex; /* Use flexbox */
 
-    align-content: center;
-    position: relative;
-    width: 85%;
-    margin: 0 auto; /* Center it */
+  align-content: center;
+  position: relative;
+  width: 85%;
+  margin: 0 auto; /* Center it */
 
-    justify-content: center;  /*  Center horizontally */
-    align-items: top; /* Centers items vertically */
-        /* border: 0.5rem solid red; */
-
+  justify-content: center; /*  Center horizontally */
+  align-items: top; /* Centers items vertically */
+  /* border: 0.5rem solid red; */
 }
-.right_img_container{
-    display: flex; /* Use flexbox */
-    position: relative;
-    margin: 0 auto; /* Center it */
-    top: 0.5rem;
-    /* vertical-align: top;
+.right_img_container {
+  display: flex; /* Use flexbox */
+  position: relative;
+  margin: 0 auto; /* Center it */
+  top: 0.5rem;
+  /* vertical-align: top;
     
     justify-content: center; Center children horizontally */
-    width: 100%;
-    height: 100%;
-    justify-content: center; /*  Center horizontally */
-    /* border: 0.5rem solid blue; */
-
+  width: 100%;
+  height: 100%;
+  justify-content: center; /*  Center horizontally */
+  /* border: 0.5rem solid blue; */
 }
 
-#fisrtOCT{
-    margin-top: 1vw;
+#fisrtOCT {
+  margin-top: 1vw;
 }
 
-#fisrtOCT::first-letter{
-    font-size:  2rem;
-    /* font-weight: bold; */
-    color: #29ABE2;
+#fisrtOCT::first-letter {
+  font-size: 2rem;
+  /* font-weight: bold; */
+  color: #29abe2;
 }
 
-
-.right_text_box{
-
-    position: absolute;
-    bottom: 12.5%;
-    width: 50%;
-    height: 20%;
-
-    font-style: italic;
-
-    font-size: 1vw; /* here uses vw as the size change is big */
-    margin-top: 0.35vw; /* here uses vw as the size change is big */
-    font-weight: normal;
-    color: #333;
-    padding-left: 2vw;
-    padding-right: 2vw;
-
-    
-    transform: translateX(-50%); /* Shifts the element up by half its own height */
-    /* border: 0.5rem solid yellow; */
-
-
-}
-.left_img_container{
-    display: flex; /* Use flexbox */
-    position: relative;
-    margin: 0 auto; /* Center it */
-
-    justify-content: center; /*  Center horizontally */
-    width: 100%;
-    height: 100%;
-
-    /* border: 0.5rem solid blueviolet; */
-
+.right_text_box {
+  font-size: 0.8rem; /* here uses vw as the size change is big */
+  margin-top: 0.35rem; /* here uses vw as the size change is big */
+  font-weight: normal;
+  color: #333;
+  /* margin-left: 2rem;
+  margin-right: 2rem; */
 }
 
-.right_img{
+.left_img_container {
+  display: flex; /* Use flexbox */
+  position: relative;
+  margin: 0 auto; /* Center it */
 
-    width: 100%;
-    border-radius: 0.5vw;  /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
+  justify-content: center; /*  Center horizontally */
+  width: 100%;
+  height: 100%;
 
-    /* border: 0.5rem solid pink; */
+  /* border: 0.5rem solid blueviolet; */
+}
 
+.right_img {
+  width: 100%;
+  border-radius: 0.5vw; /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
+
+  /* border: 0.5rem solid pink; */
+}
+
+.right_img_content {
+  display: flex; /* Use flexbox */
+  margin: 0 auto; /* Center it */
+  position: relative;
+  width: 80%;
+  justify-content: center; /*  Center horizontally */
 }
 
 .right_img_overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
-    color: #f1f1f1;
-    width: 100%;
-    color: white;
-    padding: 0.5vw; /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
-    text-align: left;
-    border-radius: 0.5vw;  /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
-    /* border: 0.5rem solid orange; */
-
-  }
-
-.left_img{
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  color: white;
+  padding: 0.5vw; /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
+  text-align: left;
+  border-radius: 0.5vw; /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
+  /* border: 0.5rem solid orange; */
 }
 
-#menu-bar{
-    font-size: 1.875rem;
-    color:#333;
-    float: right;
-    line-height: 5rem;
-    margin-right: 2.5rem;
-    cursor: pointer;
-    display: none;
+.right_img_capation {
+  font-size: 0.8rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.left_img {
+  width: 100%;
+}
+
+#menu-bar {
+  font-size: 1.875rem;
+  color: #333;
+  float: right;
+  line-height: 5rem;
+  margin-right: 2.5rem;
+  cursor: pointer;
+  display: none;
 }
 .footer {
-    background-color: hwb(0 95% 5%);
-    padding: 0.25rem 0;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  background-color: hwb(0 95% 5%);
+  padding: 0.25rem 0;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 .footer-content {
-    color: #333;
-    font-size: 0.75rem;
-    margin: 0;
+  color: #333;
+  font-size: 0.75rem;
+  margin: 0 auto;
 }
 
 .content {
-    margin: 1rem; /* controls the spacing  bewteeen content and other elements*/
+  margin: 1rem; /* controls the spacing  bewteeen content and other elements*/
 }
 .title_h1 {
-    margin-left: 4vw;
-    margin-right: 4vw;
-    color: black; 
-    font-size: 1.25rem; 
-    margin-bottom: 0.25rem;
-    font-weight: normal;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  color: black;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  font-weight: normal;
 }
 
 .title_h2 {
-    color: white; 
-    font-size: 1vw;  /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
-    margin-bottom: 0.5vw; /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
-    font-weight: normal;
+  color: white;
+  font-size: 1vw; /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
+  margin-bottom: 0.5vw; /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
+  font-weight: normal;
 }
 
 .image_caption {
-    font-size: 0.5vw; /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
-    margin-bottom: 0.05vw;/* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
-    font-weight: normal;
-
+  font-size: 0.8rem; /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
+  margin-bottom: 0.05rem; /* when drastic change is expected in responsive, uses vw, otherwise uses rem  */
+  font-weight: normal;
 }
 
 .subtitle {
-    margin-left: 4vw;
-    margin-right: 4vw;
-    font-size: 1rem; 
-    color: #333; 
-    font-weight: normal; 
-    margin-top: 0.1rem;
-    margin-bottom: 0.625rem;
-    font-style: italic;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  font-size: 1rem;
+  color: #333;
+  font-weight: normal;
+  margin-top: 0.1rem;
+  margin-bottom: 0.625rem;
+  font-style: italic;
 }
 .paragraph {
-    margin-left: 4vw;
-    margin-right: 4vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
 
-    color: #333; /* Dark gray text for the paragraph */
-    font-size: 1rem; /* adjust as needed */
-    line-height: 1.5rem; /* Adjust for readability */
-    margin-bottom: 1.5vw; /* spacing between paragraphs */
-    text-align: justify;
+  color: #333; /* Dark gray text for the paragraph */
+  font-size: 1rem; /* adjust as needed */
+  line-height: 1.5rem; /* Adjust for readability */
+  margin-bottom: 1.5vw; /* spacing between paragraphs */
+  text-align: justify;
 }
 
 @media (max-width: 925px) {
-    .logo{
-        font-size: 2rem;
-        padding-left: 3.125rem;
-    }
-    
-    a{
-        font-size: 1rem;
+  .logo {
+    font-size: 2rem;
+    padding-left: 3.125rem;
+  }
 
-    }
+  a {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 858px) {
+  #menu-bar {
+    display: block;
+  }
 
-    #menu-bar{
-        display: block;
-    }
+  .nav-links {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #262626;
+    top: 5rem;
+    left: -100%;
+    text-align: center;
+    transition: 0.3s ease;
+    z-index: 1000;
+  }
+  .nav-links li {
+    display: block;
+    margin: 3.125rem 0;
+    line-height: 1.875rem;
+  }
+  .nav-links li a,
+  .nav-links li a.active {
+    /* font-size: 1.25rem; */
+    background: none;
+    color: white;
+    font-size: 1.25rem;
+  }
 
-    .nav-links {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #262626;
-        top: 5rem;
-        left: -100%;
-        text-align: center;
-        transition: 0.3s ease;
-        z-index: 1000;
-    }
-    .nav-links li {
-        display: block;
-        margin:  3.125rem 0;
-        line-height: 1.875rem;
+  .nav-links li a.active,
+  .nav-links li a:hover {
+    background: none;
+    color: #29abe2;
+  }
 
-    }
-    .nav-links li a {
-        /* font-size: 1.25rem; */
-        background: none;
-        color: white;
-        font-size: 1.25rem;
+  .nav-links li a:hover {
+    font-size: 1.4rem;
+  }
+  .nav-links.active {
+    left: 0;
+    transition: 0.3s ease;
+    overflow-y: auto;
+  }
+}
 
-    }
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 110%;
+  }
+}
 
-    .nav-links li a.active, .nav-links li a:hover{
-        background: none;
-        color: #29ABE2;
-    }
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 120%;
+  }
+}
 
-    .nav-links li a:hover{
-        font-size: 1.4rem;
-
-    }
-    /* .nav-links li a:hover{
-        color: #29ABE2;
-    } */
-
-    .nav-links.active{
-        left: 0;
-        transition: 0.3s ease;
-        overflow-y: auto;
-    }
-
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 130%;
+  }
 }
