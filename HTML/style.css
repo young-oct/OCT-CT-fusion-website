@@ -36,7 +36,7 @@ body {
 .nav-links li a {
   color: #333;
   font-size: 1.1rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   border-radius: 0.1875rem;
   padding: 0.4375rem 0.8125rem;
 }
@@ -151,7 +151,7 @@ body {
   display: none;
 }
 .footer {
-  background-color: hwb(0 95% 5%);
+  background-color: hsla(0, 0%, 95%, 2.5%);
   padding: 0.25rem 0;
   text-align: center;
   left: 0;
