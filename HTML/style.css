@@ -24,6 +24,10 @@ body {
   line-height: 5rem;
   margin: 0.5rem 0 0 0.5rem;
 }
+/* Style for the dropdown icon */
+.dropdown-icon {
+  display: inline-block;
+}
 
 .nav-links {
   float: left;
