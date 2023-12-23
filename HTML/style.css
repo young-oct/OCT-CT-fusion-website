@@ -16,6 +16,7 @@ body {
   height: 5rem;
   width: 100%;
 }
+
 .logo {
   color: white;
   height: 3.5rem;
@@ -27,6 +28,7 @@ body {
 .nav-links {
   float: left;
   margin-right: 1.25rem;
+  display: flex;
 }
 .nav-links li {
   display: inline-block;
