@@ -17,7 +17,8 @@
     <title>Document</title>
   </head>
   <body>
-    <nav id="navbar-header" , class="navbar-header">
+    <nav id="navbar-header"
+     class="navbar-header">
       <div>
         <img
           class="logo"
@@ -36,20 +37,43 @@
         <li><a href="#">Home</a></li>
       </ul>
     </nav>
-
     <div class="content">
-      <h1 class="title">
+      <h1 class="title_h1">
         Interactive OCT and CT image fusion module for clinical otology
       </h1>
       <h2 class="subtitle">Anatomy and pathology</h2>
-
-      <p class="paragraph">
-        Optical coherence tomography (OCT) is a promising imaging modality for
+      <p class="paragraph" id ="fisrtOCT">Optical coherence tomography (OCT) is a promising imaging modality for
         clinical otology. It produces real-time, high-resolution transcanal,
         transtympanic images of the middle ear (ME) with high soft-tissue
         contrast. However, its diagnostic applications in otology are limited by
         its field of view (FOV) and shadowing artifact.
       </p>
+      <div class="image_container">
+        <div class ="right_img_container">
+          <img class="right_img"
+          src="images/design elements/mockup image.png" alt="" type =image/png>
+          <div class="right_img_overlay">
+            <h2 class="title_h2">Clinical middle ear OCT system</h2>
+            <p class = "image_caption">Dr.David P Morris using the OCT handpice to image Young's ear.</p>
+
+          </div>
+        </div>
+        <div class="right_text_box">
+          <p >Middle ear OCT enables real-time, point-of-care structural imaging of
+             the middle ear in two and three dimensions.
+          </p>
+          <br>
+          <p>This capability may find uses in a range of middle ear applications including clinical diagnostics, post-operative assessment and intraoperative guidance.
+          </p>
+        </div>
+
+        <div class="left_img_container">
+          <img class="left_img"
+          src="images/design elements/me_OCT_spiral_scan(loop).gif" alt="ME-OCT spiral scanning" type =image/gif>
+        </div>
+      </div>
+
+      <br>
       <p class="paragraph">
         This web-based interactive educational module on temporal bone and
         middle ear anatomy addresses this gap by offering users a platform to
@@ -67,7 +91,7 @@
 
     <footer class="footer">
 <p class="footer-content">
-  Content &copy; by Junzhe Wang,
+  Content &copy; by Junzhe "Young" Wang,
   <script>
     document.write(new Date().getFullYear());
   </script>. All rights reserved.
