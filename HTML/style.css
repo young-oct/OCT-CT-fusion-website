@@ -68,9 +68,6 @@ body {
   position: relative;
   margin: 0 auto; /* Center it */
   top: 0.5rem;
-  /* vertical-align: top;
-    
-    justify-content: center; Center children horizontally */
   width: 100%;
   height: 100%;
   justify-content: center; /*  Center horizontally */
@@ -83,7 +80,6 @@ body {
 
 #fisrtOCT::first-letter {
   font-size: 2rem;
-  /* font-weight: bold; */
   color: #29abe2;
 }
 
@@ -92,8 +88,6 @@ body {
   margin-top: 0.35rem; /* here uses vw as the size change is big */
   font-weight: normal;
   color: #333;
-  /* margin-left: 2rem;
-  margin-right: 2rem; */
 }
 
 .left_img_container {
@@ -249,7 +243,6 @@ body {
   }
   .nav-links li a,
   .nav-links li a.active {
-    /* font-size: 1.25rem; */
     background: none;
     color: white;
     font-size: 1.25rem;
