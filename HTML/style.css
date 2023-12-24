@@ -106,7 +106,8 @@ body {
 }
 
 .navbar a.active,
-.navbar a:hover {
+.navbar a:hover,
+#active {
   background: #29abe2;
   transition: 0.3s ease;
   color: white;
