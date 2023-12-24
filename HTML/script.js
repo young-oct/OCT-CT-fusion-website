@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Select the dropdown button
   var dropdownBtns = document.querySelectorAll(".subnav_dropbtn");
+  // Select the menu bar button
+  var menuBar = document.querySelector(".menubar");
+  // Select the navbar links container
+  var navbarlinks = document.querySelector(".navlinks");
 
   // Check if dropdownBtn exists to avoid null reference errors
   dropdownBtns.forEach(function (dropdownBtn) {
@@ -17,11 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  // Select the menu bar button
-  var menuBar = document.querySelector(".menubar");
-  // Select the navbar links container
-  var navbarlinks = document.querySelector(".navlinks");
 
   // Check if menuBar and navbarlinks exist to avoid null reference errors
   if (menuBar && navbarlinks) {
