@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var menuBar = document.querySelector(".menubar");
   // Select the navbar links container
   var navbarlinks = document.querySelector(".navlinks");
-  var content = document.querySelector(".content");
 
   // Check if menuBar and navbarlinks exist to avoid null reference errors
   if (menuBar && navbarlinks) {

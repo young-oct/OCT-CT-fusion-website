@@ -152,11 +152,11 @@ body {
   /* border: 0.5rem solid blue; */
 }
 
-#fisrtOCT {
+#fisrtWord {
   margin-top: 1vw;
 }
 
-#fisrtOCT::first-letter {
+#fisrtWord::first-letter {
   font-size: 2rem;
   color: #29abe2;
 }
@@ -393,5 +393,70 @@ body {
     /* transition: 0.3s ease; */
     transition: 0.3s ease-in-out;
     overflow-y: auto;
+  }
+}
+
+/* below is styling for each page */
+
+.image_container2Column {
+  display: flex;
+  width: 80%;
+  position: relative;
+  margin: auto; /* Center the container itself */
+  justify-content: center; /* Horizontally center content */
+  /* border: 1rem solid blue; */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.image_containerColumn {
+  width: 100%;
+  position: relative;
+  /* border: 1rem solid pink; */
+}
+
+#img1_r {
+  width: 70%;
+  bottom: 0;
+  left: 15%;
+  position: absolute;
+  /* border: 1rem solid pink; */
+}
+.cap_fig_container {
+  display: table;
+}
+#fig_caption {
+  font-size: 1.2rem;
+  font-style: italic;
+  caption-side: top;
+  display: table-caption;
+  /* border: 0.1rem solid orange; */
+}
+@media screen and (min-width: 768px) {
+  #fig_caption {
+    font-size: 90%;
+  }
+}
+@media (max-width: 858px) {
+  #fig_caption {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #fig_caption {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #fig_caption {
+    font-size: 120%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #fig_caption {
+    font-size: 150%;
   }
 }
