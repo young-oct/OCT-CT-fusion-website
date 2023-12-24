@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Select the dropdown button
-  var dropdownBtn = document.querySelector(".subnav_dropbtn");
+  var dropdownBtns = document.querySelectorAll(".subnav_dropbtn");
 
   // Check if dropdownBtn exists to avoid null reference errors
-  if (dropdownBtn) {
+  dropdownBtns.forEach(function (dropdownBtn) {
     // Toggle dropdown on click
-    dropdownBtn.addEventListener("click", function (event) {
+    dropdownBtn.addEventListener("click", function () {
       // Get the dropdown content associated with this button
       var dropdownContent = this.nextElementSibling;
 
@@ -16,9 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dropdownContent.style.display = "none";
       }
     });
-  } else {
-    console.error("Dropdown button not found");
-  }
+  });
 
   // Select the menu bar button
   var menuBar = document.querySelector(".menubar");
