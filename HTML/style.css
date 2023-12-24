@@ -415,7 +415,15 @@ body {
   /* border: 1rem solid pink; */
 }
 
-#img1_r {
+/*controls p1*/
+.fig_caption {
+  font-style: italic;
+  display: table-caption;
+  padding-bottom: 2.5%;
+}
+
+/*controls p1 1st image*/
+#p1_img1_r {
   width: 70%;
   bottom: 0;
   left: 15%;
@@ -425,38 +433,57 @@ body {
 .cap_fig_container {
   display: table;
 }
-#fig_caption {
-  font-size: 1.2rem;
-  font-style: italic;
+#p1_img1_fig_caption {
   caption-side: top;
-  display: table-caption;
+
   /* border: 0.1rem solid orange; */
 }
-@media screen and (min-width: 768px) {
-  #fig_caption {
-    font-size: 90%;
-  }
-}
-@media (max-width: 858px) {
-  #fig_caption {
-    font-size: 100%;
-  }
+
+/*controls p1 2nd image*/
+#p1_img2_r {
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  left: 5%;
+  /* border: 1rem solid yellow; */
 }
 
-@media screen and (min-width: 600px) {
-  #fig_caption {
-    font-size: 100%;
+#p1_img2_l {
+  width: 100%;
+  position: relative;
+  top: -2.5%;
+  /* border: 1rem solid pink; */
+}
+
+/*controls p1 3rd image*/
+
+#p3_img1_r {
+  width: 70%;
+  bottom: 5%;
+  left: 15%;
+  position: absolute;
+  /* border: 1rem solid pink; */
+}
+
+#p1_img3_fig_caption {
+  caption-side: top;
+}
+
+/* media control for responsive text */
+@media screen and (max-width: 858px) {
+  .fig_caption {
+    font-size: 50%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  #fig_caption {
-    font-size: 120%;
+  .fig_caption {
+    font-size: 100%;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  #fig_caption {
-    font-size: 150%;
+  .fig_caption {
+    font-size: 110%;
   }
 }
