@@ -9,51 +9,123 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.navbar-header {
+/* .content {
+  position: relative;
+  top: 1rem;
+} */
+.navbar {
   margin-left: 4vw;
   margin-right: 4vw;
   background-color: white;
   height: 5rem;
-  width: 100%;
+  width: auto;
+  display: flex; /* this make the elements inside aligns in the same box */
+  align-items: center; /* this make the elements aligns cross axis aka vertically */
+  /* position: relative; */
+  /* border: 0.5rem solid green; */
+  /* overflow: auto; */
+  /* justify-content: space-around; */
 }
-
 .logo {
   color: white;
-  height: 3.5rem;
+  height: 4rem;
   float: left;
   line-height: 5rem;
-  margin: 0.5rem 0 0 0.5rem;
+  /* border: 0.5rem solid pink; */
+  /* margin: 0.5rem 0 0 0.5rem; */
 }
+.menubar {
+  color: #333;
+  font-size: 2rem;
+  line-height: 5rem;
+  margin-right: 2.5rem;
+  cursor: pointer;
+  margin-left: auto;
+  display: none;
+  /* border: 0.5rem solid blue; */
+}
+
+.navlinks {
+  height: 5rem;
+  align-items: center; /* this make the elements aligns cross axis aka vertically */
+  justify-content: space-between;
+  display: flex; /* this make the elements inside aligns in the same box */
+  /* border: 0.5rem solid yellow; */
+}
+
 /* Style for the dropdown icon */
 .dropdown-icon {
   display: inline-block;
 }
 
-.nav-links {
-  float: left;
-  margin-right: 1.25rem;
-  display: flex;
-}
-.nav-links li {
-  display: inline-block;
-  line-height: 5rem;
-  margin: 0 0.3125rem;
-}
-.nav-links li a {
+.navbar a {
   color: #333;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+
+  /* display: flex; */
+  /* display: inline-block; */
+  /* line-height: 5rem; */
   /* text-transform: uppercase; */
   border-radius: 0.1875rem;
   padding: 0.4375rem 0.8125rem;
+  /* white-space: nowrap; Prevent wrapping of text */
+  /* border: 0.5rem solid pink; */
+  text-align: center;
 }
-.nav-links li a.active {
+
+.subnav .subnav_dropbtn {
+  display: block; /* Use flexbox for alignment */
+  align-items: center; /* Align text and icon vertically */
+  white-space: nowrap; /* Prevent wrapping of text */
+  text-align: center;
+
+  justify-content: center; /* Center content horizontally */
+}
+.subnav .dropdown-icon {
+  margin-left: 5px; /* Space between the text and the icon */
+}
+
+.navbar a.active,
+.navbar a:hover {
   background: #29abe2;
   transition: 0.3s ease;
   color: white;
 }
-.nav-links li a:hover {
-  background: #d9d9d9;
-  transition: 0.3s ease;
+
+/* Style the dropdown-contentcontent - positioned absolute */
+.dropdown-content {
+  display: none;
+  position: absolute; /* this sets to be 
+                      absolute for the hortional one
+                      this affects the vertical ones */
+  left: 13.75rem;
+  /* transform: translateX(14.5%); */
+  margin-left: 4vw;
+  padding: 0.4375rem 0.8125rem;
+
+  margin-right: 4vw;
+  width: 100%;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: inline-block;
+  font-size: 0.8rem;
+  border: 0.05rem solid #29abe2;
+  color: #333;
+  /* background-color: #29abe2; */
+}
+
+.dropdown-content a:hover {
+  display: inline-block;
+  color: #29abe2;
+  background-color: white;
+  /* background-color: #29abe2; */
+}
+
+.subnav:hover .dropdown-content {
+  display: block;
 }
 
 .image_container {
@@ -147,15 +219,6 @@ body {
   width: 100%;
 }
 
-#menu-bar {
-  font-size: 1.875rem;
-  color: #333;
-  float: right;
-  line-height: 5rem;
-  margin-right: 2.5rem;
-  cursor: pointer;
-  display: none;
-}
 .footer {
   background-color: hsla(0, 0%, 95%, 2.5%);
   padding: 0.25rem 0;
@@ -216,60 +279,6 @@ body {
   text-align: justify;
 }
 
-@media (max-width: 925px) {
-  .logo {
-    font-size: 2rem;
-    padding-left: 3.125rem;
-  }
-
-  a {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 858px) {
-  #menu-bar {
-    display: block;
-  }
-
-  .nav-links {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #262626;
-    top: 5rem;
-    left: -100%;
-    text-align: center;
-    transition: 0.3s ease;
-    z-index: 1000;
-  }
-  .nav-links li {
-    display: block;
-    margin: 3.125rem 0;
-    line-height: 1.875rem;
-  }
-  .nav-links li a,
-  .nav-links li a.active {
-    background: none;
-    color: white;
-    font-size: 1.25rem;
-  }
-
-  .nav-links li a.active,
-  .nav-links li a:hover {
-    background: none;
-    color: #29abe2;
-  }
-
-  .nav-links li a:hover {
-    font-size: 1.4rem;
-  }
-  .nav-links.active {
-    left: 0;
-    transition: 0.3s ease;
-    overflow-y: auto;
-  }
-}
-
 @media screen and (min-width: 768px) {
   html {
     font-size: 110%;
@@ -285,5 +294,104 @@ body {
 @media screen and (min-width: 1200px) {
   html {
     font-size: 130%;
+  }
+}
+
+@media (max-width: 858px) {
+  .logo {
+    font-size: 2rem;
+    padding-left: 3.125rem;
+  }
+  /* Styles for the navlinks container */
+  .navbar {
+    margin-left: -2vw;
+    margin-right: -2vw;
+  }
+  .menubar {
+    display: block;
+  }
+
+  .navlinks {
+    /* height: 4rem; */
+    display: flex;
+    left: -100%;
+
+    text-align: center;
+    /* transition: 0.3s ease; */
+    z-index: 1000;
+
+    flex-direction: column; /* Stack children vertically */
+    width: 100vw; /* Full width to match its parent */
+    /* position: relative; */
+    height: auto;
+    top: 5.5rem;
+    z-index: 10;
+    background: #262626;
+    position: fixed;
+    height: auto;
+    overflow-y: auto;
+    background-color: rgba(0, 86, 179, 0.8); /* Darker blue on hover */
+  }
+
+  /* Styles for each nav item and dropdown button */
+  .navlinks a,
+  .navlinks .subnav_dropbtn {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    display: block;
+    background: transparent;
+    width: 100%; /* Full width to match navlinks */
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    /* Add hover effects or additional styles for nav items here */
+  }
+
+  /* Subnav button positioning context */
+  .subnav {
+    position: static; /* Use static so that dropdown content pushes items down */
+    width: 100%; /* Ensure the subnav matches the width of navlinks */
+  }
+
+  /* Dropdown content style */
+  .dropdown-content {
+    position: static; /* this sets to be 
+                          static for the vertical one
+                          this affects the vertical ones */
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Align dropdown links vertically */
+    margin-left: -0.05rem;
+
+    width: 100%; /* Match the width of navlinks */
+  }
+
+  /* Display the dropdown content when the subnav is active */
+  .subnav.active .dropdown-content {
+    display: flex; /* Display the dropdown */
+  }
+
+  /* Styles for the dropdown links */
+  .dropdown-content a {
+    text-decoration: none;
+    border: none;
+    color: white; /* White text for contrast on blue bg */
+    text-align: center; /* Align text to the left */
+  }
+
+  .navlinks a:hover {
+    margin-right: -2vw;
+    color: #29abe2;
+    background-color: hsl(0, 0%, 97%);
+    /* border: #29abe2 0.5rem; */
+    border: 0.1rem outset rgba(0, 86, 179, 0.9);
+    transition: 0.3s ease;
+  }
+
+  .navlinks.active {
+    left: 0;
+    /* transition: 0.3s ease; */
+    transition: 0.3s ease-in-out;
+    overflow-y: auto;
   }
 }
