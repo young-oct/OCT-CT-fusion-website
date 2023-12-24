@@ -6,9 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (dropdownBtn) {
     // Toggle dropdown on click
     dropdownBtn.addEventListener("click", function (event) {
-      // Prevent the default anchor behavior
-      event.preventDefault();
-
       // Get the dropdown content associated with this button
       var dropdownContent = this.nextElementSibling;
 
