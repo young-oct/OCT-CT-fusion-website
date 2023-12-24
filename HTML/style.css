@@ -34,7 +34,7 @@ body {
   margin-right: 4vw;
   background-color: white;
   height: 5rem;
-  width: auto;
+  width: 90vw;
   display: flex; /* this make the elements inside aligns in the same box */
   align-items: center; /* this make the elements aligns cross axis aka vertically */
   /* position: relative; */
@@ -70,6 +70,7 @@ body {
   justify-content: space-around;
   display: flex; /* this make the elements inside aligns in the same box */
   /* border: 0.5rem solid yellow; */
+  float: left;
 }
 
 /* Style for the dropdown icon */
@@ -112,6 +113,12 @@ body {
   transition: 0.3s ease;
   color: white;
 }
+.navlinks {
+  position: relative;
+  display: flex;
+
+  /* flex-direction: row; */
+}
 
 /* Style the dropdown-contentcontent - positioned absolute */
 .dropdown-content {
@@ -119,14 +126,23 @@ body {
   position: absolute; /* this sets to be 
                       absolute for the hortional one
                       this affects the vertical ones */
-  left: 13.75rem;
+  left: 8%;
   /* transform: translateX(14.5%); */
-  margin-left: 4vw;
-  padding: 0.4375rem 0.8125rem;
+  /* margin-left: 4vw; */
+  padding: 0.2rem 0.5rem;
 
-  margin-right: 4vw;
+  /* margin-right: 4vw; */
   width: 100%;
   z-index: 1;
+}
+
+#oct_dropdown {
+  left: 5%;
+}
+
+#interactive_dropdown {
+  /* position: absolute; */
+  left: 35%;
 }
 
 .dropdown-content a {
@@ -134,6 +150,8 @@ body {
   font-size: 0.8rem;
   border: 0.05rem solid #29abe2;
   color: #333;
+  margin: 0.2rem 0.5rem;
+
   /* background-color: #29abe2; */
 }
 
