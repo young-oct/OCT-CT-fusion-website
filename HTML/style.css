@@ -599,6 +599,12 @@ body {
   #p2_sidepanel ul li {
     font-size: 50%;
   }
+  .image_caption {
+    font-size: 45%;
+  }
+  #index_img1_title {
+    font-size: 60%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -606,11 +612,23 @@ body {
   #p2_sidepanel ul li {
     font-size: 100%;
   }
+  .image_caption {
+    font-size: 50%;
+  }
+  #index_img1_title {
+    font-size: 70%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .fig_caption,
   #p2_sidepanel ul li {
     font-size: 110%;
+  }
+  .image_caption {
+    font-size: 60%;
+  }
+  #index_img1_title {
+    font-size: 80%;
   }
 }
