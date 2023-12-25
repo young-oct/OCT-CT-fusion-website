@@ -81,7 +81,8 @@ body {
 .navbar a {
   color: #333;
   font-size: 1rem;
-  margin-left: 1rem;
+
+  margin-left: 1rem; /* big screen mode, turn this on to have spacing*/
 
   /* display: flex; */
   /* display: inline-block; */
@@ -356,6 +357,7 @@ body {
     /* height: 4rem; */
     display: flex;
     left: -100%;
+    /* margin-left: 1rem; */
 
     text-align: center;
     /* transition: 0.3s ease; */
@@ -374,6 +376,9 @@ body {
     background-color: rgba(0, 86, 179, 0.8); /* Darker blue on hover */
   }
 
+  .navlinks a {
+    margin-left: 0; /*reset this to be 0 so it's full width in the vertical mode*/
+  }
   /* Styles for each nav item and dropdown button */
   .navlinks a,
   .navlinks .subnav_dropbtn {
