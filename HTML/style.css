@@ -647,6 +647,7 @@ body {
   justify-content: right;
   margin-right: 4%;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .publication-list {
