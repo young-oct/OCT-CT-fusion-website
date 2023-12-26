@@ -791,10 +791,30 @@ iframe {
   gap: 1rem;
   margin: auto 0;
 }
+
 .contact_icons a {
   font-size: 1.25rem;
   color: #333;
 }
+
+.contact_icons a:hover {
+  color: #555;
+}
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  font-size: 2rem; /* Adjust size as needed */
+  color: #333; /* Icon color */
+  display: none;
+  transition: 0.3s ease-in-out;
+}
+#backToTopBtn:hover {
+  color: #555; /* Icon color on hover */
+}
+
 /* media control for responsive text */
 @media screen and (max-width: 858px) {
   .fig_caption,

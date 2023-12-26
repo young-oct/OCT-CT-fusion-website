@@ -1,3 +1,5 @@
+// ----- Utility Functions -----
+
 // Function to toggle the display of the publication list for a given year
 function toggleYear(id) {
   var element = document.getElementById(id);
@@ -30,78 +32,68 @@ function contractAll() {
   });
 }
 
-// A function that sets up initial states on page load
-function setupInitialStates() {
-  // Perform setup tasks here, like setting initial display states
-  var allYears = document.querySelectorAll(".publications");
-  // Example: Hide all publication years on initial load
-  allYears.forEach(function (year) {
-    year.style.display = "block"; // This hides all the publication lists
-    year.previousElementSibling.textContent = "-" + year.previousElementSibling.textContent.slice(2);
-  });
-}
-
+// Function to apply reverse numbering to publications
 function initializeReverseNumbering() {
   var allPublications = document.querySelectorAll(".publication");
   var totalPublications = allPublications.length;
 
   allPublications.forEach(function (pub, index) {
-    // 'pub' is the current publication element
-    // 'index' is the position of 'pub' in the NodeList
-
     var number = totalPublications - index;
-    var numberingElement = document.createElement("span");
-
     var titleElement = pub.querySelector("h3");
     if (titleElement) {
       titleElement.textContent = number + ". " + titleElement.textContent;
-      numberingElement.style.fontWeight = "bold";
     }
   });
 }
 
+// Function to manage scroll behavior and back-to-top button
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("backToTopBtn").style.display = "block";
+  } else {
+    document.getElementById("backToTopBtn").style.display = "none";
+  }
+}
+
+// ----- Event Listeners and Initializations -----
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Select the dropdown button
+  setupInitialStates();
+  initializeReverseNumbering();
+  addEventListeners();
+});
+
+// Function to setup initial states on page load
+function setupInitialStates() {
+  var allYears = document.querySelectorAll(".publications");
+  allYears.forEach(function (year) {
+    year.style.display = "block";
+    year.previousElementSibling.textContent = "-" + year.previousElementSibling.textContent.slice(2);
+  });
+}
+
+// Function to add event listeners
+function addEventListeners() {
   var dropdownBtns = document.querySelectorAll(".subnav_dropbtn");
-  // Select the menu bar button
   var menuBar = document.querySelector(".menubar");
-  // Select the navbar links container
   var navbarlinks = document.querySelector(".navlinks");
 
-  // Check if dropdownBtn exists to avoid null reference errors
   dropdownBtns.forEach(function (dropdownBtn) {
-    // Toggle dropdown on click
     dropdownBtn.addEventListener("click", function () {
-      // Get the dropdown content associated with this button
       var dropdownContent = this.nextElementSibling;
-
-      // Toggle the display of the dropdown content
-      if (window.getComputedStyle(dropdownContent).display === "none") {
-        dropdownContent.style.display = "block";
-      } else {
-        dropdownContent.style.display = "none";
-      }
+      dropdownContent.style.display = window.getComputedStyle(dropdownContent).display === "none" ? "block" : "none";
     });
   });
 
-  // Check if menuBar and navbarlinks exist to avoid null reference errors
   if (menuBar && navbarlinks) {
     menuBar.addEventListener("click", function () {
-      // console.info("menu clicked");
       navbarlinks.classList.toggle("active");
-      if (navbarlinks.classList.contains("active")) {
-        document.body.style.overflowY = "hidden";
-      } else {
-        document.body.style.overflowY = "auto";
-      }
+      document.body.style.overflowY = navbarlinks.classList.contains("active") ? "hidden" : "auto";
     });
 
     window.addEventListener("resize", function () {
-      // Check if the screen width is more than 600px
       if (window.innerWidth > 600) {
-        // If so, ensure the navbarlinks are not in the 'active' state
         navbarlinks.classList.remove("active");
-        //Also reset the body overflow
         document.body.style.overflowY = "auto";
       }
     });
@@ -109,7 +101,13 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Menubar or navbar links not found");
   }
 
-  // Initialize functions here
-  setupInitialStates();
-  initializeReverseNumbering();
-});
+  window.onscroll = scrollFunction;
+
+  var backToTopBtn = document.getElementById("backToTopBtn");
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", function () {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+  }
+}
