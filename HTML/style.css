@@ -529,17 +529,16 @@ body {
   width: 40%;
 
   display: flex; /* flex -> align item  */
-  align-items: top; /* align item along the cross axis, vertically */
-  justify-content: space-evenly; /* align item along the main axis, horizontally */
+  align-items: center; /* align item along the cross axis, vertically */
   /* border: yellow solid 1rem; */
   position: relative;
   margin-left: -2rem;
 
   margin-right: 5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: hsl(0, 0%, 97%);
+  border-radius: 0.3rem;
 }
 
 #p2_sidepanel ul li {
