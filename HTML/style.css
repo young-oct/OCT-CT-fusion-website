@@ -525,42 +525,66 @@ body {
   /* align-items: center; align item along the cross axis, vertically */
 }
 
-#p2_sidepanel {
-  width: 40%;
+#sidebar {
+  /* width: 40%; */
+  /* position: absolute; */
+  max-width: 40%;
+  display: flex;
+  height: 80%;
 
-  display: flex; /* flex -> align item  */
-  align-items: center; /* align item along the cross axis, vertically */
+  /* display: flex; flex -> align item  */
+  /* align-items: center; align item along the cross axis, vertically */
   /* border: yellow solid 1rem; */
-  position: relative;
-  margin-left: -2rem;
+  /* margin-left: -2rem;
 
   margin-right: 5rem;
   padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 1rem; */
+  /* background-color: hsl(0, 0%, 97%); */
+  /* border-radius: 0.3rem; */
+  box-sizing: border-box;
+  padding-right: 0.5rem;
+  /* position: relative; */
+  justify-content: center;
+  align-items: center;
+}
+#sidebar ul {
+  /* position: absolute; */
+  display: flex;
   background-color: hsl(0, 0%, 97%);
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   border-radius: 0.3rem;
+
+  flex-direction: column;
+  gap: 0.25rem;
+  justify-content: space-around;
+
+  list-style-type: none;
+
+  /* border: pink 0.5rem solid; */
 }
 
-#p2_sidepanel ul li {
+#sidebar ul li {
   margin-top: 1rem;
   text-align: left;
+
   background-color: hsl(0, 0%, 97%);
 }
 
-#p2_sidepanel ul li a {
+#sidebar ul li a {
   color: #333;
 }
-#p2_sidepanel ul li a.active {
+#sidebar ul li a.active {
   color: #29abe2;
 }
 
-#p2_sidepanel ul li:hover {
+#sidebar ul li:hover {
   border-bottom: 0.1rem solid #333;
 }
 
 /* styling the ME-OCT page gif*/
 #p2_img1_c1 {
-  /* border: #29abe2 solid 0.5rem; */
+  /* border: red solid 0.5rem; */
   display: flex;
   align-items: end;
   position: relative;
@@ -597,42 +621,51 @@ body {
   /* width: 18rem; */
 }
 
-#p3content {
-  display: grid;
-  grid-template-rows: 0.1fr 1fr 1fr 1fr 0.9fr;
-  grid-template-columns: 1.2fr 1fr 1fr 0.8fr;
-  grid-template-areas:
-    "p3heading p3heading p3heading p3heading"
-    "p3sidebar p3s1 p3s1 p3s1"
-    "p3sidebar p3s1 p3s1 p3s1"
-    "p3sidebar p3s2 p3s2 p3s2"
-    "p3sidebar p3s2 p3s2 p3s2";
-  /* gap: 0.25rem; */
-  height: 95%;
-  border: green 1rem solid;
-  gap: 0;
+/* below this is for the oct basics page */
+#bullet_point {
+  list-style: disc;
+  color: #333;
+  margin-left: 8vw;
+  font-size: 1rem; /* adjust as needed */
+  line-height: 1rem; /* Adjust for readability */
+  margin-bottom: 1.5vw; /* spacing between paragraphs */
+  text-align: justify;
+}
+u {
+  text-decoration: underline;
+}
+#main_wrapper {
+  margin: 0.5rem auto;
+
+  /* border: 0.5rem solid pink; */
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#p3heading {
-  background-color: #29abe2;
-  grid-area: p3heading;
-  border: pink 1rem solid;
+.fig_content {
+  height: 100%;
+  /* border: 0.5rem solid green; */
+}
+#interferometry_1 {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+#interferometry_img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
 }
 
-#p3sidebar {
-  background-color: #29abe2;
-  grid-area: p3sidebar;
-  border: red 1rem solid;
+#interferometry_cap {
+  caption-side: bottom;
+  /* position: relative; */
+  text-align: left;
 }
-
-#p3s1 {
-  grid-area: p3s1;
-  border: orange 1rem solid;
-}
-#p3s2 {
-  grid-area: p3s2;
-  border: blue 0.5rem solid;
-}
+/* below this is for the publication page */
 
 #pubpage_title,
 #expand-collapse {
@@ -818,7 +851,7 @@ iframe {
 /* media control for responsive text */
 @media screen and (max-width: 858px) {
   .fig_caption,
-  #p2_sidepanel ul li {
+  #sidebar ul li {
     font-size: 50%;
   }
   .image_caption {
@@ -834,7 +867,7 @@ iframe {
 
 @media screen and (min-width: 1024px) {
   .fig_caption,
-  #p2_sidepanel ul li {
+  #sidebar ul li {
     font-size: 100%;
   }
   .image_caption {
@@ -847,7 +880,7 @@ iframe {
 
 @media screen and (min-width: 1200px) {
   .fig_caption,
-  #p2_sidepanel ul li {
+  #sidebar ul li {
     font-size: 110%;
   }
   .image_caption {
