@@ -47,6 +47,7 @@ body {
   height: 4rem;
   float: left;
   line-height: 5rem;
+  border-radius: 50%;
   /* border: 0.5rem solid pink; */
   /* margin: 0.5rem 0 0 0.5rem; */
 }
