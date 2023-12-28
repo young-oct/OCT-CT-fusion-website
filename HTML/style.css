@@ -603,21 +603,14 @@ body {
 #oct_3D_cap {
   caption-side: bottom;
   text-align: left;
+  margin-top: 0.5rem;
 }
 #oct_doppler_cap {
   caption-side: top;
   text-align: right;
+  margin-bottom: 0.5rem;
 }
-
-#td_oct {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  /* border: 0.1rem solid red; */
-  align-items: center;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
+/* 
 
 /* below this is for the oct basics page */
 #bullet_point {
