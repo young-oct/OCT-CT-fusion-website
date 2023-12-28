@@ -623,11 +623,12 @@ body {
 #bullet_point {
   list-style: disc;
   color: #333;
-  margin-left: 8vw;
+  margin-left: 6vw;
   font-size: 1rem; /* adjust as needed */
   line-height: 1rem; /* Adjust for readability */
   margin-bottom: 1.5vw; /* spacing between paragraphs */
-  text-align: justify;
+  /* text-align: justify; */
+  text-align: left;
 }
 u {
   text-decoration: underline;
