@@ -60,7 +60,7 @@ body {
   margin-right: auto;
   display: none;
   position: absolute;
-  right: 5rem;
+  right: 2.5rem;
   /* border: 0.5rem solid blue; */
 }
 
@@ -582,43 +582,31 @@ body {
   border-bottom: 0.1rem solid #333;
 }
 
-/* styling the ME-OCT page gif*/
-#p2_img1_c1 {
-  /* border: red solid 0.5rem; */
+#me_oct {
+  width: 40%;
   display: flex;
-  align-items: end;
-  position: relative;
-  justify-content: left;
-  width: 100%;
+  justify-content: center;
+  /* border: 0.1rem solid red; */
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
-#p2_img1_c2 {
-  /* border: green solid 0.5rem; */
-  display: flex;
-  align-items: start;
-  position: relative;
-  justify-content: right;
+#oct_doppler,
+#oct_3D {
+  display: block;
   width: 100%;
-}
-#p3_IMG_1,
-#p3_IMG_2 {
-  width: 90%;
+  margin: 0 auto;
   border-radius: 50%;
 }
-#p3_IMG_2 {
-  position: relative;
-  left: 1.5rem;
-}
 
-#p2_img1_fig_captionR {
-  caption-side: top;
-  /* position: relative; */
+#oct_3D_cap {
+  caption-side: bottom;
   text-align: left;
 }
-#p2_img1_fig_captionL {
-  caption-side: bottom;
+#oct_doppler_cap {
+  caption-side: top;
   text-align: right;
-  /* width: 18rem; */
 }
 
 /* below this is for the oct basics page */
