@@ -609,6 +609,16 @@ body {
   text-align: right;
 }
 
+#td_oct {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  /* border: 0.1rem solid red; */
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 /* below this is for the oct basics page */
 #bullet_point {
   list-style: disc;
@@ -653,6 +663,19 @@ u {
   /* position: relative; */
   text-align: left;
 }
+
+#td_oct {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+#td_oct_img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
 /* below this is for the publication page */
 
 #pubpage_title,
@@ -824,11 +847,11 @@ iframe {
 
 #backToTopBtn {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1rem;
+  right: 1rem;
   z-index: 99;
-  font-size: 2rem; /* Adjust size as needed */
-  color: #333; /* Icon color */
+  font-size: 1.75rem;
+  color: #333;
   display: none;
   transition: 0.3s ease-in-out;
 }
