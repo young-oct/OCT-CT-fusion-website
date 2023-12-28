@@ -638,13 +638,15 @@ u {
 }
 
 .fig_content {
-  height: 100%;
+  height: 90%;
   /* border: 0.5rem solid green; */
 }
 #interferometry_1 {
-  width: 80%;
+  width: 60%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  /* border: 0.5rem solid green; */
 }
 #interferometry_img {
   display: block;
@@ -656,6 +658,7 @@ u {
   caption-side: bottom;
   /* position: relative; */
   text-align: left;
+  margin-bottom: 2rem;
 }
 
 #td_oct {
@@ -666,7 +669,7 @@ u {
 
 #td_oct_img {
   display: block;
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
 }
 
