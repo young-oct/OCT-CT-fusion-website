@@ -13,6 +13,9 @@
       src="https://kit.fontawesome.com/68e9d88b8c.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+</script>
     <title>Interactive ME-OCT Altas</title>
   </head>
   <body>
@@ -32,8 +35,8 @@
             class="subnav_dropbtn">ME-OCT<span class="dropdown-icon">&#9662;</span></a>
             <div class="dropdown-content" id = "oct_dropdown">
                 <a href="me_oct.html">ME-OCT</a>
-              <a  href="OCT_basics.html">OCT basics</a>
-              <a id="active" href="OCT_development.html">OCT development</a>
+              <a href="OCT_basics.html">OCT basics</a>
+              <a id = "active" href="OCT_development.html">OCT development</a>
               <a href="OCT_realisation.html">Technical realization of ME-OCT</a>
               <a href="core_functions.html">Core functions of ME-OCT</a>
               <a href="tour_of_ear.html">Middle ear tour with OCT</a>
@@ -43,8 +46,7 @@
             <a href="#"
             class="subnav_dropbtn">Interactive altas<span class="dropdown-icon">&#9662;</span></a>
             <div class="dropdown-content" id = "interactive_dropdown">
-            <a
-            href="intractive_altas.html">Interactive altas</a>
+            <a href="intractive_altas.html">Interactive altas</a>
               <a href="normal_ear.html">Normal ear</a>
               <a href="traumatic.html">Traumatic middle ear injury</a>
               <a href="chelostoma.html">Cholesteatoma</a>
@@ -60,11 +62,153 @@
     </header>
     <div class="content">
       <h1 class="title_h1">
-OCT development
+        Time domain OCT (TD-OCT)
       </h1>
-      <h2 class="subtitle">A promising modality for otology</h2>
-
+      <h2 class="subtitle">The first-generation OCT technology</h2>
+      <p class="paragraph" id ="fisrtWord">
+        TD-OCT employs this concept and obtains depth information as a function of time by moving a reference mirror with a motorized actuator over the depth range.
+        The intensity at the output of the interferometer is measured with a photodetector,
+        while changing the optical path length in the reference arm. 
+        In TD-OCT, interference fringes can only be observed when the relative optical path length difference between the sample (containing objects of interest) and reference arms machetes within the coherence length of light source, 
+        allowing different reflectors to be spatially resolved by translating the reference mirror along the optical axis in TD-OCT. 
+        The envelope of the interference pattern (known as the A-line) represents the depth-resolved optical reflectance of the sample arm at a specific lateral position along its axial direction.
+      </p>
     </div>
+    <div id = "main_wrapper">
+      <div id = "sidebar">
+        <ul>
+          <li><a href="me_oct.html">ME-OCT</a></li>
+          <li><a href="OCT_basics.html">OCT basics</a></li>
+          <li><a class="active" href="OCT_development.html">OCT development</a></li>
+          <li><a href="OCT_realisation.html">Technical realization of ME-OCT</a></li>
+          <li><a href="core_functions.html">Core functions of ME-OCT</a></li>
+          <li><a href="tour_of_ear.html">Middle ear tour with OCT</a></li>
+      </ul>
+      </div>
+      <div class = "fig_content" id = "oct_aline_1">
+        <figure class="cap_fig_container">
+          <img id = "oct_aline_img"
+          src="images/oct_development/01_TD_OCT_Aline.gif" alt="">
+          <figcaption class="fig_caption" id = "oct_aline_cap">
+            Low coherence light allows for localizing in depth the reflective profiles of the sample. 
+            The back-reflected light from each arm is combined and only interferes if the optical path lengths of reference and sample arms match.
+            </figcaption>
+        </figure>
+      </div>
+    </div>
+    <p class="paragraph">
+      Two (2D) or three-dimensional (3D) cross-sectional images can be constructed by obtaining a set of raster-scanned A-lines along a desired lateral direction. 
+      OCT images are usually displayed in grayscale, where the horizontal axis corresponds to the direction of transverse or lateral scanning, 
+      and the vertical axis corresponds to the direction of axial scanning. 
+      To account for the high dynamic range and speckle noise often present in OCT images, 
+      pixel intensity in an OCT image is typically mapped to the logarithm of the interferogram envelope magnitude which compresses the dynamic range and enhances the image contrast.</p>
+      <div id = "main_wrapper">
+        <div class = "fig_content" id = "td_2d_oct">
+          <figure class="cap_fig_container">
+            <img id = "td_2d_oct_img"
+            src="images/oct_development/02_TD_OCT_lateral_scanning(256).gif" alt="">
+            <figcaption class="fig_caption" id = "oct_2d_cap">
+              The sample beam scans laterally across the sample to generate a cross-sectional view. </figcaption>
+          </figure>
+        </div>
+      </div>
+      <p class="paragraph">
+        In TD-OCT, light is emitted from a broadband source, 
+        such as a superluminescent diode (SLEDs). 
+        The characteristics of the light determine one key OCT performance metric: the axial resolution, 
+        \(\Delta z\), or coherence length, \(l_c\). 
+        Assuming that the spectral distribution of SLEDs is Gaussian, the axial resolution is given by:</p>
+    <p class="paragraph" style="text-align: center;">\( \Delta z = \frac{l_c}{2} = \frac{2 \ln 2}{\pi} \cdot \frac{{\lambda_o}^2}{\Delta \lambda} \)</p>
+    <p class="paragraph">
+      where \( \lambda_o \) is the center wavelength, and \( \Delta\lambda \) is the full width at half maximum (FWHM) spectral bandwidth. 
+      As the axial resolution is inversely proportional to the spectral bandwidth, 
+      a broadband source is preferred to achieve a higher axial resolution. 
+      In OCT, the lateral resolution is decoupled from the axial resolution and is governed by its optical design. 
+      The lateral resolution is inversely proportional to the numerical aperture (NA):
+    </p>
+    <p class="paragraph" style="text-align: center;">\( \Delta y = 1.27 \frac{{\lambda_o}}{NA} \)</p>
+    <p class="paragraph">
+      Although TD-OCT is simple to construct and offers a long-depth scan range, 
+      TD-OCT suffers from slow imaging acquisition speed and an unfavourable trade-off between imaging depth, 
+      imaging acquisition speed, and sensitivity.
+    </p>
+
+    <h1 class="title_h1">
+      Fourier domain OCT (FD-OCT)
+    </h1>
+    <h2 class="subtitle">Principle idea of FD-OCT</h2>
+    <p class="paragraph">
+      An alternative solution to TD-OCT is Fourier domain OCT (FD-OCT),
+       which is used in most modern OCT systems owing to superior acquisition speed and sensitivity.
+       In TD-OCT, axial detection is performed sequentially through the mechanical translation of the reference mirror whereas FD-OCT samples all axial depths simultaneously, 
+       enabling high sensitivity and fast acquisition. In FD-OCT, a spectral interferogram signal is generated by performing a spectrally resolved measurement of the interference intensity between the light reflected from the sample and light from a fixed reference arm,
+      as shown in here. The frequency of the cosine term in the interferometric signal, seen in the equation below:
+    </p>
+    <p class="paragraph" style="text-align: center;">  \( I(k) = G(k) \left( \int_{-\infty}^{\infty} \alpha(z) \cos(2knz) \, dz \right) \)</p>
+    <p class="paragraph">
+    is proportional to the relative path length difference between the reflector in the reference arm and the sample arm. 
+    Meanwhile, the amplitude of the interferometric signal encodes information about the sample reflectivity. 
+    As reflected light from all axial depths in the sample is captured and modulated in the source spectrum, 
+    all the spectral components are captured simultaneously which leads to faster acquisition speed and higher sensitivity as compared to TD-OCT. 
+  </p>
+  <div id = "main_wrapper">
+    <div class = "fig_content" id = "oct_dev">
+      <figure class="cap_fig_container">
+        <img id = "history"
+        src="images/oct_development/03_evolution of OCT phase eight.jpg" alt="">
+      </figure>
+    </div>
+    <div class = "fig_content" id = "oct_dev">
+      <figure class="cap_fig_container">
+        <img id = "fd_oct"
+        src="images/oct_development/04_SS_OCT_moving_space.gif" alt="">
+        <figcaption class="fig_caption" id = "fd_oct_1_cap">
+          Acquire interference for multiple wavelengths where the frequency encodes depth information.</figcaption>
+      </figure>
+    </div>
+    <div class = "fig_content" id = "oct_dev">
+      <figure class="cap_fig_container">
+        <img id = "fd_oct"
+        src="images/oct_development/05_SS_OCT_mutiple_samples.gif" alt="">
+        <figcaption class="fig_caption" id = "fd_oct_2_cap">
+          Interference for all depths and all wavelengths and the depth profile can be obtained via signal processing.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <p class="paragraph"> 
+    Two Fourier-domain architectures have been developed: spectral-domain OCT (SD-OCT) and swept-source OCT (SS-OCT). 
+    SD-OCT employs the same broadband light source as TD-OCT. 
+    However, instead of using a single detector to capture the entire A-scan, 
+    the spectrum of the interfered light is spatially separated with a diffraction grating and then sampled with a high-speed line camera. 
+    SD-OCT simultaneously illuminates and detects all the spectral channels. 
+    As a result, the signal-to-noise ratio (SNR) is improved in comparison to TD-OCT. 
+    In SD-OCT, the number of resolvable wavelengths determines the maximum scan range (i.e., sensitivity roll-off in depth), 
+    which is mostly dependent on the number of pixels available in the spectrometer (e.g., 512 or 4096). 
+  </p>
+  <div id = "main_wrapper">
+    <div class = "fig_content" id = "implementation_oct">
+      <figure class="cap_fig_container">
+        <img id = "implementation_oct_img"
+        src="images/oct_development/06_implementation_of_OCT.jpg" alt="">
+      </figure>
+    </div>
+  </div>
+  <p class="paragraph"> 
+    Instead of spatially decomposing a broadband source with a diffraction gating, 
+    an alternative that achieves a similar effect is to temporally sweep the wavelength of a narrowband source, 
+    a technique called swept source OCT (SS-OCT). 
+    SS-OCT utilises a wavelength-tunable laser to rapidly sweep through a range of wavelengths which allows the spectrum of the interferometer output to be sequentially recorded using a single photodetector.
+    The interferogram obtained from SS-OCT contains a range of frequencies that correspond to different depths within the tissue being imaged. 
+  </p>
+  <p class="paragraph"> 
+    Compared to SD-OCT, SS-OCT exhibits reduced detection losses owing to the higher detection efficiency of photodetectors as compared to CCDs.  
+    SS-OCT also make it possible to use balanced detection to remove common-mode interference much more easily than SD-OCT. 
+    Furthermore, SS-OCT offers additional benefits: the narrow linewidth permits a deeper scan range, 
+    the wider bandwidth enables higher axial resolution, 
+    sweep rates can be engineered to be significantly higher than the scan rates of line scan cameras, 
+    and the higher output power enables an improved sensitivity.
+  </p>
+    <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
     <footer class="footer">
 <p class="footer-content">
   Content &copy; by Junzhe "Young" Wang,

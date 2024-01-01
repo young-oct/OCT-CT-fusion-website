@@ -465,7 +465,7 @@ body {
 .fig_caption {
   font-style: italic;
   display: table-caption;
-  padding-bottom: 2.5%;
+  padding-bottom: 1%;
 }
 
 /*controls p1 1st image*/
@@ -670,6 +670,88 @@ u {
 #td_oct_img {
   display: block;
   width: 40%;
+  margin: 0 auto;
+}
+
+/* below this is for the oct development page */
+#oct_aline_1 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.5rem solid green; */
+}
+
+#oct_aline_img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#oct_aline_cap {
+  caption-side: bottom;
+  /* position: relative; */
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+#td_2d_oct {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#td_2d_oct_img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#oct_2d_cap {
+  caption-side: bottom;
+  /* position: relative; */
+  text-align: left;
+}
+
+#oct_dev {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* border: 0.1rem solid red; */
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#history,
+#fd_oct {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#fd_oct_1_cap {
+  caption-side: top;
+  /* position: relative; */
+  text-align: left;
+}
+#fd_oct_2_cap {
+  caption-side: bottom;
+  /* position: relative; */
+  text-align: left;
+}
+
+#implementation_oct {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#implementation_oct_img {
+  display: block;
+  width: 80%;
   margin: 0 auto;
 }
 
