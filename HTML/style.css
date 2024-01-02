@@ -356,7 +356,7 @@ body {
   .navlinks {
     /* height: 4rem; */
     display: flex;
-    left: -100%;
+    left: -105%;
     /* margin-left: 1rem; */
 
     text-align: center;
@@ -368,7 +368,6 @@ body {
     /* position: relative; */
     height: auto;
     top: 5.5rem;
-    z-index: 10;
     background: #262626;
     position: fixed;
     height: auto;
@@ -768,6 +767,19 @@ u {
 #oct_realization_img {
   display: block;
   width: 80%;
+  margin: 0 auto;
+}
+
+#system_detail {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#system_detail_img {
+  display: flex;
+  width: 60%;
   margin: 0 auto;
 }
 
