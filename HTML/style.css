@@ -755,6 +755,22 @@ u {
   margin: 0 auto;
 }
 
+/* below this is for the oct realisation page */
+
+#oct_realization {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.5rem solid green; */
+}
+
+#oct_realization_img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
 /* below this is for the publication page */
 
 #pubpage_title,
