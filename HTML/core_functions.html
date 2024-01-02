@@ -13,6 +13,9 @@
       src="https://kit.fontawesome.com/68e9d88b8c.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+</script>
     <title>Interactive ME-OCT Altas</title>
   </head>
   <body>
@@ -32,10 +35,10 @@
             class="subnav_dropbtn">ME-OCT<span class="dropdown-icon">&#9662;</span></a>
             <div class="dropdown-content" id = "oct_dropdown">
                 <a href="me_oct.html">ME-OCT</a>
-              <a  href="OCT_basics.html">OCT basics</a>
+              <a href="OCT_basics.html">OCT basics</a>
               <a href="OCT_development.html">OCT development</a>
               <a href="OCT_realisation.html">Technical realization of ME-OCT</a>
-              <a id="active" href="core_functions.html">Core functions of ME-OCT</a>
+              <a id = "active" href="core_functions.html">Core functions of ME-OCT</a>
               <a href="tour_of_ear.html">Middle ear tour with OCT</a>
             </div>
           </div>
@@ -43,8 +46,7 @@
             <a href="#"
             class="subnav_dropbtn">Interactive altas<span class="dropdown-icon">&#9662;</span></a>
             <div class="dropdown-content" id = "interactive_dropdown">
-            <a
-            href="intractive_altas.html">Interactive altas</a>
+            <a href="intractive_altas.html">Interactive altas</a>
               <a href="normal_ear.html">Normal ear</a>
               <a href="traumatic.html">Traumatic middle ear injury</a>
               <a href="chelostoma.html">Cholesteatoma</a>
@@ -60,12 +62,76 @@
     </header>
     <div class="content">
       <h1 class="title_h1">
-Core functions of ME-OCT      </h1>
-      <h2 class="subtitle">A promising modality for otology</h2>
-
+        Core functions of ME-OCT
+      </h1>
+      <h2 class="subtitle">One technology, endless diagnostic possibilities</h2>
+      <p class="paragraph" id ="fisrtWord">
+        Optical coherence tomography (OCT) has emerged as a significant advancement in otology and auditory physiology, 
+        offering complementary information for clinical decision-making in the examination of the tympanic membrane (TM), 
+        ossicular chain, and inner ear. 
+        This non-invasive, depth-resolved imaging technique for hearing diagnostics has many advantages over traditional otoscopes and surgical microscopes, 
+        which are the primary tools for otologic point of care imaging. 
+      </p>
+      <p class="paragraph">
+        Pitris et al. first demonstrated the potential of OCT imaging for the TM and middle ear in 2001. 
+        However, widespread interest in OCT technology for otology research and clinical applications took nearly a decade to develop due to technological limitations. 
+        The introduction of swept-source OCT (SS-OCT) in the 2010s, 
+        featuring akinetic all-semiconductor lasers and other highly phase-stable systems, 
+        made real-time in-vivo middle ear OCT clinically viable.
+      </p>
     </div>
+    <div id = "main_wrapper">
+      <div id = "sidebar">
+        <ul>
+          <li><a href="me_oct.html">ME-OCT</a></li>
+          <li><a href="OCT_basics.html">OCT basics</a></li>
+          <li><a href="OCT_development.html">OCT development</a></li>
+          <li><a href="OCT_realisation.html">Technical realization of ME-OCT</a></li>
+          <li><a class="active" href="core_functions.html">Core functions of ME-OCT</a></li>
+          <li><a href="tour_of_ear.html">Middle ear tour with OCT</a></li>
+      </ul>
+      </div>
+      <div class = "fig_content" id = "oct_realization">
+        <figure class="cap_fig_container">
+          <img id = "oct_realization_img"
+          src="images/oct_realisation/01_ME-OCT_realization.gif" alt="">
+        </figure>
+      </div>
+    </div>
+    <p class="paragraph">
+      ME-OCT has since been applied to various clinical applications, 
+      such as detecting cholesteatomas, guiding ear surgery, 
+      measuring TM thickness, grading otitis media, 
+      evaluating tympanoplasty success, 
+      and discriminating presumptive otosclerosis from healthy controls. 
+      Notably, OCT has shown potential to improve otitis media (OM) diagnosis by detecting biofilm presence behind the TM, 
+      resulting in higher diagnostic sensitivity (83% vs. 74%) and specificity (98% vs. 60%) compared to standard otoscopy. 
+      In a study conducted with a pediatric population, 
+      OCT showed compelling diagnostic accuracy in detecting effusion in the middle ear space, 
+      exhibiting high diagnostic accuracy of 90.6%, sensitivity of 90.9%, and specificity of 90.2%. 
+      This improvement has the potential to optimise clinical workflow in comparison to traditional methods, 
+      such as pneumatic otoscopy, which often necessitates sealing the ear canal.      
+    </p>
+    <div id = "main_wrapper">
+      <div class = "fig_content" id = "system_detail">
+        <figure class="cap_fig_container" id = "system_detail_fig">
+          <img id = "system_detail_img"
+          src="images/oct_realisation/02_system_detial.jpg" alt="">
+      </div>
+    </div>
+    <p class="paragraph">
+      To accelerate the clinical adoption of OCT in otology, 
+      several form factors have been explored to address the diverse clinical needs. 
+      For example, integrating OCT with surgical microscopes has enabled detection of microanatomic changes in TM layers and differentiation of keratin from normal or inflamed middle ear mucosa. 
+      Handheld OCT probes, resembling otoscopes or endoscopes, 
+      have demonstrated their ability to detect biofilm behind the TM and to identify ossicular fixations. 
+      Here you can see the pathway our lab took to bring middle ear OCT system from a benchtop design to a practical clinical solution for ENTs.
+      We developed a handheld, otoscopic form factor that is already familiar to clinicians. 
+      This system comprises a desktop console, a tethered hand-piece, 
+      and an intuitive user interface. It is designed for single-operator use, 
+      allowing for direct patient interaction and simultaneous measurement initiation.
+    </p>
     <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
-
     <footer class="footer">
 <p class="footer-content">
   Content &copy; by Junzhe "Young" Wang,
