@@ -778,6 +778,63 @@ u {
   text-align: justify;
 }
 
+/* below this is for the core functions page */
+
+#core_functions_1 {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.5rem solid green; */
+}
+
+#core_functions_1_img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#core_2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.5rem solid green; */
+}
+
+#core_2_img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#core_3_img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#core_4 {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  /* border: 0.1rem solid red; */
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#core_4_img {
+  display: block;
+  width: 65%;
+  margin: 0 auto;
+}
+#core_5_img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
 /* below this is for the publication page */
 
 #pubpage_title,
