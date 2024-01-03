@@ -709,12 +709,11 @@ u {
 
 #oct_2d_cap {
   caption-side: bottom;
-  /* position: relative; */
-  text-align: left;
+  text-align: center;
 }
 
 #oct_dev {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
   /* border: 0.1rem solid red; */
@@ -724,33 +723,9 @@ u {
 }
 
 #history,
-#fd_oct {
+#oct_implementation {
   display: block;
   width: 100%;
-  margin: 0 auto;
-}
-
-#fd_oct_1_cap {
-  caption-side: top;
-  /* position: relative; */
-  text-align: left;
-}
-#fd_oct_2_cap {
-  caption-side: bottom;
-  /* position: relative; */
-  text-align: left;
-}
-
-#implementation_oct {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#implementation_oct_img {
-  display: block;
-  width: 80%;
   margin: 0 auto;
 }
 
@@ -781,6 +756,26 @@ u {
   display: flex;
   width: 60%;
   margin: 0 auto;
+}
+
+#oct_dev_2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.5rem solid green; */
+}
+
+#oct_dev_img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#oct_dev_2_cap {
+  caption-side: bottom;
+  text-align: justify;
 }
 
 /* below this is for the publication page */
@@ -970,7 +965,7 @@ iframe {
 @media screen and (max-width: 858px) {
   .fig_caption,
   #sidebar ul li {
-    font-size: 50%;
+    font-size: 80%;
   }
   .image_caption {
     font-size: 45%;
