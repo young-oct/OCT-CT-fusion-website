@@ -811,12 +811,12 @@ u {
 
 #core_3_img {
   display: block;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
 #core_4 {
-  width: 80%;
+  width: 75%;
   display: flex;
   justify-content: center;
   /* border: 0.1rem solid red; */
@@ -827,7 +827,7 @@ u {
 
 #core_4_img {
   display: block;
-  width: 65%;
+  width: 70%;
   margin: 0 auto;
 }
 #core_5_img {
