@@ -800,22 +800,15 @@ u {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 0.5rem solid green; */
 }
 
 #core_2_img {
   display: block;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
 }
 
-#core_3_img {
-  display: block;
-  width: 90%;
-  margin: 0 auto;
-}
-
-#core_4 {
+#core_3 {
   width: 75%;
   display: flex;
   justify-content: center;
@@ -825,15 +818,35 @@ u {
   margin-right: 0.5rem;
 }
 
-#core_4_img {
+#core_3_img {
   display: block;
   width: 70%;
   margin: 0 auto;
 }
-#core_5_img {
+#core_4_img {
   display: block;
   width: 50%;
   margin: 0 auto;
+}
+
+#core_4 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#core_5_img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#core_4_cap {
+  caption-side: bottom;
+  text-align: center;
 }
 /* below this is for the publication page */
 
