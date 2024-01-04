@@ -627,6 +627,7 @@ u {
 }
 #main_wrapper {
   margin: 0.5rem auto;
+  margin-top: 0.5rem;
 
   /* border: 0.5rem solid pink; */
   width: 90%;
@@ -847,6 +848,28 @@ u {
 #core_4_cap {
   caption-side: bottom;
   text-align: center;
+}
+
+/* below this is for the tour of ear page */
+
+#tour_1 {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.5rem solid green; */
+}
+
+#tour_1_img {
+  display: block;
+  width: 45%;
+  margin: 0 auto;
+}
+
+video {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 1%;
 }
 /* below this is for the publication page */
 
