@@ -318,7 +318,7 @@ body {
   font-size: 1rem; /* adjust as needed */
   line-height: 1.5rem; /* Adjust for readability */
   margin-bottom: 1.5vw; /* spacing between paragraphs */
-  text-align: justify;
+  text-align: left;
 }
 
 @media screen and (min-width: 768px) {
@@ -806,7 +806,10 @@ u {
 #core_2_img {
   display: block;
   width: 100%;
+
   margin: 0 auto;
+  /* top right buttom left */
+  padding: 0 0.25rem 0 0.25rem;
 }
 
 #core_3 {
