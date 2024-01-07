@@ -919,8 +919,28 @@ u {
   margin: 0 auto;
 }
 
-video {
+#box_wrapper {
+  margin: 0.25rem auto;
+  margin-bottom: 0.25rem;
+
+  /* border: 0.5rem solid pink; */
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.5rem solid green; */
+}
+
+#video_container {
+  /* border: 0.5rem solid pink; */
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+video {
+  width: 100%;
   margin: 0 auto;
   border-radius: 1%;
 }
@@ -953,7 +973,7 @@ video {
 }
 
 #fusion_3 {
-  width: 100%;
+  width: 65%;
   display: flex;
   margin: 0 auto;
 }
@@ -961,7 +981,7 @@ video {
 /* Set the default image size */
 #fusion_3_img {
   display: block;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -975,12 +995,11 @@ video {
 #case_group_img {
   margin: 0.25rem auto;
 
-  /* border: 0.5rem solid pink; */
   width: 100%;
   /* height: 0%; */
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
 }
 .blue_box {
   /* Existing styles for the blue box */
@@ -996,13 +1015,13 @@ video {
 .box-title {
   position: absolute;
   top: 0.5rem; /* Adjust as necessary */
-  left: 1rem; /* Adjust as necessary */
-  margin: 0rem; /* Remove default margins */
+  left: 0.5rem; /* Adjust as necessary */
+  margin-bottom: 0.5rem;
   /* padding: 0.5em; Add some padding inside the box */
   color: #333;
-  font-size: 1.15em; /* Adjust the size as needed */
+  font-size: 1em; /* Adjust the size as needed */
   font-weight: normal;
-  /* Additional styling as required */
+  /* font-style: italic; */
 }
 
 .arrow {
@@ -1040,13 +1059,12 @@ video {
 }
 
 #case_group_img {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  margin-bottom: 1rem;
 
   margin-top: 1rem;
-  margin-top: 1rem;
   justify-content: space-around;
-  /* border: #29abe2 0.1rem solid; */
+  align-items: end;
 }
 #case1_axial_1 {
   width: 100%;
@@ -1056,7 +1074,7 @@ video {
 }
 #case1_axial_1_img {
   display: block;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
 }
 

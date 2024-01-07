@@ -90,10 +90,11 @@ function calculateScaleFactor(imageElement) {
   var imageWidth = imageElement.offsetWidth;
 
   // Example calculation: adjust the scale factor based on your needs
-  var scaleFactor = (viewportWidth / imageWidth) * 0.4; // Scale to 40% of viewport width
+  var scaleFactor = viewportWidth / imageWidth;
 
   // Limiting scale factor to a maximum of 1 (to prevent upscaling)
-  scaleFactor = Math.min(scaleFactor, 1);
+  scaleFactor = Math.min(scaleFactor, 0.8);
+
   return scaleFactor;
 }
 
@@ -126,7 +127,7 @@ function navigateMedia(direction) {
   var activeIndex = mediaElements.indexOf(activeElement); // Get the index of that element
 
   // Check for no active element
-  if (activeElement !== null) {
+  if (activeElement) {
     // Hide the currently active element and remove the 'enlarged' class
     activeElement.classList.remove("enlarged");
     activeElement.style.transform = ""; // Reset the transform property
