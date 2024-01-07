@@ -90,7 +90,7 @@ function calculateScaleFactor(imageElement) {
   var imageWidth = imageElement.offsetWidth;
 
   // Example calculation: adjust the scale factor based on your needs
-  var scaleFactor = (viewportWidth / imageWidth) * 0.8; // Scale to 80% of viewport width
+  var scaleFactor = (viewportWidth / imageWidth) * 0.4; // Scale to 40% of viewport width
 
   // Limiting scale factor to a maximum of 1 (to prevent upscaling)
   scaleFactor = Math.min(scaleFactor, 1);
@@ -161,8 +161,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Hide the arrows
-document.querySelector(".fa-arrow-left").style.display = "none";
-document.querySelector(".fa-arrow-right").style.display = "none";
+document.querySelector(".fa-arrow-left").style.display = "none"; // Force arrow to be off
+document.querySelector(".fa-arrow-right").style.display = "none"; // Force arrow to be off
 
 // Function to setup initial states on page load
 function setupInitialStates() {

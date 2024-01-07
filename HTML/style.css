@@ -972,33 +972,48 @@ video {
 }
 
 /* below this is for the case I axial page */
-.main_wrapper {
+#case_group_img {
   margin: 0.25rem auto;
 
   /* border: 0.5rem solid pink; */
-  width: 90%;
+  width: 100%;
   /* height: 0%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+}
+.blue_box {
+  /* Existing styles for the blue box */
+  border: #29abe2 0.1rem solid;
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  border-radius: 0.2rem;
+
+  position: relative; /* If not already set - for positioning the title absolutely within the box */
 }
 
-/* Arrow base styles */
-.arrow {
-  display: none; /* Ensure arrows are hidden by default */
+.box-title {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 200; /* Higher than overlay to be clickable */
-  cursor: pointer;
-  font-size: 2rem;
-  color: #29abe2;
-  /* padding: 1rem; */
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  top: 0.5rem; /* Adjust as necessary */
+  left: 1rem; /* Adjust as necessary */
+  margin: 0rem; /* Remove default margins */
+  /* padding: 0.5em; Add some padding inside the box */
+  color: #333;
+  font-size: 1.15em; /* Adjust the size as needed */
+  font-weight: normal;
+  /* Additional styling as required */
+}
 
-  border: none; /* Remove any default border */
+.arrow {
+  display: block; /* Initially set to block to make them visible for positioning */
+  position: fixed; /* Use fixed to keep them in the same place regardless of scrolling */
+  top: 50%; /* Start at the vertical center of the viewport */
+  transform: translateY(-50%); /* Shift up by half the arrow's height to center it */
+  z-index: 2000; /* Ensure it's above other elements */
+  cursor: pointer;
+  font-size: 2rem; /* Adjust size as needed */
+  color: #29abe2; /* Your color preference */
 }
 
 /* Styles for hover effect */
@@ -1009,32 +1024,34 @@ video {
 
 /* Specific styles for left arrow */
 .left-arrow {
-  left: 0.25rem;
+  left: 1rem;
 }
 
 /* Specific styles for right arrow */
 .right-arrow {
-  right: 0.25rem;
+  right: 1rem;
 }
 
-/* If using Font Awesome, ensure they are hidden by default */
-.fa-arrow-right,
-.fa-arrow-left {
-  display: none;
+.fa-arrow-left,
+.fa-arrow-right {
+  /* Padding is fine, but it won't center the arrow */
+  padding: 0.5rem;
 }
 
 #case_group_img {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border: #262626 0.5rem solid;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  margin-top: 1rem;
+  margin-top: 1rem;
   justify-content: space-around;
+  /* border: #29abe2 0.1rem solid; */
 }
 #case1_axial_1 {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.5rem solid green;
 }
 #case1_axial_1_img {
   display: block;
@@ -1042,6 +1059,11 @@ video {
   margin: 0 auto;
 }
 
+#case1_axial_1_img_cap {
+  font-size: 0.8rem;
+  caption-side: bottom;
+  text-align: center;
+}
 /* below this is for the publication page */
 
 #pubpage_title,
