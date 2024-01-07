@@ -140,7 +140,7 @@ function addEventListeners() {
 }
 // Function to add event listeners to images for toggling size
 function addImageClickEventListeners() {
-  var mediaElements = document.querySelectorAll("img, video");
+  var mediaElements = document.querySelectorAll(".enlarge_img, video");
 
   mediaElements.forEach(function (mediaElement) {
     mediaElement.addEventListener("click", function () {

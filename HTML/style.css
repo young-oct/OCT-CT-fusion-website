@@ -967,6 +967,7 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.15); /* Center and scale the image */
+  /* transition: 0.1s ease-in-out; */
 }
 
 /* below this is for the publication page */
