@@ -62,6 +62,7 @@ function toggleMediaSize(mediaElement) {
 
   if (mediaElement.classList.contains("enlarged")) {
     mediaElement.classList.remove("enlarged");
+    mediaElement.style.transform = ""; //reset transform
 
     overlay.style.display = "none"; // Hide overlay
     body.style.overflow = "auto"; // Enable scrolling
@@ -100,10 +101,15 @@ function calculateScaleFactor(imageElement) {
 function hideOverlay() {
   var overlay = document.getElementById("overlay");
   var enlargedImages = document.querySelectorAll(".enlarged");
+  var videos = document.querySelectorAll("video");
 
   enlargedImages.forEach(function (mediaElement) {
     mediaElement.classList.remove("enlarged");
     mediaElement.style.transform = ""; // Reset the transform property
+  });
+  // Pause all videos
+  videos.forEach(function (video) {
+    video.pause();
   });
 
   overlay.style.display = "none";
