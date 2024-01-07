@@ -62,23 +62,86 @@ function toggleMediaSize(mediaElement) {
 
   if (mediaElement.classList.contains("enlarged")) {
     mediaElement.classList.remove("enlarged");
+
     overlay.style.display = "none"; // Hide overlay
     body.style.overflow = "auto"; // Enable scrolling
+
+    // Hide the arrows
+    document.querySelector(".fa-arrow-left").style.display = "none";
+    document.querySelector(".fa-arrow-right").style.display = "none";
   } else {
+    var scaleFactor = calculateScaleFactor(mediaElement);
+
+    //Apply the scale and centering
+    mediaElement.style.transform = "translate(-50%, -50%) scale(" + scaleFactor + ")";
+
     mediaElement.classList.add("enlarged");
     overlay.style.display = "block"; // Show overlay
     body.style.overflow = "hidden"; // Disable scrolling
+    // Show the arrows
+    document.querySelector(".fa-arrow-left").style.display = "block";
+    document.querySelector(".fa-arrow-right").style.display = "block";
   }
+}
+// Function to dynamically calculate the appropriate scaling factor
+function calculateScaleFactor(imageElement) {
+  var viewportWidth = window.innerWidth;
+  var imageWidth = imageElement.offsetWidth;
+
+  // Example calculation: adjust the scale factor based on your needs
+  var scaleFactor = (viewportWidth / imageWidth) * 0.8; // Scale to 80% of viewport width
+
+  // Limiting scale factor to a maximum of 1 (to prevent upscaling)
+  scaleFactor = Math.min(scaleFactor, 1);
+  return scaleFactor;
 }
 
 // Function to hide overlay and reset image size
 function hideOverlay() {
+  var overlay = document.getElementById("overlay");
   var enlargedImages = document.querySelectorAll(".enlarged");
+
   enlargedImages.forEach(function (mediaElement) {
     mediaElement.classList.remove("enlarged");
+    mediaElement.style.transform = ""; // Reset the transform property
   });
-  document.getElementById("overlay").style.display = "none";
+
+  overlay.style.display = "none";
   document.body.style.overflow = "auto"; // Enable scrolling
+  // Also hide the arrows when the overlay is hidden
+  document.querySelector(".left-arrow").style.display = "none";
+  document.querySelector(".right-arrow").style.display = "none";
+}
+
+// Function to navigate elements when arrow clicked
+function navigateMedia(direction) {
+  var mediaElements = Array.from(document.querySelectorAll(".enlarge_img")); // Convert NodeList to Array
+  var activeElement = document.querySelector(".enlarge_img.enlarged"); // Get the currently enlarged element
+  var activeIndex = mediaElements.indexOf(activeElement); // Get the index of that element
+
+  // Check for no active element
+  if (activeElement !== null) {
+    // Hide the currently active element and remove the 'enlarged' class
+    activeElement.classList.remove("enlarged");
+    activeElement.style.transform = ""; // Reset the transform property
+
+    // Calculate the new index
+    if (direction === "next") {
+      activeIndex = (activeIndex + 1) % mediaElements.length;
+    } else if (direction === "prev") {
+      activeIndex = (activeIndex - 1 + mediaElements.length) % mediaElements.length;
+    }
+
+    // activeElement.style.display = "none";
+
+    // Add the 'enlarged' class to the new element and show it
+    var newActiveElement = mediaElements[activeIndex];
+    var scaleFactor = calculateScaleFactor(newActiveElement);
+    newActiveElement.style.transform = "translate(-50%, -50%) scale(" + scaleFactor + ")";
+
+    newActiveElement.classList.add("enlarged");
+    newActiveElement.style.display = "block";
+  }
 }
 
 // ----- Event Listeners and Initializations -----
@@ -88,7 +151,12 @@ document.addEventListener("DOMContentLoaded", function () {
   initializeReverseNumbering();
   addEventListeners();
   addImageClickEventListeners();
+  addArrowEventListeners(); // Initialize arrow navigation
 });
+
+// Hide the arrows
+document.querySelector(".fa-arrow-left").style.display = "none";
+document.querySelector(".fa-arrow-right").style.display = "none";
 
 // Function to setup initial states on page load
 function setupInitialStates() {
@@ -146,5 +214,20 @@ function addImageClickEventListeners() {
     mediaElement.addEventListener("click", function () {
       toggleMediaSize(this); // Make sure to call the correct function name
     });
+  });
+}
+
+// Function to add event listeners for the navigation arrows
+function addArrowEventListeners() {
+  var leftArrow = document.querySelector(".left-arrow");
+  var rightArrow = document.querySelector(".right-arrow");
+
+  leftArrow.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevent the overlay from closing
+    navigateMedia("prev");
+  });
+  rightArrow.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevent the overlay from closing
+    navigateMedia("next");
   });
 }
