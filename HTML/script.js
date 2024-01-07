@@ -228,6 +228,7 @@ function addArrowEventListeners() {
   var leftArrow = document.querySelector(".left-arrow");
   var rightArrow = document.querySelector(".right-arrow");
 
+  // Click events for arrows
   leftArrow.addEventListener("click", function (event) {
     event.stopPropagation(); // Prevent the overlay from closing
     navigateMedia("prev");
@@ -235,5 +236,31 @@ function addArrowEventListeners() {
   rightArrow.addEventListener("click", function (event) {
     event.stopPropagation(); // Prevent the overlay from closing
     navigateMedia("next");
+  });
+  // Keyboard events for arrow keys
+  document.addEventListener("keydown", function (event) {
+    // check if the overlay is currently active to avoid
+    // key event propagate to image viewer
+    var overlay = document.getElementById("overlay");
+
+    if (overlay.style.display == "block") {
+      if (event.key === "ArrowLeft") {
+        // If the left arrow key is pressed
+        navigateMedia("prev");
+        leftArrow.classList.add("active");
+        setTimeout(function () {
+          leftArrow.classList.remove("active");
+        }, 150); //clear active state after 150ms
+        event.preventDefault(); // Prevent default action to avoid scrolling the page
+      } else if (event.key === "ArrowRight") {
+        // If the right arrow key is pressed
+        navigateMedia("next");
+        rightArrow.classList.add("active");
+        setTimeout(function () {
+          rightArrow.classList.remove("active");
+        }, 150); //clear active state after 150ms
+        event.preventDefault(); // Prevent default action to avoid scrolling the page
+      }
+    }
   });
 }

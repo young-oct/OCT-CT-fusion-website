@@ -1016,8 +1016,9 @@ video {
   color: #29abe2; /* Your color preference */
 }
 
-/* Styles for hover effect */
-.arrow:hover {
+/* Styles for hover effect  */
+.arrow:hover,
+.arrow.active {
   border: #29abe2 0.1rem solid;
   border-radius: 0.2rem;
 }
