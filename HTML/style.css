@@ -18,6 +18,35 @@ body {
   height: 100vh;
   padding-bottom: 0.25rem;
 }
+.paragraph_inline {
+  /* font-style: italic; */
+  font-weight: bold;
+  color: #29abe2;
+  text-decoration: underline;
+}
+
+ol {
+  counter-reset: list-counter;
+  list-style-position: outside;
+  padding-left: 0; /* Remove default padding */
+}
+ol li {
+  counter-increment: list-counter;
+  color: #333;
+  margin-left: 6vw;
+  margin-right: 6vw;
+  font-size: 1rem; /* adjust as needed */
+  line-height: 1.2rem; /* Adjust for readability */
+  margin-bottom: 1.15vw; /* spacing between paragraphs */
+  text-align: balance; /* 'pretty' is not a valid value */
+  padding-left: 2rem; /* Space for the custom counter */
+}
+ol li::before {
+  content: "(" counter(list-counter) ") ";
+  position: absolute; /* Position it absolutely within the li */
+  margin-left: -2rem; /* Pull the counter back to the left */
+}
+
 .content {
   /* this is a temporay fix unitl I figure out how to do 
    1. click the menu 
@@ -317,8 +346,8 @@ body {
   color: #333; /* Dark gray text for the paragraph */
   font-size: 1rem; /* adjust as needed */
   line-height: 1.5rem; /* Adjust for readability */
-  margin-bottom: 1.5vw; /* spacing between paragraphs */
-  text-align: left;
+  margin-bottom: 1rem; /* spacing between paragraphs */
+  text-align: pretty;
 }
 
 @media screen and (min-width: 768px) {
@@ -546,6 +575,7 @@ body {
   /* position: relative; */
   justify-content: center;
   align-items: center;
+  text-wrap: balance;
 }
 #sidebar ul {
   /* position: absolute; */
@@ -626,8 +656,7 @@ u {
   text-decoration: underline;
 }
 #main_wrapper {
-  margin: 0.5rem auto;
-  margin-top: 0.5rem;
+  margin: 0.25rem auto;
 
   /* border: 0.5rem solid pink; */
   width: 90%;
@@ -874,6 +903,72 @@ video {
   margin: 0 auto;
   border-radius: 1%;
 }
+
+/* below this is for the oct/ct image fusion page */
+
+#fusion_1 {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.5rem solid green; */
+}
+#fusion_1_img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#fusion_2 {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+#fusion_2_img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#fusion_3 {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+/* Set the default image size */
+#fusion_3_img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#fusion_3_img_cap {
+  font-size: 0.8rem;
+  caption-side: bottom;
+  text-align: center;
+}
+#overlay {
+  display: none; /* Hidden by default */
+  position: fixed; /* Position it to cover the whole screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  z-index: 9; /*  below the enlarged image */
+}
+
+/* for the enlarged state */
+.enlarged {
+  z-index: 10; /* Make sure the image is above other elements */
+  position: fixed; /* Change to fixed to keep the image in the viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.15); /* Center and scale the image */
+}
+
 /* below this is for the publication page */
 
 #pubpage_title,

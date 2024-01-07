@@ -55,12 +55,39 @@ function scrollFunction() {
   }
 }
 
+// Add function for toggling image size
+function toggleMediaSize(mediaElement) {
+  var body = document.body;
+  var overlay = document.getElementById("overlay");
+
+  if (mediaElement.classList.contains("enlarged")) {
+    mediaElement.classList.remove("enlarged");
+    overlay.style.display = "none"; // Hide overlay
+    body.style.overflow = "auto"; // Enable scrolling
+  } else {
+    mediaElement.classList.add("enlarged");
+    overlay.style.display = "block"; // Show overlay
+    body.style.overflow = "hidden"; // Disable scrolling
+  }
+}
+
+// Function to hide overlay and reset image size
+function hideOverlay() {
+  var enlargedImages = document.querySelectorAll(".enlarged");
+  enlargedImages.forEach(function (mediaElement) {
+    mediaElement.classList.remove("enlarged");
+  });
+  document.getElementById("overlay").style.display = "none";
+  document.body.style.overflow = "auto"; // Enable scrolling
+}
+
 // ----- Event Listeners and Initializations -----
 
 document.addEventListener("DOMContentLoaded", function () {
   setupInitialStates();
   initializeReverseNumbering();
   addEventListeners();
+  addImageClickEventListeners();
 });
 
 // Function to setup initial states on page load
@@ -110,4 +137,14 @@ function addEventListeners() {
       document.documentElement.scrollTop = 0;
     });
   }
+}
+// Function to add event listeners to images for toggling size
+function addImageClickEventListeners() {
+  var mediaElements = document.querySelectorAll("img, video");
+
+  mediaElements.forEach(function (mediaElement) {
+    mediaElement.addEventListener("click", function () {
+      toggleMediaSize(this); // Make sure to call the correct function name
+    });
+  });
 }
