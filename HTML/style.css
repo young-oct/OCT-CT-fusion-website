@@ -1159,17 +1159,17 @@ video {
 }
 
 .fused_side_img {
-  width: 80%;
+  width: 95%;
   display: block;
   margin: 0 auto;
 }
 .side_top {
-  border: 0.5rem solid blue;
+  /* border: 0.5rem solid blue; */
   position: absolute;
   top: 0;
 }
 .side_bottom {
-  border: 0.5rem solid orange;
+  /* border: 0.5rem solid orange; */
   position: absolute;
   bottom: 0;
 }
