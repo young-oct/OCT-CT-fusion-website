@@ -1011,6 +1011,15 @@ video {
 
   position: relative; /* If not already set - for positioning the title absolutely within the box */
 }
+.case_title {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  font-size: 1rem;
+  color: #333;
+  font-weight: normal;
+  margin-top: 0.1rem;
+  margin-bottom: 0.625rem;
+}
 
 .box-title {
   position: absolute;
@@ -1022,6 +1031,18 @@ video {
   font-size: 1em; /* Adjust the size as needed */
   font-weight: normal;
   /* font-style: italic; */
+}
+
+.box-sub-title {
+  position: absolute;
+  top: 1.75rem; /* Adjust as necessary */
+  left: 0.5rem; /* Adjust as necessary */
+  margin-bottom: 0.5rem;
+  /* padding: 0.5em; Add some padding inside the box */
+  color: #333;
+  font-size: 0.7em; /* Adjust the size as needed */
+  font-weight: normal;
+  font-style: italic;
 }
 
 .arrow {
@@ -1066,23 +1087,109 @@ video {
   justify-content: space-around;
   align-items: end;
 }
-#case1_axial_1 {
+#case_fig {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#case1_axial_1_img {
+#case_img {
   display: block;
   width: 60%;
   margin: 0 auto;
 }
-
-#case1_axial_1_img_cap {
+#case_img_cap {
   font-size: 0.8rem;
   caption-side: bottom;
   text-align: center;
 }
+
+.fused_container {
+  margin: 0.25rem auto;
+
+  border: 0.1rem solid green;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_container {
+  width: 80%;
+  border: 0.5rem solid pink;
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+
+#download_icon {
+  position: absolute;
+  top: 1.5%;
+  left: 21.5%; /* remeber to use precentage to control the location so it's responsive to the window size change  */
+  z-index: 100;
+  color: #222;
+  font-size: 1.75rem;
+}
+#share_icon {
+  position: absolute;
+  top: 1.5%;
+  right: 21.5%; /* remeber to use precentage to control the location so it's responsive to the window size change  */
+  z-index: 100;
+  color: #222;
+  font-size: 1.75rem;
+}
+
+#download_icon:hover,
+#share_icon:hover {
+  color: #444;
+}
+
+.side_container {
+  width: 20%;
+  border: 0.5rem solid red;
+  height: 100%;
+  position: relative;
+  /* 
+  justify-content: center;
+  flex-direction: column; */
+}
+
+.fused_main_img {
+  width: 60%;
+  position: relative;
+}
+
+.fused_side_img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+.side_top {
+  border: 0.5rem solid blue;
+  position: absolute;
+  top: 0;
+}
+.side_bottom {
+  border: 0.5rem solid orange;
+  position: absolute;
+  bottom: 0;
+}
+
+#fused_top_cap {
+  font-size: 0.75rem;
+  caption-side: bottom;
+  text-align: center;
+  text-wrap: balance;
+
+  /* font-style: normal; */
+}
+#fused_bottom_cap {
+  font-size: 0.75rem;
+  caption-side: top;
+  text-align: center;
+  text-wrap: balance;
+  /* font-style: normal; */
+}
+
 /* below this is for the publication page */
 
 #pubpage_title,
