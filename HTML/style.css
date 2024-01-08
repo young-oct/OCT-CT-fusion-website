@@ -1174,6 +1174,13 @@ video {
   bottom: 0;
 }
 
+/* .stack_icon {
+  position: absolute;
+  bottom: 2%;
+  right: 12.5%;
+  font-size: 1.5rem;
+  color: #222;
+} */
 #fused_top_cap {
   font-size: 0.75rem;
   caption-side: bottom;
