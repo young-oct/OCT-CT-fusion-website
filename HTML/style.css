@@ -1117,8 +1117,9 @@ video {
   width: 80%;
   border: 0.5rem solid pink;
   justify-content: center;
+
   display: flex;
-  position: relative;
+  position: relative; /*set it to relative for toggle switch  */
 }
 
 #download_icon {
@@ -1195,6 +1196,86 @@ video {
   text-align: center;
   text-wrap: balance;
   /* font-style: normal; */
+}
+.switch-container {
+  position: absolute;
+  top: 1.5%;
+  left: 42.5%; /* this should be 50% but it is 42.5 magic number; */
+  z-index: 2;
+}
+
+.switch {
+  position: relative;
+  display: block;
+  width: 6rem;
+  height: 1.75rem;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* Show text when the switch is active */
+input + .slider-round::after {
+  opacity: 1; /* Make text visible */
+  color: #29abe2;
+}
+
+/* Show text when the switch is active */
+input:checked + .slider-round::after {
+  opacity: 1; /* Make text visible */
+  color: white;
+}
+/* The slider */
+.slider-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: #aaa; */
+  transform: 0.4s;
+  transition: 0.4s;
+  border: #29abe2 0.1rem solid;
+  border-radius: 1.75rem;
+  /* Add a pseudo-element for the text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Creates the circular knob inside the slider using the :before pseudo-element*/
+
+.slider-round:before {
+  position: absolute;
+  content: "";
+  height: 1.75rem;
+  width: 1.75rem;
+  left: -0.1rem;
+  bottom: -0.1rem;
+  background-color: white;
+  transition: 0.4s ease;
+  border-radius: 50%;
+}
+
+/* Pseudo-element for displaying text */
+.slider-round::after {
+  content: "labels";
+  position: absolute;
+  font-size: 0.8rem; /* Adjust the font size as needed */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.4s ease;
+  /* z-index: 10; */
+}
+/* Changes the slider's background color to blue (#2196F3) when the checkbox (input) is checked.*/
+input:checked + .slider-round {
+  background-color: #29abe2;
+}
+
+input:checked + .slider-round:before {
+  transform: translateX(4.35rem);
+  transition: 0.4s ease;
 }
 
 /* below this is for the publication page */
