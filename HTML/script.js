@@ -265,3 +265,16 @@ function addArrowEventListeners() {
     }
   });
 }
+
+// Function to display the range slider index
+var rangeSlider = document.getElementById("myRange");
+var index = document.getElementById("demo");
+var total = rangeSlider.max; // Retrieves the maximum value of the range slider
+
+// Display the default slider value on page load
+index.innerHTML = rangeSlider.value + "/" + total;
+
+// Update the current slider value each time you drag the slider handle
+rangeSlider.oninput = function () {
+  index.innerHTML = this.value + "/" + total;
+};

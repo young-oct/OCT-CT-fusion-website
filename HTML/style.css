@@ -288,7 +288,7 @@ ol li::before {
 }
 
 .footer {
-  background-color: hsla(0, 0%, 95%, 2.5%);
+  background-color: hsla(0, 0%, 95%, 40%);
   padding: 0.5rem 0;
   margin-top: 1.5rem;
   text-align: center;
@@ -1107,7 +1107,7 @@ video {
 .fused_container {
   margin: 0.25rem auto;
 
-  border: 0.1rem solid green;
+  /* border: 0.1rem solid green; */
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -1115,7 +1115,7 @@ video {
 }
 .main_container {
   width: 80%;
-  border: 0.5rem solid pink;
+  /* border: 0.5rem solid pink; */
   justify-content: center;
 
   display: flex;
@@ -1267,6 +1267,7 @@ input:checked + .slider-round::after {
   opacity: 0; /* Initially hidden */
   transition: opacity 0.4s ease;
   /* z-index: 10; */
+  font-weight: bold;
 }
 /* Changes the slider's background color to blue (#2196F3) when the checkbox (input) is checked.*/
 input:checked + .slider-round {
@@ -1278,6 +1279,87 @@ input:checked + .slider-round:before {
   transition: 0.4s ease;
 }
 
+/*range-slider */
+.range-slider-container {
+  position: absolute;
+  width: 60%;
+  /* border: orchid 0.1rem solid; */
+  z-index: 100;
+  /* left: 51.5%;
+  bottom: 40%; */
+  align-items: center; /* Center vertically in the container */
+  justify-content: center; /* Center horizontally in the container */
+  display: flex; /* Added to center the slider vertically */
+  /* height: 5%; */
+  /* border: pink 0.1rem solid; */
+  transform: rotate(90deg); /*Rotate the slider to vertical*/
+  bottom: 48.5%;
+  left: 50.8%;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+}
+.range-slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none; /* Override default CSS styles */
+  width: 100%;
+
+  /* border: green 0.1rem solid; */
+  /* background: #d3d3d3; Grey background */
+  outline: none; /*Remove outline*/
+  /* opacity: 0.7; Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* color: rgba(0, 0, 0, 0.3); */
+  /* transform: rotate(90deg); Rotate the slider to vertical */
+  border: #444 0.1rem solid;
+}
+/* Styles for WebKit-based browsers */
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default appearance */
+  width: 2rem; /* Increased width of the thumb */
+  height: 1rem; /* Increased height of the thumb */
+  background: #444; /* Custom thumb color*/
+  cursor: pointer; /* Changes cursor to pointer when hovering over the thumb */
+  border-radius: 50%; /* Optional: Makes the thumb circular */
+  border-radius: 0; /* Makes the thumb square */
+}
+
+/* Styles for WebKit-based browsers */
+.range-slider::-webkit-slider-thumb:hover,
+.range-slider::-webkit-slider-thumb:active {
+  background: #555; /* Custom thumb color*/
+}
+
+#demo {
+  position: absolute;
+  bottom: 6.5%;
+  z-index: 100;
+  right: 22.5%;
+  height: 1.5rem;
+  width: 5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  /* padding: 0.5 1rem 1rem 1rem; */
+  border: #29abe2 0.1rem solid;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  /* text-align: center; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.orientation-container {
+  position: absolute;
+  z-index: 15;
+  bottom: 1.5%;
+  left: 21.5%;
+  width: 7.5%;
+}
+.orientation-img {
+  width: 100%;
+}
 /* below this is for the publication page */
 
 #pubpage_title,
