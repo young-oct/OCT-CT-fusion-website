@@ -151,19 +151,30 @@ function navigateMedia(direction) {
   }
 }
 
+function updateArrowVisibility() {
+  var leftArrow = document.querySelector(".fa-arrow-left");
+  var rightArrow = document.querySelector(".fa-arrow-right");
+  // Hide the arrows
+  if (leftArrow) {
+    leftArrow.style.display = "none"; // Force arrow to be off
+  }
+
+  if (rightArrow) {
+    rightArrow.style.display = "none"; // Force arrow to be off
+  }
+}
+
 // ----- Event Listeners and Initializations -----
 
 document.addEventListener("DOMContentLoaded", function () {
   setupInitialStates();
   initializeReverseNumbering();
-  addEventListeners();
+  subnavEventListeners();
   addImageClickEventListeners();
   addArrowEventListeners(); // Initialize arrow navigation
+  updateArrowVisibility();
+  SubnavSelector();
 });
-
-// Hide the arrows
-document.querySelector(".fa-arrow-left").style.display = "none"; // Force arrow to be off
-document.querySelector(".fa-arrow-right").style.display = "none"; // Force arrow to be off
 
 // Function to setup initial states on page load
 function setupInitialStates() {
@@ -175,28 +186,39 @@ function setupInitialStates() {
 }
 
 // Function to add event listeners
-function addEventListeners() {
+function subnavEventListeners() {
   var dropdownBtns = document.querySelectorAll(".subnav_dropbtn");
   var menuBar = document.querySelector(".menubar");
-  var navbarlinks = document.querySelector(".navlinks");
+  var navlinks = document.querySelector(".navlinks");
+  var subnavs = document.querySelectorAll(".subnav");
 
   dropdownBtns.forEach(function (dropdownBtn) {
     dropdownBtn.addEventListener("click", function () {
       var dropdownContent = this.nextElementSibling;
-      dropdownContent.style.display = window.getComputedStyle(dropdownContent).display === "none" ? "block" : "none";
+      var isDropdownHidden = window.getComputedStyle(dropdownContent).display === "none";
+
+      dropdownContent.style.display = isDropdownHidden ? "block" : "none";
+      dropdownContent.style.overflowY = isDropdownHidden ? "auto" : "none";
     });
   });
 
-  if (menuBar && navbarlinks) {
+  if (menuBar && navlinks) {
     menuBar.addEventListener("click", function () {
-      navbarlinks.classList.toggle("active");
-      document.body.style.overflowY = navbarlinks.classList.contains("active") ? "hidden" : "auto";
+      navlinks.classList.toggle("active");
+      document.body.style.overflowY = navlinks.classList.contains("active") ? "hidden" : "auto";
     });
 
     window.addEventListener("resize", function () {
       if (window.innerWidth > 600) {
-        navbarlinks.classList.remove("active");
+        navlinks.classList.remove("active");
         document.body.style.overflowY = "auto";
+        subnavs.forEach(function (subnav) {
+          subnav.classList.remove("active");
+          var dropdownContent = subnav.querySelector(".dropdown-content");
+          if (dropdownContent) {
+            dropdownContent.style.display = "none";
+          }
+        });
       }
     });
   } else {
@@ -212,6 +234,29 @@ function addEventListeners() {
       document.documentElement.scrollTop = 0;
     });
   }
+}
+
+function SubnavSelector() {
+  var dropdownBtns = document.querySelectorAll(".subnav_dropbtn");
+  dropdownBtns.forEach(function () {
+    dropdownBtn.addEventListener("click", function () {
+      if (window.innerWidth > 600) {
+        // Deactivate all dropdowns
+        dropdownBtns.forEach(function (btn) {
+          if (btn != dropdownBtn) {
+            // Skip the currently clicked button
+            var dropdownContent = btn.nextElementSibling;
+            dropdownContent.style.display = "none";
+            btn.classList.remove("active");
+          }
+        });
+        var dropdownContent = this.nextElementSibling;
+        var isCurrentlyActive = dropdownContent.style.display === "block";
+        dropdownContent.style.display = isCurrentlyActive ? "none" : "block";
+        this.classList.toggle("active", !isCurrentlyActive);
+      }
+    });
+  });
 }
 // Function to add event listeners to images for toggling size
 function addImageClickEventListeners() {
@@ -229,37 +274,40 @@ function addArrowEventListeners() {
   var leftArrow = document.querySelector(".left-arrow");
   var rightArrow = document.querySelector(".right-arrow");
 
-  // Click events for arrows
-  leftArrow.addEventListener("click", function (event) {
-    event.stopPropagation(); // Prevent the overlay from closing
-    navigateMedia("prev");
-  });
-  rightArrow.addEventListener("click", function (event) {
-    event.stopPropagation(); // Prevent the overlay from closing
-    navigateMedia("next");
-  });
+  if (leftArrow && rightArrow) {
+    // Click events for arrows
+    leftArrow.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent the overlay from closing
+      navigateMedia("prev");
+    });
+    rightArrow.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent the overlay from closing
+      navigateMedia("next");
+    });
+  }
+
   // Keyboard events for arrow keys
   document.addEventListener("keydown", function (event) {
     // check if the overlay is currently active to avoid
-    // key event propagate to image viewer
+    // key event propagation to image viewer
     var overlay = document.getElementById("overlay");
 
-    if (overlay.style.display == "block") {
-      if (event.key === "ArrowLeft") {
+    if (overlay && overlay.style.display == "block") {
+      if (event.key === "ArrowLeft" && leftArrow) {
         // If the left arrow key is pressed
         navigateMedia("prev");
         leftArrow.classList.add("active");
         setTimeout(function () {
           leftArrow.classList.remove("active");
-        }, 150); //clear active state after 150ms
+        }, 150); // Clear active state after 150ms
         event.preventDefault(); // Prevent default action to avoid scrolling the page
-      } else if (event.key === "ArrowRight") {
+      } else if (event.key === "ArrowRight" && rightArrow) {
         // If the right arrow key is pressed
         navigateMedia("next");
         rightArrow.classList.add("active");
         setTimeout(function () {
           rightArrow.classList.remove("active");
-        }, 150); //clear active state after 150ms
+        }, 150); // Clear active state after 150ms
         event.preventDefault(); // Prevent default action to avoid scrolling the page
       }
     }
@@ -269,24 +317,34 @@ function addArrowEventListeners() {
 // Function to display the range slider index
 var rangeSlider = document.getElementById("myRange");
 var index = document.getElementById("demo");
-var total = rangeSlider.max; // Retrieves the maximum value of the range slider
 
-// Display the default slider value on page load
-index.innerHTML = rangeSlider.value + "/" + total;
+if (rangeSlider && index) {
+  var total = rangeSlider.max; // Retrieves the maximum value of the range slider
 
-// Update the current slider value each time you drag the slider handle
-rangeSlider.oninput = function () {
-  index.innerHTML = this.value + "/" + total;
-};
+  // Display the default slider value on page load
+  index.innerHTML = rangeSlider.value + "/" + total;
+
+  // Update the current slider value each time you drag the slider handle
+  rangeSlider.oninput = function () {
+    index.innerHTML = this.value + "/" + total;
+  };
+}
 
 // Function to fetch the footer template content and insert it into the DOM.
 window.addEventListener("DOMContentLoaded", () => {
   fetch("footer-template.html")
-    .then((response) => response.text())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.text();
+    })
     .then((html) => {
       document.getElementById("footer-placeholder").innerHTML = html;
-      // Update the year in the footer
-      document.getElementById("Current-year").textContent = new Date().getFullYear();
+      const currentYearElement = document.getElementById("current-year");
+      if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+      }
     })
     .catch((error) => {
       console.error("Error fetching the footer template:", error);

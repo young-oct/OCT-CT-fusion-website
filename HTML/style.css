@@ -416,13 +416,14 @@ ol li::before {
     flex-direction: column; /* Stack children vertically */
     width: 100vw; /* Full width to match its parent */
     /* position: relative; */
-    height: auto;
+    /* height: auto; */
     top: 5.5rem;
     background: #262626;
     position: fixed;
-    height: auto;
     overflow-y: auto;
     background-color: rgba(0, 86, 179, 0.8); /* Darker blue on hover */
+    height: auto;
+    max-height: 100%;
   }
 
   .navlinks a {
@@ -457,7 +458,7 @@ ol li::before {
     display: none; /* Hidden by default */
     flex-direction: column; /* Align dropdown links vertically */
     margin-left: -0.05rem;
-
+    overflow-y: auto;
     width: 100%; /* Match the width of navlinks */
   }
 
@@ -488,6 +489,8 @@ ol li::before {
     /* transition: 0.3s ease; */
     transition: 0.3s ease-in-out;
     overflow-y: auto;
+    /* height: 100%;
+    top: 15%; */
   }
 }
 
