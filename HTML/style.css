@@ -766,8 +766,21 @@ u {
   text-align: center;
 }
 
+.oct_development_img {
+  /* width: 100; */
+  margin: 0.25rem auto;
+
+  /* border: 0.5rem solid pink; */
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 #oct_dev {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   /* border: 0.1rem solid red; */
@@ -924,7 +937,8 @@ u {
 
 #box_wrapper {
   margin: 0.25rem auto;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 
   /* border: 0.5rem solid pink; */
   width: 90%;
@@ -932,6 +946,7 @@ u {
   display: flex;
   justify-content: center;
   align-items: center;
+
   /* border: 0.5rem solid green; */
 }
 
