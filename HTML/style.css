@@ -96,10 +96,10 @@ ol li::before {
 .navlinks {
   height: 5rem;
   align-items: center; /* this make the elements aligns cross axis aka vertically */
-  justify-content: space-around;
+  justify-content: space-between;
   display: flex; /* this make the elements inside aligns in the same box */
   /* border: 0.5rem solid yellow; */
-  float: left;
+  float: right;
 }
 
 /* Style for the dropdown icon */
@@ -1534,8 +1534,8 @@ iframe {
 
 #backToTopBtn {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 2.5rem;
+  right: 0.75rem;
   z-index: 99;
   font-size: 1.75rem;
   color: #333;
