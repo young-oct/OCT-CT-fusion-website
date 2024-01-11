@@ -235,29 +235,33 @@ function subnavEventListeners() {
     });
   }
 }
-
+// Function to only allow one selection of one subnav at a time
 function SubnavSelector() {
   var dropdownBtns = document.querySelectorAll(".subnav_dropbtn");
-  dropdownBtns.forEach(function () {
+
+  dropdownBtns.forEach(function (dropdownBtn) {
     dropdownBtn.addEventListener("click", function () {
       if (window.innerWidth > 600) {
+        var dropdownContent = this.nextElementSibling;
+        var isCurrentlyActive = this.classList.contains("active");
+
         // Deactivate all dropdowns
         dropdownBtns.forEach(function (btn) {
-          if (btn != dropdownBtn) {
-            // Skip the currently clicked button
-            var dropdownContent = btn.nextElementSibling;
-            dropdownContent.style.display = "none";
-            btn.classList.remove("active");
-          }
+          var otherDropdownContent = btn.nextElementSibling;
+          otherDropdownContent.style.display = "none";
+          btn.classList.remove("active");
         });
-        var dropdownContent = this.nextElementSibling;
-        var isCurrentlyActive = dropdownContent.style.display === "block";
-        dropdownContent.style.display = isCurrentlyActive ? "none" : "block";
-        this.classList.toggle("active", !isCurrentlyActive);
+
+        // Toggle the current dropdown based on its previous state
+        if (!isCurrentlyActive) {
+          dropdownContent.style.display = "block";
+          this.classList.add("active");
+        }
       }
     });
   });
 }
+
 // Function to add event listeners to images for toggling size
 function addImageClickEventListeners() {
   var mediaElements = document.querySelectorAll(".enlarge_img, video");
