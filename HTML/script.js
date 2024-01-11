@@ -278,3 +278,17 @@ index.innerHTML = rangeSlider.value + "/" + total;
 rangeSlider.oninput = function () {
   index.innerHTML = this.value + "/" + total;
 };
+
+// Function to fetch the footer template content and insert it into the DOM.
+window.addEventListener("DOMContentLoaded", () => {
+  fetch("footer-template.html")
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("footer-placeholder").innerHTML = html;
+      // Update the year in the footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })
+    .catch((error) => {
+      console.error("Error fetching the footer template:", error);
+    });
+});
