@@ -318,22 +318,6 @@ function addArrowEventListeners() {
   });
 }
 
-// Function to display the range slider index
-var rangeSlider = document.getElementById("myRange");
-var index = document.getElementById("demo");
-
-if (rangeSlider && index) {
-  var total = rangeSlider.max; // Retrieves the maximum value of the range slider
-
-  // Display the default slider value on page load
-  index.innerHTML = rangeSlider.value + "/" + total;
-
-  // Update the current slider value each time you drag the slider handle
-  rangeSlider.oninput = function () {
-    index.innerHTML = this.value + "/" + total;
-  };
-}
-
 // Function to fetch the footer template content and insert it into the DOM.
 window.addEventListener("DOMContentLoaded", () => {
   fetch("footer-template.html")
@@ -353,4 +337,264 @@ window.addEventListener("DOMContentLoaded", () => {
     .catch((error) => {
       console.error("Error fetching the footer template:", error);
     });
+});
+
+class fusedViewer {
+  constructor(viewerId, imageId, overlayId, originalImagePath, alternateImagePath) {
+    this.viewer = document.getElementById(viewerId);
+    this.fusedImage = document.getElementById(imageId);
+    this.infoOverlay = document.getElementById(overlayId);
+    this.originalImagePath = originalImagePath;
+    this.alternateImagePath = alternateImagePath;
+    this.imagePath = originalImagePath;
+    this.imageIndex = 0;
+    this.totalImages = 0;
+  }
+
+  updateImagePath(newPath) {
+    console.log(`Updating path for ${this.viewer.id} to: ${newPath}`);
+    this.imagePath = newPath;
+    this.updateImage();
+  }
+
+  async findTotalImages() {
+    let exists = true;
+    let index = 0;
+    while (exists) {
+      const imageUrl = this.getImageUrl(index);
+      exists = await this.imageExists(imageUrl);
+      if (exists) index++;
+    }
+    this.totalImages = index;
+    this.updateImage();
+  }
+
+  init() {
+    this.findTotalImages();
+    this.addEventListeners();
+  }
+  addEventListeners() {
+    const imageElement = document.querySelector(".fusedimage_style");
+    const body = document.body;
+    const rangeSlider = document.getElementById("myRange"); // Assuming the slider has an ID of "myRange"
+
+    window.addEventListener("wheel", (event) => {
+      const rect = imageElement.getBoundingClientRect();
+
+      if (
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom
+      ) {
+        event.preventDefault(); // Prevent scrolling when over the image
+        body.style.overflow = "hidden"; // Disable scrolling
+
+        if (event.deltaY < 0) {
+          this.imageIndex = Math.max(this.imageIndex - 1, 0);
+        } else {
+          this.imageIndex = Math.min(this.imageIndex + 1, this.totalImages - 1);
+        }
+        this.updateImage();
+      } else {
+        body.style.overflow = ""; // Re-enable scrolling when not over the image
+      }
+    });
+
+    window.addEventListener("mousemove", (event) => {
+      const rect = imageElement.getBoundingClientRect();
+      if (
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+      ) {
+        body.style.overflow = ""; // Re-enable scrolling when mouse moves out of the image
+      }
+    });
+
+    if (rangeSlider) {
+      rangeSlider.addEventListener("input", () => {
+        this.imageIndex = parseInt(rangeSlider.value);
+        this.updateImage();
+      });
+    }
+    // window.addEventListener("keydown", (event) => {
+    //   switch (event.key) {
+    //     case "ArrowUp":
+    //     case "ArrowLeft":
+    //       this.imageIndex = Math.max(this.imageIndex - 1, 0);
+    //       break;
+    //     case "ArrowDown":
+    //     case "ArrowRight":
+    //       this.imageIndex = Math.min(this.imageIndex + 1, this.totalImages - 1);
+    //       break;
+    //   }
+    //   this.updateImage();
+    // });
+  }
+
+  imageExists(url) {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = url;
+    });
+  }
+
+  getImageUrl(index) {
+    return `${this.imagePath}/image_${String(index).padStart(5, "0")}.jpg`;
+  }
+
+  updateImage() {
+    if (this.fusedImage) {
+      this.fusedImage.src = this.getImageUrl(this.imageIndex);
+      // this.index = document.getElementById("demo");
+
+      // Set the onload function for the image
+      this.fusedImage.onload = () => {
+        this.updateImageIndex();
+      };
+    } else {
+      console.error("image element not found");
+    }
+  }
+  updateImageIndex() {
+    const rangeSlider = document.getElementById("myRange");
+
+    if (rangeSlider && this.infoOverlay) {
+      // Update the maximum value of the range slider
+      // -1 needed to make sure the slider reaches to its full range
+      rangeSlider.max = this.totalImages - 1;
+      // console.log(this.totalImages);
+      // Update the display with the correct index
+      this.infoOverlay.innerHTML = `${this.imageIndex + 1}/${this.totalImages}`;
+
+      // Ensure the slider reflects the current image index
+      rangeSlider.value = this.imageIndex;
+      // log.console(rangeSlider.value);
+    }
+  }
+}
+class SwitchButton {
+  constructor(containerId, viewer) {
+    this.switchContainer = document.getElementById(containerId);
+    this.viewer = viewer;
+    this.isOriginal = true;
+
+    if (this.switchContainer) {
+      const checkbox = this.switchContainer.querySelector('input[type="checkbox"]');
+
+      if (checkbox) {
+        checkbox.addEventListener("change", () => {
+          console.log("label toggled");
+          this.isOriginal = checkbox.checked; // Set isOriginal based on the checkbox state
+          const newPath = this.isOriginal ? this.viewer.originalImagePath : this.viewer.alternateImagePath;
+          this.viewer.updateImagePath(newPath);
+        });
+      } else {
+        console.error("Checkbox element not found in container:", containerId);
+      }
+    } else {
+      console.error("SwitchContainer element not found:", containerId);
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const c1_coronalViewer = new fusedViewer(
+    "c1_coronalViewer",
+    "c1_coronalImage",
+    "c1_coronalinfoOverlay",
+    "images/03_06_20230206(L)/coronal_FOV(25)/cropped",
+    "images/03_06_20230206(L)/coronal_FOV(25)/raw"
+  );
+
+  const c2_coronalViewer = new fusedViewer(
+    "c2_coronalViewer",
+    "c2_coronalImage",
+    "c2_coronalinfoOverlay",
+    "images/03_23_20230309(R)/coronal_FOV(25)/cropped",
+    "images/03_23_20230309(R)/coronal_FOV(25)/raw"
+  );
+  const c3_coronalViewer = new fusedViewer(
+    "c3_coronalViewer",
+    "c3_coronalImage",
+    "c3_coronalinfoOverlay",
+    "images/03_37_20230322(L)/coronal_FOV(25)/cropped",
+    "images/03_37_20230322(L)/coronal_FOV(25)/raw"
+  );
+
+  const c1_axialViewer = new fusedViewer(
+    "c1_axialViewer",
+    "c1_axialImage",
+    "c1_axialinfoOverlay",
+    "images/03_06_20230206(L)/axial_FOV(25)/cropped",
+    "images/03_06_20230206(L)/axial_FOV(25)/raw"
+  );
+
+  const c2_axialViewer = new fusedViewer(
+    "c2_axialViewer",
+    "c2_axialImage",
+    "c2_axialinfoOverlay",
+    "images/03_23_20230309(R)/axial_FOV(25)/cropped",
+    "images/03_23_20230309(R)/axial_FOV(25)/raw"
+  );
+
+  const c3_axialViewer = new fusedViewer(
+    "c3_axialViewer",
+    "c3_axialImage",
+    "c3_axialinfoOverlay",
+    "images/03_37_20230322(L)/axial_FOV(25)/cropped",
+    "images/03_37_20230322(L)/axial_FOV(25)/raw"
+  );
+
+  const c1_sagittalViewer = new fusedViewer(
+    "c1_sagittalViewer",
+    "c1_sagittalImage",
+    "c1_sagittalinfoOverlay",
+    "images/03_06_20230206(L)/sagittal_FOV(25)/cropped",
+    "images/03_06_20230206(L)/sagittal_FOV(25)/raw"
+  );
+
+  const c2_sagittalViewer = new fusedViewer(
+    "c2_sagittalViewer",
+    "c2_sagittalImage",
+    "c2_sagittalinfoOverlay",
+    "images/03_23_20230309(R)/sagittal_FOV(25)/cropped",
+    "images/03_23_20230309(R)/sagittal_FOV(25)/raw"
+  );
+
+  const c3_sagittalViewer = new fusedViewer(
+    "c3_sagittalViewer",
+    "c3_sagittalImage",
+    "c3_sagittalinfoOverlay",
+    "images/03_37_20230322(L)/sagittal_FOV(25)/cropped",
+    "images/03_37_20230322(L)/sagittal_FOV(25)/raw"
+  );
+
+  c1_coronalViewer.init();
+  c2_coronalViewer.init();
+  c3_coronalViewer.init();
+
+  c1_axialViewer.init();
+  c2_axialViewer.init();
+  c3_axialViewer.init();
+
+  c1_sagittalViewer.init();
+  c2_sagittalViewer.init();
+  c3_sagittalViewer.init();
+
+  const c1_coronal_switchButton = new SwitchButton("c1_coronal_switchButton", c1_coronalViewer);
+  const c2_coronal_switchButton = new SwitchButton("c2_coronal_switchButton", c2_coronalViewer);
+  const c3_coronal_switchButton = new SwitchButton("c3_coronal_switchButton", c3_coronalViewer);
+
+  const c1_axial_switchButton = new SwitchButton("c1_axial_switchButton", c1_axialViewer);
+  const c2_axial_switchButton = new SwitchButton("c2_axial_switchButton", c2_axialViewer);
+  const c3_axial_switchButton = new SwitchButton("c3_axial_switchButton", c3_axialViewer);
+
+  const c1_sagittal_switchButton = new SwitchButton("c1_sagittal_switchButton", c1_sagittalViewer);
+  const c2_sagittal_switchButton = new SwitchButton("c2_sagittal_switchButton", c2_sagittalViewer);
+  const c3_sagittal_switchButton = new SwitchButton("c3_sagittal_switchButton", c3_sagittalViewer);
 });

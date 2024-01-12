@@ -101,26 +101,38 @@
     </div>
 
     <div class="fused_container">
+      <div class="note_container"></div>
       <div class="main_container">
-        <div class="orientation-container">
-          <img class="orientation-img" src="images/design elements/RAS arrow(C).png" alt="" />
-        </div>
         <div class="range-slider-container">
           <input type="range" min="1" max="100" value="50" class="range-slider" id="myRange" />
           <!-- <p>Value: <span id="demo"></span></p> -->
         </div>
-        <div id="demo"></div>
-        <div class="switch-container">
+        <div class="orientation-container">
+          <img class="orientation-img" src="images/design elements/RAS arrow(C).png" alt="" />
+        </div>
+
+        <div id="c1_axialinfoOverlay" class="infoOverlay_style"></div>
+        <div class="switch-container" id="c1_axial_switchButton">
           <label class="switch">
             <input type="checkbox" />
             <div class="slider-round"></div>
           </label>
         </div>
+
         <i id="download_icon" class="fa-solid fa-cloud-arrow-down"></i>
         <i id="share_icon" class="fa-solid fa-arrow-up-right-from-square"></i>
 
-        <img class="fused_main_img" src="images/03_06_20230206(L)/axial_FOV(25)/cropped/image_00000.jpg" alt="" />
+        <div id="c1_axialViewer" class="fusedviewer_style">
+          <img
+            id="c1_axialImage"
+            class="fusedimage_style"
+            src="images/03_06_20230206(L)/axial_FOV(25)/cropped/image_00000.jpg"
+            alt="axial CT Scan" />
+        </div>
+
+        <!-- <img class="fused_main_img" src="images/03_06_20230206(L)/axial_FOV(25)/cropped/image_00000.jpg" alt="" /> -->
       </div>
+
       <div class="side_container">
         <div class="side_top">
           <figure class="cap_fig_container">
@@ -141,6 +153,23 @@
         </div>
       </div>
     </div>
+
+    <!-- <div id="c1_axialViewer" class="fusedviewer_style">
+      <img
+        id="c1_axialImage"
+        class="fusedimage_style"
+        src="images/03_06_20230206(L)/axial_FOV(25)/cropped/image_00000.jpg"
+        alt="axial CT Scan" />
+      <div id="c1_axialinfoOverlay" class="infoOverlay_style"></div>
+    </div>
+    <button id="c1_axial_switchButton" class="switch-button_style">annotation ON/OFF</button>
+    <div class="expandable-text">
+      Imaging protocol
+      <span class="hidden-text">
+        CT: Siemens Somatom Definition AS+ - 120 kVp 163 mA 0.4 mm
+        <br />ME-OCT: 1550 nm OCT - 0.22 vol/s (30&deg; &#xd7; 30&deg; &#xd7; 10.9 mm), 40&#181;m
+      </span>
+    </div> -->
 
     <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
     <div id="footer-placeholder"></div>
