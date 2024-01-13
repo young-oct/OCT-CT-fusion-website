@@ -366,6 +366,10 @@ class fusedViewer {
       if (exists) index++;
     }
     this.totalImages = index;
+
+    // Set the default image index to the middle value
+    this.imageIndex = Math.floor(this.totalImages / 2);
+
     this.updateImage();
   }
 
@@ -450,7 +454,6 @@ class fusedViewer {
   updateImage() {
     if (this.fusedImage) {
       this.fusedImage.src = this.getImageUrl(this.imageIndex);
-      // this.index = document.getElementById("demo");
 
       // Set the onload function for the image
       this.fusedImage.onload = () => {

@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="images/design elements/lego(square).png" />
     <script src="https://kit.fontawesome.com/68e9d88b8c.js" crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
     <title>Interactive ME-OCT Altas</title>
   </head>
   <body>
@@ -29,12 +33,14 @@
             </div>
           </div>
           <div class="subnav">
-            <a href="#" class="subnav_dropbtn">Interactive altas<span class="dropdown-icon">&#9662;</span></a>
+            <a href="#" id="active" class="subnav_dropbtn"
+              >Interactive altas<span class="dropdown-icon">&#9662;</span></a
+            >
             <div class="dropdown-content" id="interactive_dropdown">
               <a href="fusion.html">OCT/CT image fusion</a>
-              <a href="normal_ear.html">Normal ear</a>
-              <a id="active" href="traumatic.html">Traumatic middle ear injury</a>
-              <a href="chelostoma.html">Cholesteatoma</a>
+              <a href="case1-axial.html">Normal ear</a>
+              <a id="active" href="case2-axial.html">Traumatic middle ear injury</a>
+              <a href="case3-axial.html">Cholesteatoma</a>
             </div>
           </div>
           <a href="publication.html">Publications</a>
@@ -46,9 +52,124 @@
       </div>
     </header>
     <div class="content">
-      <h1 class="title_h1">Case II: traumatic middle ear injury (R)-axial view</h1>
-      <h2 class="subtitle">A promising modality for otology</h2>
+      <h1 class="title_h1">Case II: Traumatic ear (R)</h1>
+      <h2 class="case_title">Case description</h2>
+      <p class="paragraph" id="fisrtWord">
+        A 57-year-old male, with normal hearing in his left ear was selected as a healthy control for OCT/CT image
+        fusion. Otoscopic examination of the left tympanic membrane showed it to be intact and healthy. In the otoscopic
+        image, the malleus is visible from the umbo to the short process, and the incudostapedial joint can be seen
+        posteriorly through the tympanic membrane <b>(TM)</b>. The coronal CT image shows a broad external auditory
+        canal <b>(EAC)</b> and an aerated middle ear space with intact scutum <b>(SC)</b> and ossicles. The TM is not
+        visible in the CT image due to its thinness and low radiopacity. The corresponding OCT image shows the TM and
+        proximal surfaces of the cochlear promontory <b>(CP)</b>, incus <b>(I)</b> and umbo <b>(M)</b>.
+      </p>
     </div>
+
+    <div class="blue_box">
+      <h2 class="box-title">Diagnostic imaging</h2>
+      <h3 class="box-sub-title">(click image to enlarge)</h3>
+
+      <div class="main_wrapper" id="case_group_img">
+        <i class="arrow left-arrow fa-solid fa-arrow-left"></i>
+        <div id="overlay" onclick="hideOverlay()"></div>
+        <div class="fig_content" id="case_fig">
+          <figure class="cap_fig_container">
+            <img class="enlarge_img" id="case_img" src="images/case I/01_case I otoscopy.png" alt="" />
+            <figcaption class="fig_caption" id="case_img_cap">otoscopic image</figcaption>
+          </figure>
+        </div>
+        <div class="fig_content" id="case_fig">
+          <figure class="cap_fig_container">
+            <img class="enlarge_img" id="case_img" src="images/case I/02_case I audiogram.jpg" alt="" />
+            <figcaption class="fig_caption" id="case_img_cap">audiogram</figcaption>
+          </figure>
+        </div>
+        <div class="fig_content" id="case_fig">
+          <figure class="cap_fig_container">
+            <img class="enlarge_img" id="case_img" src="images/case I/03_case I CT.jpg" alt="" />
+            <figcaption class="fig_caption" id="case_img_cap">CT (coronal view)</figcaption>
+          </figure>
+        </div>
+        <div class="fig_content" id="case_fig">
+          <figure class="cap_fig_container">
+            <img class="enlarge_img" id="case_img" src="images/case I/04_case I 3D OCT.jpg" alt="" />
+            <figcaption class="fig_caption" id="case_img_cap">OCT (3D view)</figcaption>
+          </figure>
+          <i class="arrow right-arrow fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="fused_container">
+      <div class="note_container"></div>
+      <div class="main_container">
+        <div class="range-slider-container">
+          <input type="range" min="1" max="100" value="50" class="range-slider" id="myRange" />
+          <!-- <p>Value: <span id="demo"></span></p> -->
+        </div>
+        <div class="orientation-container">
+          <img class="orientation-img" src="images/design elements/RAS arrow(C).png" alt="" />
+        </div>
+
+        <div id="c2_axialinfoOverlay" class="infoOverlay_style"></div>
+        <div class="switch-container" id="c2_axial_switchButton">
+          <label class="switch">
+            <input type="checkbox" />
+            <div class="slider-round"></div>
+          </label>
+        </div>
+
+        <i id="download_icon" class="fa-solid fa-cloud-arrow-down"></i>
+        <i id="share_icon" class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        <div id="c2_axialViewer" class="fusedviewer_style">
+          <img
+            id="c2_axialImage"
+            class="fusedimage_style"
+            src="images/03_23_20230309(R)/axial_FOV(25)/cropped/image_00000.jpg"
+            alt="axial CT Scan" />
+        </div>
+
+        <!-- <img class="fused_main_img" src="images/03_06_20230206(L)/axial_FOV(25)/cropped/image_00000.jpg" alt="" /> -->
+      </div>
+
+      <div class="side_container">
+        <div class="side_top">
+          <figure class="cap_fig_container">
+            <a href="case2-coronal.html">
+              <img class="fused_side_img" src="images/03_23_20230309(R)/axial_FOV(25)/cropped/image_00000.jpg" alt="" />
+            </a>
+            <figcaption class="fig_caption" id="fused_top_cap">click image to coronal view</figcaption>
+          </figure>
+        </div>
+        <div class="side_bottom">
+          <!-- <i id="bottom_stack" class="fa-solid fa-layer-group stack_icon"></i> -->
+          <figure class="cap_fig_container">
+            <a href="case2-sagittal.html">
+              <img class="fused_side_img" src="images/03_23_20230309(R)/axial_FOV(25)/cropped/image_00000.jpg" alt="" />
+            </a>
+            <figcaption class="fig_caption" id="fused_bottom_cap">click image to sagittal view</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="c1_axialViewer" class="fusedviewer_style">
+      <img
+        id="c1_axialImage"
+        class="fusedimage_style"
+        src="images/03_06_20230206(L)/axial_FOV(25)/cropped/image_00000.jpg"
+        alt="axial CT Scan" />
+      <div id="c1_axialinfoOverlay" class="infoOverlay_style"></div>
+    </div>
+    <button id="c1_axial_switchButton" class="switch-button_style">annotation ON/OFF</button>
+    <div class="expandable-text">
+      Imaging protocol
+      <span class="hidden-text">
+        CT: Siemens Somatom Definition AS+ - 120 kVp 163 mA 0.4 mm
+        <br />ME-OCT: 1550 nm OCT - 0.22 vol/s (30&deg; &#xd7; 30&deg; &#xd7; 10.9 mm), 40&#181;m
+      </span>
+    </div> -->
 
     <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
     <div id="footer-placeholder"></div>
