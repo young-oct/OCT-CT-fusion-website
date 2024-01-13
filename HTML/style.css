@@ -1703,6 +1703,14 @@ iframe {
 
 /* share icon */
 /* Style for the modal background */
+
+#modal-title {
+  color: white;
+  font-size: 1rem;
+  font-style: normal;
+  margin-left: -1vw;
+  margin-top: -0.75vw;
+}
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -1717,23 +1725,21 @@ iframe {
 
 /* Style for the modal content */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 30%; /* Could be more or less, depending on screen size */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.85);
+  margin: 15% auto;
+  padding: 1.5rem;
+  width: 30%;
   position: relative;
+  border-radius: 0.25rem;
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: white;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 28px;
-  font-weight: bold;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .close:hover,
@@ -1747,46 +1753,62 @@ iframe {
 .share-link button {
   border: none;
   padding: 10px;
-  background-color: #007bff;
+  /* background-color: #007bff; */
+  background-color: #29abe2;
   color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 0.75rem;
+  margin: 0.5rem 0.25rem;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 1rem;
 }
 .share-link {
   display: flex;
   align-items: center; /* Align the items vertically */
+  border: 0.1rem solid #333;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: none;
 }
 
 .share-link input {
   flex-grow: 1; /* Allow the input to grow and fill the space */
-  margin-right: 10px; /* Add some space between the input and the button */
-  padding: 5px;
-  color: black; /* Set the text color to black */
+  margin-right: 0.5rem;
+  padding: 0.25rem;
+  background-color: #262626;
+  color: white;
+  outline: none;
+  box-shadow: none;
 }
 
 .share-link button:hover {
-  background-color: #0056b3;
+  background-color: #007bff;
 }
 
 /* Style for the Share Buttons */
 .share-buttons {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 .share-btn {
-  background: #f1f1f1;
+  /* background: #f1f1f1; */
   border: none;
-  padding: 10px 15px;
-  margin-right: 10px;
+  padding: 0.5rem 0.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   cursor: pointer;
+  margin-bottom: 1rem;
+  border-radius: 50%;
 }
 
 .share-btn i {
   margin-right: 8px;
+  font-size: 1.5rem;
+  margin: 0 auto;
 }
