@@ -164,6 +164,27 @@ function updateArrowVisibility() {
   }
 }
 
+// Function to toggle the share modal
+function toggleShareModal() {
+  var modal = document.getElementById("shareModal");
+  modal.style.display = modal.style.display === "block" ? "none" : "block";
+}
+
+// Function to copy the share link to the clipboard
+function copyToClipboard() {
+  // Create a dummy input to copy the link text
+  var dummy = document.createElement("input"),
+    text = window.location.href;
+
+  document.body.appendChild(dummy);
+  dummy.value = text;
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+
+  alert("Link copied to clipboard!");
+}
+
 // ----- Event Listeners and Initializations -----
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -174,7 +195,62 @@ document.addEventListener("DOMContentLoaded", function () {
   addArrowEventListeners(); // Initialize arrow navigation
   updateArrowVisibility();
   SubnavSelector();
+  var shareIcon = document.getElementById("share_icon");
+  var closeBtn = document.querySelector(".modal .close");
+
+  var currentPageUrl = window.location.href;
+  var shareLinkInput = document.getElementById("shareLink");
+  shareLinkInput.value = currentPageUrl;
+
+  // When the share icon is clicked, show the modal
+  shareIcon.addEventListener("click", toggleShareModal);
+
+  // When the close button (x) is clicked, close the modal
+  closeBtn.addEventListener("click", toggleShareModal);
+
+  // Close the modal if the user clicks outside of it
+  window.addEventListener("click", function (event) {
+    var modal = document.getElementById("shareModal");
+    if (event.target === modal) {
+      toggleShareModal();
+    }
+  });
 });
+
+//  function for sharing via email
+function shareEmail() {
+  var shareURL = "mailto:?subject=Check out this site&body=" + encodeURIComponent(window.location.href);
+  window.open(shareURL, "_blank");
+}
+function shareTwitter() {
+  var text = "Check out this site";
+  var shareURL =
+    "https://twitter.com/intent/tweet?text=" +
+    encodeURIComponent(text) +
+    "&url=" +
+    encodeURIComponent(window.location.href);
+  window.open(shareURL, "_blank");
+}
+function shareLinkedIn() {
+  var currentUrl = window.location.href; // Gets the current URL
+  var shareURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(currentUrl);
+
+  window.open(shareURL, "_blank");
+}
+
+function copyToClipboard() {
+  var copyText = document.getElementById("shareLink");
+  copyText.select(); // Select the text field
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+  navigator.clipboard
+    .writeText(copyText.value)
+    .then(() => {
+      // alert("Copied to clipboard!");
+    })
+    .catch((err) => {
+      console.error("Could not copy text: ", err);
+    });
+}
 
 // Function to setup initial states on page load
 function setupInitialStates() {

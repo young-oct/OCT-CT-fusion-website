@@ -137,6 +137,23 @@
 
         <i id="download_icon" class="fa-solid fa-cloud-arrow-down"></i>
         <i id="share_icon" class="fa-solid fa-arrow-up-right-from-square"></i>
+        <div id="shareModal" class="modal" style="display: none">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Share</h3>
+            <div class="share-buttons">
+              <button class="share-btn" onclick="shareEmail()"><i class="fa-solid fa-envelope"></i></button>
+              <button class="share-btn" onclick="shareLinkedIn()">
+                <i class="fa-brands fa-linkedin"></i>
+              </button>
+              <button class="share-btn" onclick="shareTwitter()"><i class="fa-brands fa-x-twitter"></i></button>
+            </div>
+            <div class="share-link">
+              <input type="text" id="shareLink" readonly />
+              <button onclick="copyToClipboard()"><i class="fa-solid fa-copy"></i> Copy</button>
+            </div>
+          </div>
+        </div>
 
         <div id="c1_axialViewer" class="fusedviewer_style">
           <img
