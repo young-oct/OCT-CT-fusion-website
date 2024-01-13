@@ -1150,13 +1150,13 @@ video {
   justify-content: center;
   align-items: center;
   /* background-color: #000; */
-  border: #29abe2 0.1rem solid;
+  /* border: #29abe2 0.1rem solid; */
 }
 
 .fusedimage_style {
   width: 100%;
   margin: 0 auto;
-  border: red 0.1rem solid;
+  /* border: red 0.1rem solid; */
   /* padding: 1.5rem; */
 }
 
@@ -1186,7 +1186,7 @@ video {
 
 .side_container {
   width: 20%;
-  border: 0.5rem solid red;
+  /* border: 0.5rem solid red; */
   height: 100%;
   position: relative;
   /* 
@@ -1196,9 +1196,10 @@ video {
 
 .note_container {
   width: 25%;
-  border: 0.25rem solid orange;
+  border: 0.1rem solid #e05d27;
   height: 100%;
   /* position: relative; */
+  border-radius: 0.2rem;
 }
 
 #legends-wrapper {
@@ -1215,9 +1216,10 @@ video {
 } */
 
 .legends {
-  border: 0.25rem solid green;
+  border: 0.15rem solid #27e0a7;
   width: 100%;
   height: 40%;
+  border-radius: 0.2rem;
 }
 .findings_title {
   margin-left: 1vw;
