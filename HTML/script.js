@@ -170,21 +170,6 @@ function toggleShareModal() {
   modal.style.display = modal.style.display === "block" ? "none" : "block";
 }
 
-// Function to copy the share link to the clipboard
-function copyToClipboard() {
-  // Create a dummy input to copy the link text
-  var dummy = document.createElement("input"),
-    text = window.location.href;
-
-  document.body.appendChild(dummy);
-  dummy.value = text;
-  dummy.select();
-  document.execCommand("copy");
-  document.body.removeChild(dummy);
-
-  alert("Link copied to clipboard!");
-}
-
 // ----- Event Listeners and Initializations -----
 
 document.addEventListener("DOMContentLoaded", function () {
