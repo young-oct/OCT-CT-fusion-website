@@ -172,6 +172,26 @@ function toggleShareModal() {
 
 // ----- Event Listeners and Initializations -----
 
+// Function to open the download modal
+function openDownloadModal() {
+  var downloadModal = document.getElementById("downloadModal");
+  downloadModal.style.display = "block";
+}
+
+// Function to close the download modal
+function closeDownloadModal() {
+  var downloadModal = document.getElementById("downloadModal");
+  downloadModal.style.display = "none";
+}
+
+// Function to copy attribution text to clipboard
+function copyAttributionText(textAreaId) {
+  var copyText = document.getElementById(textAreaId);
+  copyText.select();
+  document.execCommand("copy");
+  // alert("Attribution copied to clipboard!");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   setupInitialStates();
   initializeReverseNumbering();
@@ -187,18 +207,43 @@ document.addEventListener("DOMContentLoaded", function () {
   var shareLinkInput = document.getElementById("shareLink");
   shareLinkInput.value = currentPageUrl;
 
-  // When the share icon is clicked, show the modal
-  shareIcon.addEventListener("click", toggleShareModal);
-
-  // When the close button (x) is clicked, close the modal
-  closeBtn.addEventListener("click", toggleShareModal);
-
   // Close the modal if the user clicks outside of it
   window.addEventListener("click", function (event) {
     var modal = document.getElementById("shareModal");
     if (event.target === modal) {
       toggleShareModal();
     }
+  });
+
+  // When the share icon is clicked, show the modal
+  shareIcon.addEventListener("click", toggleShareModal);
+
+  // When the close button (x) is clicked, close the modal
+  closeBtn.addEventListener("click", toggleShareModal);
+
+  var downloadIcon = document.getElementById("download_icon");
+  var closeDownloadIcon = document.querySelector(".download-close");
+  var attributionTextAreas = document.querySelectorAll(".attribution textarea");
+
+  // Open modal when download icon is clicked
+  downloadIcon.addEventListener("click", openDownloadModal);
+
+  // Close modal when close icon (x) is clicked
+  closeDownloadIcon.addEventListener("click", closeDownloadModal);
+
+  // Click outside the modal to close it
+  window.addEventListener("click", function (event) {
+    var downloadModal = document.getElementById("downloadModal");
+    if (event.target === downloadModal) {
+      closeDownloadModal();
+    }
+  });
+
+  // Copy attribution text to clipboard when textarea is clicked
+  attributionTextAreas.forEach(function (textArea) {
+    textArea.addEventListener("click", function () {
+      copyAttributionText(this.id);
+    });
   });
 });
 
@@ -223,18 +268,24 @@ function shareLinkedIn() {
   window.open(shareURL, "_blank");
 }
 
-function copyToClipboard() {
-  var copyText = document.getElementById("shareLink");
+function copyToClipboard(elementId) {
+  var copyText = document.getElementById(elementId);
   copyText.select(); // Select the text field
   copyText.setSelectionRange(0, 99999); // For mobile devices
-  navigator.clipboard
-    .writeText(copyText.value)
-    .then(() => {
-      // alert("Copied to clipboard!");
-    })
-    .catch((err) => {
-      console.error("Could not copy text: ", err);
-    });
+
+  if (navigator.clipboard && window.isSecureContext) {
+    // Navigator clipboard is available
+    navigator.clipboard
+      .writeText(copyText.value)
+      .then(function () {
+        // console.log("Content copied to clipboard");
+      })
+      .catch(function (error) {
+        console.error("Could not copy text: ", error);
+      });
+  } else {
+    document.execCommand("copy");
+  }
 }
 
 // Function to setup initial states on page load
@@ -380,7 +431,6 @@ function addArrowEventListeners() {
 }
 
 // Function to fetch the footer template content and insert it into the DOM.
-// Function to fetch the template content and insert it into the DOM.
 window.addEventListener("DOMContentLoaded", () => {
   fetch("template.html") // Replace 'template.html' with the path to your actual template file
     .then((response) => {
@@ -397,15 +447,17 @@ window.addEventListener("DOMContentLoaded", () => {
       // Get the footer and legends content from the parsed HTML
       const footerHTML = doc.querySelector(".footer").outerHTML;
       const legendsHTML = doc.querySelector(".legends").outerHTML;
+      const termHTML = doc.querySelector(".TermOfUse").outerHTML;
 
       // Insert the footer and legends into their respective placeholders in the current document
       document.getElementById("footer-placeholder").innerHTML = footerHTML;
       document.getElementById("legends-placeholder").innerHTML = legendsHTML;
+      document.getElementById("term-placeholder").innerHTML = termHTML;
 
-      // Update the current year in the footer
-      const currentYearElement = document.querySelector(".footer .current-year");
-      if (currentYearElement) {
-        currentYearElement.textContent = new Date().getFullYear();
+      // Update the current year in all elements with the class "current-year"
+      const currentYearElements = document.getElementsByClassName("current-year");
+      for (let i = 0; i < currentYearElements.length; i++) {
+        currentYearElements[i].textContent = new Date().getFullYear();
       }
     })
     .catch((error) => {
@@ -442,14 +494,42 @@ class fusedViewer {
     this.totalImages = index;
 
     // Set the default image index to the middle value
-    this.imageIndex = Math.floor(this.totalImages / 2);
+    this.imageIndex = Math.floor((this.totalImages - 1) / 2);
 
     this.updateImage();
+  }
+  //This method handles creating a temporary link for downloading the currently displayed image.
+  downloadImage() {
+    console.log(this.imageIndex);
+
+    const imagePath = this.getImageUrl(this.imageIndex);
+    const tempLink = document.createElement("a");
+    tempLink.href = imagePath;
+    tempLink.download = `image_${String(this.imageIndex).padStart(5, "0")}.jpg`; // Dynamic filename
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    document.body.removeChild(tempLink);
+  }
+  // This method has an event listener to the download button which calls the downloadImage method when clicked.
+  setupDownloadButton() {
+    const downloadBtn = document.getElementById("downloadBtn");
+    downloadBtn.onclick = () => {
+      this.downloadImage();
+      // console.log(this.imageIndex);
+    };
   }
 
   init() {
     this.findTotalImages();
     this.addEventListeners();
+    this.setupDownloadButton();
+
+    // Set the initial value of the slider
+    const rangeSlider = document.getElementById("myRange");
+    if (rangeSlider) {
+      rangeSlider.value = 0; // Starts at the first image (index 0)
+      this.updateImageIndex(); // Update display to show "1" instead of "0"
+    }
   }
   addEventListeners() {
     const imageElement = document.querySelector(".fusedimage_style");
@@ -474,6 +554,8 @@ class fusedViewer {
           this.imageIndex = Math.min(this.imageIndex + 1, this.totalImages - 1);
         }
         this.updateImage();
+        // console.log("imageIndex updated to:", this.imageIndex);
+        //image index goes over by 1//
       } else {
         body.style.overflow = ""; // Re-enable scrolling when not over the image
       }
@@ -493,23 +575,16 @@ class fusedViewer {
 
     if (rangeSlider) {
       rangeSlider.addEventListener("input", () => {
+        // Adjust the slider's value to start from 0
         this.imageIndex = parseInt(rangeSlider.value);
+
+        // Ensure that imageIndex does not go below 0
+        this.imageIndex = Math.max(this.imageIndex, 0);
+
         this.updateImage();
+        // Optionally update the display or other elements related to imageIndex
       });
     }
-    // window.addEventListener("keydown", (event) => {
-    //   switch (event.key) {
-    //     case "ArrowUp":
-    //     case "ArrowLeft":
-    //       this.imageIndex = Math.max(this.imageIndex - 1, 0);
-    //       break;
-    //     case "ArrowDown":
-    //     case "ArrowRight":
-    //       this.imageIndex = Math.min(this.imageIndex + 1, this.totalImages - 1);
-    //       break;
-    //   }
-    //   this.updateImage();
-    // });
   }
 
   imageExists(url) {
@@ -529,14 +604,19 @@ class fusedViewer {
     if (this.fusedImage) {
       this.fusedImage.src = this.getImageUrl(this.imageIndex);
 
-      // Set the onload function for the image
-      this.fusedImage.onload = () => {
-        this.updateImageIndex();
-      };
-    } else {
-      console.error("image element not found");
+      // this.fusedImage.onload = () => {
+      //   // Update both the slider and the display index when the image is loaded
+      //   const rangeSlider = document.getElementById("myRange");
+      //   if (rangeSlider) {
+      //     rangeSlider.value = this.imageIndex;
+      //   }
+      this.updateImageIndex();
     }
+    // } else {
+    //   console.error("image element not found");
+    // }
   }
+
   updateImageIndex() {
     const rangeSlider = document.getElementById("myRange");
 
@@ -545,12 +625,12 @@ class fusedViewer {
       // -1 needed to make sure the slider reaches to its full range
       rangeSlider.max = this.totalImages - 1;
       // console.log(this.totalImages);
+      rangeSlider.value = this.imageIndex;
+
       // Update the display with the correct index
       this.infoOverlay.innerHTML = `${this.imageIndex + 1}/${this.totalImages}`;
-
-      // Ensure the slider reflects the current image index
-      rangeSlider.value = this.imageIndex;
-      // log.console(rangeSlider.value);
+      // console.log(rangeSlider.value);
+      // console.log(this.imageIndex);
     }
   }
 }

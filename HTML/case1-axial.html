@@ -136,6 +136,30 @@
         </div>
 
         <i id="download_icon" class="fa-solid fa-cloud-arrow-down"></i>
+        <div id="downloadModal" class="downloadmodal">
+          <div class="download-modal-content">
+            <span class="download-close">&times;</span>
+            <h2 class="download-heading">Download image</h2>
+            <h2 class="downloadModal-title">Term of use</h2>
+            <div id="term-placeholder"></div>
+
+            <h2 class="downloadModal-title">How to atribute</h2>
+            <p class="attribution-text">For presentations / print</p>
+
+            <div class="attribution">
+              <textarea id="attributionText" readonly>
+Lorem ipsum dolor sit amet consectetur adipisicing elit.</textarea
+              >
+              <button id="attributionCopy" onclick="copyToClipboard('attributionText')">
+                <i class="fa-solid fa-copy"></i> Copy
+              </button>
+            </div>
+            <div class="download-container">
+              <button id="downloadBtn">Download</button>
+            </div>
+          </div>
+        </div>
+
         <i id="share_icon" class="fa-solid fa-arrow-up-right-from-square"></i>
         <div id="shareModal" class="modal" style="display: none">
           <div class="modal-content">

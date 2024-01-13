@@ -298,11 +298,6 @@ ol li::before {
   /* position: absolute; */
   /* border: #262626 solid 0.1rem; */
 }
-.footer-content {
-  color: #333;
-  font-size: 0.75rem;
-  margin: 0 auto;
-}
 
 .content {
   margin: 1rem; /* controls the spacing  bewteeen content and other elements*/
@@ -1164,7 +1159,7 @@ video {
   position: absolute;
   top: 1.5%;
   left: 2.5%; /* remeber to use precentage to control the location so it's responsive to the window size change  */
-  z-index: 100;
+  z-index: 3;
   color: #8daebc;
   font-size: 1.75rem;
   margin-left: 1rem;
@@ -1173,7 +1168,7 @@ video {
   position: absolute;
   top: 2.5%;
   right: 1.5%; /* remeber to use precentage to control the location so it's responsive to the window size change  */
-  z-index: 100;
+  z-index: 3;
   color: #8daebc;
   font-size: 1.75rem;
   margin-right: 1rem;
@@ -1395,7 +1390,7 @@ input:checked + .slider-round:before {
 .range-slider-container {
   position: absolute;
   width: 80%;
-  z-index: 100;
+  z-index: 1;
 
   align-items: center; /* Center vertically in the container */
   justify-content: center; /* Center horizontally in the container */
@@ -1428,12 +1423,11 @@ input:checked + .slider-round:before {
 /* Styles for WebKit-based browsers */
 .range-slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default appearance */
-  width: 2rem; /* Increased width of the thumb */
-  height: 1rem; /* Increased height of the thumb */
+  width: 0.5rem; /* Increased width of the thumb */
+  height: 0.5rem; /* Increased height of the thumb */
   background: #8daebc; /*  thumb color*/
   cursor: pointer; /* Changes cursor to pointer when hovering over the thumb */
-  border-radius: 50%; /* Optional: Makes the thumb circular */
-  border-radius: 1.5rem; /* Makes the thumb square */
+  border-radius: 50%; /*  Makes the thumb circular */
 }
 
 /* Styles for WebKit-based browsers */
@@ -1441,6 +1435,7 @@ input:checked + .slider-round:before {
 .range-slider::-webkit-slider-thumb:active {
   background: #29abe2; /* Custom thumb color*/
 }
+/* Styles the index number box */
 
 .infoOverlay_style {
   position: absolute;
@@ -1451,6 +1446,8 @@ input:checked + .slider-round:before {
   width: 4rem;
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
+  z-index: 1;
+
   /* padding: 0.5 1rem 1rem 1rem; */
   /* border: #29abe2 0.1rem solid; */
   padding-right: 1rem;
@@ -1473,6 +1470,7 @@ input:checked + .slider-round:before {
   width: 10%;
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
+  z-index: 1;
 }
 .orientation-img {
   width: 100%;
@@ -1708,7 +1706,7 @@ iframe {
 
 #modal-title {
   color: white;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-style: normal;
   margin-left: -1vw;
   margin-top: -0.75vw;
@@ -1719,9 +1717,8 @@ iframe {
   z-index: 2; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
   background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
 }
 
@@ -1730,7 +1727,9 @@ iframe {
   background-color: rgba(0, 0, 0, 0.85);
   margin: 15% auto;
   padding: 1.5rem;
-  width: 30%;
+  /* min-width: 30%;
+  width: 35%; */
+  width: 25rem;
   position: relative;
   border-radius: 0.25rem;
 }
@@ -1746,9 +1745,10 @@ iframe {
 
 .close:hover,
 .close:focus {
-  color: black;
+  /* color: black; */
   text-decoration: none;
   cursor: pointer;
+  color: #999;
 }
 
 /* The Copy Button */
@@ -1813,4 +1813,174 @@ iframe {
   margin-right: 8px;
   font-size: 1.5rem;
   margin: 0 auto;
+}
+
+/* The Modal (background) */
+.downloadmodal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  /* border: #007bff 0.1rem solid; */
+}
+
+/* Modal Content Box */
+.download-modal-content {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  /* margin: 7.5% auto; */
+  padding: 1.5rem;
+  margin: auto;
+
+  width: 60%;
+  border-radius: 0.25rem;
+}
+
+/* The Close Button (x) */
+.download-close {
+  color: white;
+  float: right;
+  margin-top: -0.5rem;
+  margin-right: -0.5rem;
+  font-size: 1.5rem;
+}
+
+.download-close:hover,
+.download-close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Headings and Paragraphs */
+.download-heading {
+  font-size: 1.15rem;
+  font-weight: normal;
+  margin-top: 0.1rem;
+  margin-bottom: 0.625rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.downloadModal-title {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  color: white;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 0.1rem;
+  margin-bottom: 0.625rem;
+  /* font-weight: bold; */
+}
+.TermOfUse {
+  margin-left: 1vw;
+  margin-right: 1vw;
+
+  /* padding: 1rem; */
+  /* border-radius: 0.25rem; Rounded corners for the container */
+  /* margin: 1rem 0; Spacing above and below the terms of use container */
+}
+
+.TermOfUse-text {
+  color: white;
+  font-size: 0.75rem;
+  line-height: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#TermOfUse-namelink {
+  color: white;
+  text-decoration: underline;
+}
+.TermOfUs-list ul {
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+}
+
+.TermOfUs-list ul li {
+  font-size: 0.75rem;
+  list-style-type: disc;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+/* The Copy Button */
+.attribution button {
+  border: none;
+  padding: 10px;
+  /* background-color: #007bff; */
+  background-color: #29abe2;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.75rem;
+  margin: 0.5rem 0.25rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 1rem;
+  white-space: nowrap;
+}
+.attribution {
+  display: flex;
+  align-items: center; /* Align the items vertically */
+  border: 0.1rem solid #333;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: none;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.attribution textarea {
+  flex-grow: 1; /* Allow the input to grow and fill the space */
+  margin-right: 0.5rem;
+  padding: 0.25rem;
+  background-color: #262626;
+  color: white;
+  border: none;
+  display: flex;
+  resize: none;
+}
+
+#attributionCopy:hover,
+#downloadBtn:hover {
+  background-color: #007bff;
+}
+
+.attribution-text {
+  color: white;
+  font-size: 0.75rem;
+  line-height: 1.15rem;
+  /* margin-top: 0.5rem; */
+  margin-bottom: 0.5rem;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.download-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 0.75rem;
+  margin-bottom: 0.15rem;
+}
+
+/* Download Button */
+#downloadBtn {
+  background-color: #29abe2;
+  color: white;
+  padding: 0.5rem 1.05rem;
+  /* margin: 10px 0; */
+  border: none;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  margin: 0;
 }
