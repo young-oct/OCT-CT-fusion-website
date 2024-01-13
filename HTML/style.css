@@ -289,7 +289,7 @@ ol li::before {
 
 .footer {
   background-color: hsla(0, 0%, 95%, 40%);
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
   margin-top: 1.5rem;
   text-align: center;
   /* left: 0;
@@ -298,7 +298,15 @@ ol li::before {
   /* position: absolute; */
   /* border: #262626 solid 0.1rem; */
 }
-
+.footer-content {
+  font-size: 0.7rem;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+#footer-link {
+  text-decoration: underline;
+  color: #333;
+}
 .content {
   margin: 1rem; /* controls the spacing  bewteeen content and other elements*/
 }
@@ -1881,10 +1889,6 @@ iframe {
 .TermOfUse {
   margin-left: 1vw;
   margin-right: 1vw;
-
-  /* padding: 1rem; */
-  /* border-radius: 0.25rem; Rounded corners for the container */
-  /* margin: 1rem 0; Spacing above and below the terms of use container */
 }
 
 .TermOfUse-text {
@@ -1914,7 +1918,6 @@ iframe {
 .attribution button {
   border: none;
   padding: 10px;
-  /* background-color: #007bff; */
   background-color: #29abe2;
   color: white;
   text-align: center;
@@ -1977,7 +1980,6 @@ iframe {
   background-color: #29abe2;
   color: white;
   padding: 0.5rem 1.05rem;
-  /* margin: 10px 0; */
   border: none;
   cursor: pointer;
   border-radius: 1.5rem;
