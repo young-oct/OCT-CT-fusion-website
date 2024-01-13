@@ -319,8 +319,9 @@ function addArrowEventListeners() {
 }
 
 // Function to fetch the footer template content and insert it into the DOM.
+// Function to fetch the template content and insert it into the DOM.
 window.addEventListener("DOMContentLoaded", () => {
-  fetch("footer-template.html")
+  fetch("template.html") // Replace 'template.html' with the path to your actual template file
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -328,14 +329,26 @@ window.addEventListener("DOMContentLoaded", () => {
       return response.text();
     })
     .then((html) => {
-      document.getElementById("footer-placeholder").innerHTML = html;
-      const currentYearElement = document.getElementById("current-year");
+      // Parse the HTML response to be able to manipulate it
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+
+      // Get the footer and legends content from the parsed HTML
+      const footerHTML = doc.querySelector(".footer").outerHTML;
+      const legendsHTML = doc.querySelector(".legends").outerHTML;
+
+      // Insert the footer and legends into their respective placeholders in the current document
+      document.getElementById("footer-placeholder").innerHTML = footerHTML;
+      document.getElementById("legends-placeholder").innerHTML = legendsHTML;
+
+      // Update the current year in the footer
+      const currentYearElement = document.querySelector(".footer .current-year");
       if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear();
       }
     })
     .catch((error) => {
-      console.error("Error fetching the footer template:", error);
+      console.error("Error fetching the template:", error);
     });
 });
 
@@ -483,6 +496,7 @@ class fusedViewer {
 class SwitchButton {
   constructor(containerId, viewer) {
     this.switchContainer = document.getElementById(containerId);
+    this.legendsWrapper = document.getElementById("legends-wrapper");
     this.viewer = viewer;
     this.isOriginal = true;
 
@@ -495,6 +509,17 @@ class SwitchButton {
           this.isOriginal = checkbox.checked; // Set isOriginal based on the checkbox state
           const newPath = this.isOriginal ? this.viewer.originalImagePath : this.viewer.alternateImagePath;
           this.viewer.updateImagePath(newPath);
+
+          // Toggle legends-wrapper active state and display
+          if (this.legendsWrapper) {
+            if (this.legendsWrapper.classList.contains("active")) {
+              this.legendsWrapper.classList.remove("active");
+              this.legendsWrapper.style.display = "none";
+            } else {
+              this.legendsWrapper.classList.add("active");
+              this.legendsWrapper.style.display = "block";
+            }
+          }
         });
       } else {
         console.error("Checkbox element not found in container:", containerId);

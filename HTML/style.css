@@ -1165,7 +1165,7 @@ video {
   top: 1.5%;
   left: 2.5%; /* remeber to use precentage to control the location so it's responsive to the window size change  */
   z-index: 100;
-  color: #111;
+  color: #8daebc;
   font-size: 1.75rem;
   margin-left: 1rem;
 }
@@ -1174,14 +1174,14 @@ video {
   top: 2.5%;
   right: 1.5%; /* remeber to use precentage to control the location so it's responsive to the window size change  */
   z-index: 100;
-  color: #111;
+  color: #8daebc;
   font-size: 1.75rem;
   margin-right: 1rem;
 }
 
 #download_icon:hover,
 #share_icon:hover {
-  color: #777;
+  color: #29abe2;
 }
 
 .side_container {
@@ -1198,7 +1198,77 @@ video {
   width: 25%;
   border: 0.25rem solid orange;
   height: 100%;
-  position: relative;
+  /* position: relative; */
+}
+
+#legends-wrapper {
+  margin: 0.25rem auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* visibility: hidden; */
+  display: none;
+}
+/* #legends-wrapper.active {
+  display: block;
+} */
+
+.legends {
+  border: 0.25rem solid green;
+  width: 100%;
+  height: 40%;
+}
+.findings_title {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: 1rem;
+  color: #333;
+  font-weight: normal;
+  margin-top: 0.1rem;
+  margin-bottom: 0.625rem;
+}
+
+.findings-paragraph {
+  margin-left: 1vw;
+  margin-right: 1vw;
+
+  color: #333; /* Dark gray text for the paragraph */
+  font-size: 0.9rem; /* adjust as needed */
+  line-height: 1.15rem;
+  margin-bottom: 1rem; /* spacing between paragraphs */
+  text-align: pretty;
+  /* visibility: hidden; */
+}
+
+.findings_title {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: 1rem;
+  color: #333;
+  font-weight: normal;
+  margin-top: 0.1rem;
+  margin-bottom: 0.625rem;
+}
+
+.legends-paragraph {
+  margin-left: 1vw;
+  margin-right: 1vw;
+
+  color: #333; /* Dark gray text for the paragraph */
+  font-size: 0.65rem; /* adjust as needed */
+  text-align: pretty;
+  margin-bottom: 0.5rem;
+}
+
+.legends_title {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: 0.8rem;
+  color: #333;
+  font-weight: normal;
+  margin-top: 0.1rem;
+  margin-bottom: 0.25rem;
 }
 
 .fused_side_img {
@@ -1358,7 +1428,7 @@ input:checked + .slider-round:before {
   -webkit-appearance: none; /* Override default appearance */
   width: 2rem; /* Increased width of the thumb */
   height: 1rem; /* Increased height of the thumb */
-  background: #777; /* Custom thumb color*/
+  background: #8daebc; /*  thumb color*/
   cursor: pointer; /* Changes cursor to pointer when hovering over the thumb */
   border-radius: 50%; /* Optional: Makes the thumb circular */
   border-radius: 1.5rem; /* Makes the thumb square */
@@ -1367,7 +1437,7 @@ input:checked + .slider-round:before {
 /* Styles for WebKit-based browsers */
 .range-slider::-webkit-slider-thumb:hover,
 .range-slider::-webkit-slider-thumb:active {
-  background: #555; /* Custom thumb color*/
+  background: #29abe2; /* Custom thumb color*/
 }
 
 .infoOverlay_style {
