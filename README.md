@@ -188,7 +188,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-This work is licensed under a [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa], see either LICENSE.txt or [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa] for more information.
+This work is licensed under a [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa], see either `LICENSE.txt` or [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa] for more information.
 
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
