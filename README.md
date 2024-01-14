@@ -79,7 +79,7 @@
 
 ## About The Project
 
-[![HTML/images/fusion/01_fused_demo.gif][HTML/images/fusion/01_fused_demo.gif]](HTML/images/fusion/01_fused_demo.gif)
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 # OCT-CT-fusion-website
 
