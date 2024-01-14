@@ -1269,16 +1269,6 @@ video {
   /* visibility: hidden; */
 }
 
-.findings_title {
-  margin-left: 1vw;
-  margin-right: 1vw;
-  font-size: 1rem;
-  color: #333;
-  font-weight: normal;
-  margin-top: 0.1rem;
-  margin-bottom: 0.625rem;
-}
-
 .legends-paragraph {
   margin-left: 1vw;
   margin-right: 1vw;
@@ -1323,19 +1313,35 @@ video {
   color: #222;
 } */
 #fused_top_cap {
-  font-size: 0.75rem;
-  caption-side: bottom;
+  font-size: 80%;
+  /* caption-side: bottom; */
   text-align: center;
   text-wrap: balance;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: #e05d27;
 
   /* font-style: normal; */
 }
 #fused_bottom_cap {
-  font-size: 0.75rem;
-  caption-side: top;
+  font-size: 80%;
+  /* caption-side: top; */
   text-align: center;
   text-wrap: balance;
   /* font-style: normal; */
+  /* border: #27e0a7 0.1rem solid; */
+  border-radius: 2rem;
+  padding: 2%;
+  color: #27e0a7;
+
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  /* color: white; */
+}
+#fused {
+  position: relative;
 }
 .switch-container {
   position: absolute;

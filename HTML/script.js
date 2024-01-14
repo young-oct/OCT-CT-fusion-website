@@ -448,7 +448,6 @@ window.addEventListener("DOMContentLoaded", () => {
       const footerHTML = doc.querySelector(".footer").outerHTML;
       const legendsHTML = doc.querySelector(".legends").outerHTML;
       const termHTML = doc.querySelector(".TermOfUse").outerHTML;
-      // const
 
       // Insert the footer and legends into their respective placeholders in the current document
       document.getElementById("footer-placeholder").innerHTML = footerHTML;
