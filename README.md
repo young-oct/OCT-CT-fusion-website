@@ -30,41 +30,24 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/HTML/images/readme/index.jpg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">OCT CT fusion website</h3>
 
   <p align="center">
-This web-based interactive educational module on temporal bone and middle ear anatomy addresses this gap by
-        offering users a platform to familiarize themselves with both the normal anatomy of the middle ear and a
-        selection of pathological cases by the courtesy of
-        <a
-          id="name-link"
-          href="https://medicine.dal.ca/departments/department-sites/surgery/divisions/otolaryngology/our-people/faculty/david-p--morris.html"
-          ><span style="white-space: nowrap">Dr. David P Morris</span></a
-        >
-        and
 
-        <a
-          id="name-link"
-          href="https://medicine.dal.ca/departments/department-sites/surgery/divisions/otolaryngology/our-people/faculty/nael-shoman.html"
-          ><span style="white-space: nowrap">Dr. Nael Shoman</span></a
-        >, including trauma and cholesteatoma, as observed through <em>in-vivo</em> imaging at our clinic. This module
-        showcases an image fusion technique that augements standard computerized tomography (CT) and OCT for improved
-        clinical interpretation. This results in a composite image that combines the wide FOV and excellent boney
-        delineation of CT with the high resolution and soft-tissue contrast of OCT for better ME images than with either
-        modality alone.
-
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+An interactive, web-based educational module designed to explore the anatomy of the temporal bone and middle ear with images
+synthesized from middle ear optical coherence tomography (OCT) and temporal bone CT scans.
+<br />
+<a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+<br />
+<br />
+<a href="https://github.com/github_username/repo_name">View Demo</a>
+·
+<a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+·
+<a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
 
   </p>
 </div>
