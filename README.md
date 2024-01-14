@@ -206,13 +206,13 @@ CONTACT
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Young Wang - [linkedin-shield][linkedin-url] - junzhe.wang@dal.ca
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/young-oct/OCT-CT-fusion-website](https://github.com/young-oct/OCT-CT-fusion-website)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-ACKNOWLEDGMENTS
+<!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
 
@@ -233,9 +233,9 @@ ACKNOWLEDGMENTS
 <!-- * [React Icons](https://react-icons.github.io/react-icons/search) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-I 
+
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/young-oct/OCT-CT-fusion-website.svg?style=for-the-badge
 [contributors-url]: https://github.com/young-oct/OCT-CT-fusion-website/graphs/contributors
