@@ -38,8 +38,8 @@
             >
             <div class="dropdown-content" id="interactive_dropdown">
               <a href="fusion.html">OCT/CT image fusion</a>
-              <a href="case1-axial.html">Normal ear</a>
-              <a id="active" href="case2-axial.html">Traumatic middle ear injury</a>
+              <a id="active" href="case1-axial.html">Normal ear</a>
+              <a href="case2-axial.html">Traumatic middle ear injury</a>
               <a href="case3-axial.html">Cholesteatoma</a>
             </div>
           </div>
@@ -52,16 +52,18 @@
       </div>
     </header>
     <div class="content">
-      <h1 class="title_h1">Case II: Traumatic ear (R)</h1>
+      <h1 class="title_h1">Case II: traumatic middle ear injury (R) - axial view</h1>
       <h2 class="case_title">Case description</h2>
       <p class="paragraph" id="fisrtWord">
-        A 57-year-old male, with normal hearing in his left ear was selected as a healthy control for OCT/CT image
-        fusion. Otoscopic examination of the left tympanic membrane showed it to be intact and healthy. In the otoscopic
-        image, the malleus is visible from the umbo to the short process, and the incudostapedial joint can be seen
-        posteriorly through the tympanic membrane <b>(TM)</b>. The coronal CT image shows a broad external auditory
-        canal <b>(EAC)</b> and an aerated middle ear space with intact scutum <b>(SC)</b> and ossicles. The TM is not
-        visible in the CT image due to its thinness and low radiopacity. The corresponding OCT image shows the TM and
-        proximal surfaces of the cochlear promontory <b>(CP)</b>, incus <b>(I)</b> and umbo <b>(M)</b>.
+        A 28-year-old female patient presented with a significant traumatic ear injury. At 18, she was urgently referred
+        to our clinic due to bloody ear discharge post-temporomandibular joint arthroscopy. Initial examination revealed
+        an anterior canal wall laceration and a traumatic tympanic membrane <b>(TM)</b> perforation. Audiometric tests
+        indicated moderate conductive hearing loss, characterized by a \( 32.5 \, \text{dB} \) mean air-bone gap across
+        \( 0.5 - 4 \, \text{kHz} \) frequencies. Despite the TM perforation healing, the conductive hearing loss
+        remained. The patient declined surgical intervention but continues to be monitored by our clinic. Her ear's
+        condition is unchanged since the initial injury. A recent examination of the healed TM revealed a nearly
+        featureless structure, with the lateral process of the malleus <b>(M)</b> being the only distinguishable
+        landmark under endoscopy.
       </p>
     </div>
 
@@ -74,25 +76,25 @@
         <div id="overlay" onclick="hideOverlay()"></div>
         <div class="fig_content" id="case_fig">
           <figure class="cap_fig_container">
-            <img class="enlarge_img" id="case_img" src="images/case I/01_case I otoscopy.png" alt="" />
+            <img class="enlarge_img" id="case_img" src="images/case II/01_case II otoscopy.png" alt="" />
             <figcaption class="fig_caption" id="case_img_cap">otoscopic image</figcaption>
           </figure>
         </div>
         <div class="fig_content" id="case_fig">
           <figure class="cap_fig_container">
-            <img class="enlarge_img" id="case_img" src="images/case I/02_case I audiogram.jpg" alt="" />
+            <img class="enlarge_img" id="case_img" src="images/case II/02_case II audiogram.jpg" alt="" />
             <figcaption class="fig_caption" id="case_img_cap">audiogram</figcaption>
           </figure>
         </div>
         <div class="fig_content" id="case_fig">
           <figure class="cap_fig_container">
-            <img class="enlarge_img" id="case_img" src="images/case I/03_case I CT.jpg" alt="" />
-            <figcaption class="fig_caption" id="case_img_cap">CT (coronal view)</figcaption>
+            <img class="enlarge_img" id="case_img" src="images/case II/03_case II CT(A).jpg" alt="" />
+            <figcaption class="fig_caption" id="case_img_cap">CT (axial view)</figcaption>
           </figure>
         </div>
         <div class="fig_content" id="case_fig">
           <figure class="cap_fig_container">
-            <img class="enlarge_img" id="case_img" src="images/case I/04_case I 3D OCT.jpg" alt="" />
+            <img class="enlarge_img" id="case_img" src="images/case II/04_case II 3D OCT.jpg" alt="" />
             <figcaption class="fig_caption" id="case_img_cap">OCT (3D view)</figcaption>
           </figure>
           <i class="arrow right-arrow fa-solid fa-arrow-right"></i>
@@ -101,14 +103,36 @@
     </div>
 
     <div class="fused_container">
-      <div class="note_container"></div>
+      <div class="side_container">
+        <div class="side_top">
+          <figure class="cap_fig_container">
+            <a href="case2-coronal.html">
+              <img
+                class="fused_side_img"
+                src="images/03_23_20230309(R)/coronal_FOV(25)/cropped/image_00000.jpg"
+                alt="" />
+            </a>
+            <figcaption class="fig_caption" id="fused_top_cap">click image to coronal view</figcaption>
+          </figure>
+        </div>
+        <div class="side_bottom">
+          <figure class="cap_fig_container">
+            <a href="case2-sagittal.html">
+              <img
+                class="fused_side_img"
+                src="images/03_23_20230309(R)/sagittal_FOV(25)/cropped/image_00000.jpg"
+                alt="" />
+            </a>
+            <figcaption class="fig_caption" id="fused_bottom_cap">click image to sagittal view</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="main_container">
         <div class="range-slider-container">
           <input type="range" min="1" max="100" value="50" class="range-slider" id="myRange" />
-          <!-- <p>Value: <span id="demo"></span></p> -->
         </div>
         <div class="orientation-container">
-          <img class="orientation-img" src="images/design elements/RAS arrow(C).png" alt="" />
+          <img class="orientation-img" src="images/design elements/RSA arrow(A).png" alt="" />
         </div>
 
         <div id="c2_axialinfoOverlay" class="infoOverlay_style"></div>
@@ -120,7 +144,48 @@
         </div>
 
         <i id="download_icon" class="fa-solid fa-cloud-arrow-down"></i>
+        <div id="downloadModal" class="downloadmodal">
+          <div class="download-modal-content">
+            <span class="download-close">&times;</span>
+            <h2 class="download-heading">Download image</h2>
+            <h2 class="downloadModal-title">Term of use</h2>
+            <div id="term-placeholder"></div>
+
+            <h2 class="downloadModal-title">How to atribute</h2>
+            <p class="attribution-text">For presentations / print</p>
+
+            <div class="attribution">
+              <textarea id="attributionText" readonly>
+Lorem ipsum dolor sit amet consectetur adipisicing elit.</textarea
+              >
+              <button id="attributionCopy" onclick="copyToClipboard('attributionText')">
+                <i class="fa-solid fa-copy"></i> Copy
+              </button>
+            </div>
+            <div class="download-container">
+              <button id="downloadBtn">Download</button>
+            </div>
+          </div>
+        </div>
+
         <i id="share_icon" class="fa-solid fa-arrow-up-right-from-square"></i>
+        <div id="shareModal" class="modal" style="display: none">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Share</h2>
+            <div class="share-buttons">
+              <button class="share-btn" onclick="shareEmail()"><i class="fa-solid fa-envelope"></i></button>
+              <button class="share-btn" onclick="shareLinkedIn()">
+                <i class="fa-brands fa-linkedin"></i>
+              </button>
+              <button class="share-btn" onclick="shareTwitter()"><i class="fa-brands fa-x-twitter"></i></button>
+            </div>
+            <div class="share-link">
+              <input type="text" id="shareLink" readonly />
+              <button onclick="copyToClipboard()"><i class="fa-solid fa-copy"></i> Copy</button>
+            </div>
+          </div>
+        </div>
 
         <div id="c2_axialViewer" class="fusedviewer_style">
           <img
@@ -129,47 +194,24 @@
             src="images/03_23_20230309(R)/axial_FOV(25)/cropped/image_00000.jpg"
             alt="axial CT Scan" />
         </div>
-
-        <!-- <img class="fused_main_img" src="images/03_06_20230206(L)/axial_FOV(25)/cropped/image_00000.jpg" alt="" /> -->
       </div>
-
-      <div class="side_container">
-        <div class="side_top">
-          <figure class="cap_fig_container">
-            <a href="case2-coronal.html">
-              <img class="fused_side_img" src="images/03_23_20230309(R)/axial_FOV(25)/cropped/image_00000.jpg" alt="" />
-            </a>
-            <figcaption class="fig_caption" id="fused_top_cap">click image to coronal view</figcaption>
-          </figure>
-        </div>
-        <div class="side_bottom">
-          <!-- <i id="bottom_stack" class="fa-solid fa-layer-group stack_icon"></i> -->
-          <figure class="cap_fig_container">
-            <a href="case2-sagittal.html">
-              <img class="fused_side_img" src="images/03_23_20230309(R)/axial_FOV(25)/cropped/image_00000.jpg" alt="" />
-            </a>
-            <figcaption class="fig_caption" id="fused_bottom_cap">click image to sagittal view</figcaption>
-          </figure>
-        </div>
+      <div class="note_container">
+        <h2 class="findings_title">Clinical findings</h2>
+        <p class="findings-paragraph">
+          In the CT, OCT and fused coronal images, it can be seen that the umbo had detached from the TM and the malleus
+          had shifted medially by approximately 1.5mm. The umbo of the malleus, which would be contiguous with the
+          tympanic membrane in a normal ear, can be seen lying inferior to the incudostapedial joint in the coronal cut
+          and can be followed superiorly. The umbo can also be seen in the axial image.In the OCT image, but not in the
+          CT image, a fibrous connection (FC) is visible between the medialized neck of the malleus (NOM) and the incus
+          (I). Both the CT and OCT also show a thickening of the mucosa (TMU) around the round window niche and on the
+          promontory, presumably due to scarring associated with reactive inflammatory changes from persistent exposure
+          of the mucosa to air immediately following the injury.
+        </p>
       </div>
     </div>
-
-    <!-- <div id="c1_axialViewer" class="fusedviewer_style">
-      <img
-        id="c1_axialImage"
-        class="fusedimage_style"
-        src="images/03_06_20230206(L)/axial_FOV(25)/cropped/image_00000.jpg"
-        alt="axial CT Scan" />
-      <div id="c1_axialinfoOverlay" class="infoOverlay_style"></div>
+    <div id="legends-wrapper">
+      <div id="legends-placeholder"></div>
     </div>
-    <button id="c1_axial_switchButton" class="switch-button_style">annotation ON/OFF</button>
-    <div class="expandable-text">
-      Imaging protocol
-      <span class="hidden-text">
-        CT: Siemens Somatom Definition AS+ - 120 kVp 163 mA 0.4 mm
-        <br />ME-OCT: 1550 nm OCT - 0.22 vol/s (30&deg; &#xd7; 30&deg; &#xd7; 10.9 mm), 40&#181;m
-      </span>
-    </div> -->
 
     <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
     <div id="footer-placeholder"></div>
