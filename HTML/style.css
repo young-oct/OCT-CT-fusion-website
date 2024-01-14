@@ -295,6 +295,8 @@ ol li::before {
   /* left: 0;
   bottom: 0; */
   width: 100%;
+  display: inline-block;
+
   /* position: absolute; */
   /* border: #262626 solid 0.1rem; */
 }
@@ -307,6 +309,27 @@ ol li::before {
   text-decoration: underline;
   color: #333;
 }
+.declaration {
+  float: left;
+  margin-left: 0.5rem;
+}
+.footer-externals {
+  font-size: 0.7rem;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+  /* border: #007bff 0.1rem solid; */
+  float: right;
+  margin-right: 0.5rem;
+
+  /* color: #333; */
+}
+.footer-externals a {
+  color: #333;
+  border-left: #333 0.1rem solid;
+  padding-left: 0.25rem;
+  /* float: right; */
+}
+
 .content {
   margin: 1rem; /* controls the spacing  bewteeen content and other elements*/
 }
@@ -1239,7 +1262,7 @@ video {
   margin-right: 1vw;
 
   color: #333; /* Dark gray text for the paragraph */
-  font-size: 0.9rem; /* adjust as needed */
+  font-size: 0.75rem; /* adjust as needed */
   line-height: 1.15rem;
   margin-bottom: 1rem; /* spacing between paragraphs */
   text-align: pretty;
@@ -1681,6 +1704,10 @@ iframe {
   .contact_img_container {
     width: 45%;
   }
+  .findings-paragraph {
+    font-size: 0.6rem;
+    line-height: calc(1.15rem / 2);
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1693,6 +1720,9 @@ iframe {
   }
   #index_img1_title {
     font-size: 70%;
+  }
+  .findings-paragraph {
+    font-size: 0.7rem;
   }
 }
 
@@ -1985,4 +2015,9 @@ iframe {
   border-radius: 1.5rem;
   font-size: 1rem;
   margin: 0;
+}
+
+#policy {
+  margin: 0.25rem auto;
+  width: 90%;
 }
