@@ -39,15 +39,17 @@
 
 An interactive, web-based educational module designed to explore the anatomy of the temporal bone and middle ear with images
 synthesized from middle ear optical coherence tomography (OCT) and temporal bone CT scans.
-<br />
+
+<!-- <br />
 <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-<br />
-<br />
-<a href="https://github.com/github_username/repo_name">View Demo</a>
+<br /> -->
+<!-- <br />
+<a href="https://github.com/github_username/repo_name">View Demo</a> -->
+<!-- · -->
+
+<a href="https://github.com/young-oct/OCT-CT-fusion-website/issues">Report Bug</a>
 ·
-<a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-·
-<a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+<a href="https://github.com/young-oct/OCT-CT-fusion-website/issues">Request Feature</a>
 
   </p>
 </div>
@@ -119,33 +121,17 @@ This website, built with HTML, CSS, and JavaScript, showcases middle ear CT and 
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To begin using this project, start by downloading and installing Visual Studio Code or a similar integrated development environment (IDE). Visual Studio Code is a powerful and user-friendly tool that will help you navigate and modify the project's codebase effectively.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Before diving into the project, ensure you have Visual Studio Code or a comparable IDE installed on your computer. These tools are essential for accessing, editing, and managing the project files.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
+1. Clone the repo
+   sh
+   https://github.com/young-oct/OCT-CT-fusion-website.git
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -153,65 +139,65 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-  <p xmlns:cc="http://creativecommons.org/ns#">
-    This work &copy;
-    <span class="current-year" id="termYear"></span> by
-    <a
-      id="TermOfUse-namelink"
-      rel="cc:attributionURL dct:creator"
-      property="cc:attributionName"
-      href="https://www.linkedin.com/in/junzhe-young-wang/"
-      >Junzhe "Young" Wang</a
-    >
-    is licensed under
-    <a
-      href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
-      target="_blank"
-      rel="license noopener noreferrer"
-      style="display: inline-block"
-      >CC BY-NC-SA 4.0<img
-        style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
-        src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img
-        style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
-        src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img
-        style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
-        src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /><img
-        style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
-        src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" /></a
-    >, with support from
-    <a
-      rel="cc:attributionURL dct:creator"
-      property="cc:attributionName"
-      href="https://www.dal.ca/faculty/school-biomedical-engineering/our-people/our-faculty-atok/RobAdamson.html"
-      ><span style="white-space: nowrap">Dr. Robert Adamson</span></a
-    >. The normal anatomy of the middle ear and a selection of pathological cases are provided by the courtesy of
-    <a
-      rel="cc:attributionURL dct:creator"
-      property="cc:attributionName"
-      href="https://medicine.dal.ca/departments/department-sites/surgery/divisions/otolaryngology/our-people/faculty/david-p--morris.html"
-      ><span style="white-space: nowrap">Dr. David P Morris</span></a
-    >
-    and
-    <a rel="cc:attributionURL dct:creator"
-      property="cc:attributionName"
-      href="https://medicine.dal.ca/departments/department-sites/surgery/divisions/otolaryngology/our-people/faculty/nael-shoman.html"
-      ><span style="white-space: nowrap">Dr. Nael Shoman</span></a
-    >.
-  </p>
-  <p >You do not need to seek permission to use the provided media:</p>
-  <div >
-    <ul>
-      <li>Give appropriate credit/attribution;</li>
-      <li>The use for non-commercial;</li>
-      <li>You do not copyright the material.</li>
-    </ul>
-  </div>
+<p xmlns:cc="http://creativecommons.org/ns#">
+  This work &copy;
+  <span class="current-year" id="termYear"></span> by
+  <a
+    id="TermOfUse-namelink"
+    rel="cc:attributionURL dct:creator"
+    property="cc:attributionName"
+    href="https://www.linkedin.com/in/junzhe-young-wang/"
+    >Junzhe "Young" Wang</a
+  >
+  is licensed under
+  <a
+    href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+    target="_blank"
+    rel="license noopener noreferrer"
+    style="display: inline-block"
+    >CC BY-NC-SA 4.0<img
+      style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
+      src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img
+      style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
+      src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img
+      style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
+      src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /><img
+      style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
+      src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" /></a
+  >, with support from
+  <a
+    rel="cc:attributionURL dct:creator"
+    property="cc:attributionName"
+    href="https://www.dal.ca/faculty/school-biomedical-engineering/our-people/our-faculty-atok/RobAdamson.html"
+    ><span style="white-space: nowrap">Dr. Robert Adamson</span></a
+  >. The normal anatomy of the middle ear and a selection of pathological cases are provided by the courtesy of
+  <a
+    rel="cc:attributionURL dct:creator"
+    property="cc:attributionName"
+    href="https://medicine.dal.ca/departments/department-sites/surgery/divisions/otolaryngology/our-people/faculty/david-p--morris.html"
+    ><span style="white-space: nowrap">Dr. David P Morris</span></a
+  >
+  and
+  <a rel="cc:attributionURL dct:creator"
+    property="cc:attributionName"
+    href="https://medicine.dal.ca/departments/department-sites/surgery/divisions/otolaryngology/our-people/faculty/nael-shoman.html"
+    ><span style="white-space: nowrap">Dr. Nael Shoman</span></a
+  >.
+</p>
+<p >You do not need to seek permission to use the provided media:</p>
+<div >
+  <ul>
+    <li>Give appropriate credit/attribution;</li>
+    <li>The use for non-commercial;</li>
+    <li>You do not copyright the material.</li>
+  </ul>
+</div>
 
-  <p >
-    For usage beyond the scope of the CC BY-NC-SA 4.0 license or to request high-resolution content, please contact us via email 
-    at 
-     <a href="mailto:junzhe.wang@dal.ca">junzhe.wang@dal.ca</i></a> or <a id="TermOfUse-namelink" href="mailto:rob.adamson@dal.ca">rob.adamson@dal.ca</i></a>. 
-  </p>
+<p >
+  For usage beyond the scope of the CC BY-NC-SA 4.0 license or to request high-resolution content, please contact us via email
+  at
+   <a href="mailto:junzhe.wang@dal.ca">junzhe.wang@dal.ca</i></a> or <a id="TermOfUse-namelink" href="mailto:rob.adamson@dal.ca">rob.adamson@dal.ca</i></a>.
+</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -219,10 +205,10 @@ This is an example of how to list things you need to use the software and how to
 
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+- [ ] 2023.12.15 Pre-alpha version release
+- [ ] 2023.12.18 Alpha version release
+- [ ] 2024.01.14 Beta version release
+<!-- - [ ] Nested Feature -->
 
 See the [open issues](https://github.com/young-oct/OCT-CT-fusion-website/issues) for a full list of proposed features (and known issues).
 
@@ -330,3 +316,7 @@ Project Link: [https://github.com/young-oct/OCT-CT-fusion-website](https://githu
 [JavaScript-url]: https://www.javascript.com
 [HTML-shield]: https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [HTML-url]: https://www.w3.org/html/
+
+```
+
+```
