@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="/HTML/images/readme/index.jpg" alt="Logo" width="500">
+    <img src="/HTML/images/readme/index.jpg" alt="Logo" width="300">
   </a>
 
 <h3 align="center">OCT CT fusion website</h3>
@@ -90,11 +90,11 @@ synthesized from middle ear optical coherence tomography (OCT) and temporal bone
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-# OCT-CT-fusion-website
+<!-- # OCT-CT-fusion-website -->
 
 This website, built with HTML, CSS, and JavaScript, showcases middle ear CT and OCT results. It features an intuitive interface and interactive elements, presenting medical imaging in a clear, user-friendly format.
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+<!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description` -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,7 +202,7 @@ This work is licensed under the [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-n
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTACT
+CONTACT
 
 ## Contact
 
@@ -212,18 +212,30 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGMENTS -->
+ACKNOWLEDGMENTS
 
 ## Acknowledgments
 
-- []()
-- []()
-- []()
+<!-- * [Choose an Open Source License](https://choosealicense.com) -->
+<!-- * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet) -->
+<!-- * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/) -->
+<!-- * [Malven's Grid Cheatsheet](https://grid.malven.co/) -->
+
+- [Img Shields](https://shields.io)
+<!-- * [GitHub Pages](https://pages.github.com) -->
+- [Font Awesome](https://fontawesome.com)
+- [Siebenlab](http://www.siebenlab.com/)
+- [Interactive Web-based CT Temporal Bone Module](http://uwmsk.org/temporalbone/index.html)
+- [casestacks](https://www.casestacks.com/neuro/ct/temporal-bone-anatomy/)
+- [radiologyassistant](https://radiologyassistant.nl/head-neck/temporal-bone/anatomy-2-0)
+- [sectional-anatomy.org](https://sectional-anatomy.org/ct-head-neck/)
+
+<!-- * [React Icons](https://react-icons.github.io/react-icons/search) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 I 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links
 
 [contributors-shield]: https://img.shields.io/github/contributors/young-oct/OCT-CT-fusion-website.svg?style=for-the-badge
 [contributors-url]: https://github.com/young-oct/OCT-CT-fusion-website/graphs/contributors
