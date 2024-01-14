@@ -95,14 +95,18 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-- [![Next][Next.js]][Next-url]
+<!-- - [![Next][Next.js]][Next-url]
 - [![React][React.js]][React-url]
 - [![Vue][Vue.js]][Vue-url]
 - [![Angular][Angular.io]][Angular-url]
 - [![Svelte][Svelte.dev]][Svelte-url]
 - [![Laravel][Laravel.com]][Laravel-url]
 - [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-- [![JQuery][JQuery.com]][JQuery-url]
+- [![JQuery][JQuery.com]][JQuery-url] -->
+
+- [![JavaScript][JavaScript.com]][JavaScript-url]
+- [![CSS][CSS.com]][CSS-url]
+- [![HTML][HTML.com]][HTML-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
