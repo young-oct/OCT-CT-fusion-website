@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/design elements/lego(square).png" />
+    <script src="https://kit.fontawesome.com/68e9d88b8c.js" crossorigin="anonymous"></script>
+    <title>Interactive ME-OCT Altas</title>
+  </head>
+  <body>
+    <header>
+      <div id="navbar" class="navbar">
+        <div>
+          <img class="logo" src="images/design elements/logo(transparent).png" alt="logo" />
+        </div>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a class="active" href="otology.html">Hearing diagnostics</a>
+          <div class="subnav">
+            <a href="#" class="subnav_dropbtn">ME-OCT<span class="dropdown-icon">&#9662;</span></a>
+            <div class="dropdown-content" id="oct_dropdown">
+              <a href="me_oct.html">ME-OCT</a>
+              <a href="OCT_basics.html">OCT basics</a>
+              <a href="OCT_development.html">OCT development</a>
+              <a href="OCT_realisation.html">Technical realization of ME-OCT</a>
+              <a href="core_functions.html">Core functions of ME-OCT</a>
+              <a href="tour_of_ear.html">Middle ear tour with OCT</a>
+            </div>
+          </div>
+          <div class="subnav">
+            <a href="#" class="subnav_dropbtn">Interactive altas<span class="dropdown-icon">&#9662;</span></a>
+            <div class="dropdown-content" id="interactive_dropdown">
+              <a href="fusion.html">OCT/CT image fusion</a>
+              <a href="case1-axial.html">Normal ear</a>
+              <a href="case2-axial.html">Traumatic middle ear injury</a>
+              <a href="case3-axial.html">Cholesteatoma</a>
+            </div>
+          </div>
+          <a href="publication.html">Publications</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="menubar">
+          <i id="menu-bar" class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <h1 class="title_h1">Hearing and hearing loss</h1>
+      <h2 class="subtitle">Epidemiology of hearing loss</h2>
+      <p class="paragraph" id="fisrtWord">
+        The sense of hearing is one of the most critical senses humans possess, as it plays a crucial role in our daily
+        communication and emotional connection with others. Our sense of hearing allows us to enjoy music, appreciate
+        the sounds of our environment, and communicate with those around us, which significantly improves to our quality
+        of life by adding richness and depth to our sensory experiences. Without the ability to hear, we would miss out
+        on the sound of a loved one's voice, the laughter of a child, or the soothing sounds of nature.
+      </p>
+      <p class="paragraph">
+        Hearing loss (HL) is a prevalent chronic condition among older Americans. In the U.S., about 5.2 million
+        children and 26 million adults suffer from significant noise-induced HL. Detectable hearing loss affects 2 to 3
+        per 1,000 children at birth, and around 15% of adults over 18 report hearing difficulties. Age is a primary
+        factor, with the highest incidence in those 60 to 69 years old. Men aged 20 to 69 are nearly twice as likely as
+        women to experience hearing loss. Furthermore, standard tests reveal that one in eight Americans aged 12 and
+        older has HL in both ears.
+      </p>
+      <div class="image_container2Column" id="p1_img1">
+        <div class="image_containerColumn">
+          <div class="cap_image_container" id="p1_img1_r">
+            <figure class="cap_fig_container">
+              <img
+                class="right_img"
+                src="images/design elements/04_hearing_loss_communication.png"
+                alt="
+              hearing loss communication" />
+              <figcaption class="fig_caption" id="p1_img1_fig_caption">
+                Hearing loss is a growing public health concern
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="image_containerColumn" id="p1_img1_l">
+          <img class="left_img" src="images/design elements/05_prediction.png" alt="prediction" type =image/png>
+        </div>
+      </div>
+      <h1 class="title_h1">Physiology and anatomy of hearing</h1>
+      <h2 class="subtitle">Forms of hearing loss</h2>
+      <p class="paragraph">
+        The physiology of hearing involves a complex interplay between the anatomical structures of the ear and neural
+        pathways, leading to the sensation of sound. The human ear, capable of processing sound frequencies ranging from
+        20 Hz to 20 kHz, is divided into three main regions: the external ear, the middle ear (ME), and the inner ear.
+        The external ear comprises the auricle (or pinna) and the external auditory canal (EAC), a narrow, curved
+        cartilaginous structure about 2.5 cm long with an opening of 0.6 cm in diameter. Sound-induced air pressure
+        changes are collected in the external ear and travel down the EAC to the tympanic membrane (TM), a thin membrane
+        that separates the external canal from the middle ear space. The middle ear, located within the temporal bone,
+        contains three bony structures known as the ossicles (malleus, incus, and stapes) and supporting ligaments.
+        These structures amplify and transmit sound vibrations to the inner ear through the stapes footplate. The inner
+        ear houses the cochlea, a spiral-shaped structure that converts mechanical motions from the ossicular chain into
+        neural signals. Inside the cochlea, sound waves cause hair cells, specialized sensory cells responsive to
+        specific sound frequencies, to vibrate. This vibration leads to the release of neurotransmitters, stimulating
+        adjacent neurons. The neural signals from these hair cells are transmitted to the brain's auditory cortex via
+        the auditory nerve.
+      </p>
+      <div class="image_container2Column" id="p1_img2">
+        <div class="image_containerColumn">
+          <div class="cap_image_container" id="p1_img2_r">
+            <figure class="cap_fig_container">
+              <img class="right_img" src="images/design elements/06_ear_anatomy.png" alt="ear anatomy" />
+            </figure>
+          </div>
+        </div>
+        <div class="image_containerColumn" id="p1_img2_c">
+          <div class="cap_image_container" id="p1_img2_l">
+            <figure class="cap_fig_container">
+              <img class="left_img" src="images/design elements/07_hearing_loss_type.png" alt="ear anatomy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+      <p class="paragraph">
+        Hearing loss, which can occur at any age and for various reasons, is categorized into three main types:
+        sensorineural, conductive, and mixed. Sensorineural hearing loss (SNHL), the most common type, involves
+        disorders that affect the inner ear (e.g., damaged hair cells) or the neural pathway to the auditory cortex that
+        impedes the conversion of mechanical vibration to neuroelectric signals. Overall, the physiology of hearing
+        involves a complex interplay between the anatomical structures of the ear and neural pathways which lead to the
+        sensation of sound. Unfortunately, any disruption which can occur at any age and for a variety of reasons can
+        result in hearing loss. There are three main categories of hearing loss (HL), each with its own unique causes
+        and characteristics. The first type is sensorineural hearing loss (SNHL) and it encompasses disorders that
+        affect the inner ear (e.g., damaged hair cells) or the neural pathway to the auditory cortex that impedes the
+        conversion of mechanical vibration to neuroelectric signals. SNHL is the most common type of hearing loss and
+        can be caused by a wide range of factors, including aging, exposure to loud noises, certain medications, genetic
+        factors, and trauma.
+      </p>
+      <p class="paragraph">
+        On the other hand, conductive hearing loss (CHL) typically involves abnormalities of the TM and middle ear,
+        which interferes with the normal transmission and/or the amplification of sound and conversion of sound to
+        mechanical vibration. This type of hearing loss can be temporary due to cerumen impaction of the EAC, and also
+        be caused by conditions such as ear infections, fluid accumulation in the middle ear or damage to the TM or
+        ossicles. Finally, mixed hearing loss occurs when both conductive and sensorineural hearing loss are present,
+        which indicates that there may be damage to both the outer or middle ear and the inner ear or auditory nerve.
+        Regardless of its type, hearing loss (HL) can lead to substantial health and quality of life burdens –
+        communication difficulties, cognitive decline, and mental health issues, if hearing loss is not managed properly
+        and in a timely manner.
+      </p>
+      <h1 class="title_h1">Existing Hearing diagnostics</h1>
+      <h2 class="subtitle">Clinical painpoint</h2>
+      <p class="paragraph">
+        In this discussion, our focus will be on conductive hearing loss (CHL) resulting from middle ear disorders, a
+        condition affecting roughly 4% of the global population. In clinical practice, Conductive Hearing Loss (CHL) is
+        suspected when an air-bone gap (ABG) of 15 decibels (dB) or more is observed. The diagnosis of conductive
+        hearing loss can be challenging due to the complexity of ear anatomy and pathology.
+      </p>
+      <div class="image_container2Column" id="p1_img3">
+        <div class="image_containerColumn">
+          <div class="cap_image_container" id="p1_img3_r">
+            <figure class="cap_fig_container">
+              <img
+                class="right_img"
+                src="images/design elements/08_current_otology_diagnostics.jpg"
+                alt="
+              current otology diagnostics" />
+              <figcaption class="fig_caption" id="p1_img3_fig_caption">
+                Current middle ear diagnostics lack the precision to reliably distinguish the various causes of
+                conductive hearing loss.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="image_containerColumn" id="p3_img1_l">
+          <img class="left_img" src="images/design elements/09_otology_imaging modality_resolution.png" alt="09 otology
+          imaging modality resolution.png" type =image/png>
+        </div>
+      </div>
+      <p class="paragraph">
+        Traditionally, otology relies on three diagnostic pillars: clinical examination including otoscopic imaging,
+        audiometry, and tympanometry. However, these methods often lack the precision required for confident diagnosis,
+        leading to the supplementary and selective use of CT scans, MRI, and exploratory surgery. While these additional
+        methods can be effective, they are not first-line approaches due to their costs, the desire to avoid radiation
+        exposure, and the risks associated with invasive procedures. Therefore, there is a significant clinical need for
+        diagnostic tools that can provide a non-invasive visualisation of the structural and functional state of the
+        middle ear.
+      </p>
+    </div>
+
+    <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

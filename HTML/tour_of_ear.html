@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/design elements/lego(square).png" />
+    <script src="https://kit.fontawesome.com/68e9d88b8c.js" crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <title>Interactive ME-OCT Altas</title>
+  </head>
+  <body>
+    <header>
+      <div id="navbar" class="navbar">
+        <div>
+          <img class="logo" src="images/design elements/logo(transparent).png" alt="logo" />
+        </div>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="otology.html">Hearing diagnostics</a>
+          <div class="subnav">
+            <a href="#" id="active" class="subnav_dropbtn">ME-OCT<span class="dropdown-icon">&#9662;</span></a>
+            <div class="dropdown-content" id="oct_dropdown">
+              <a href="me_oct.html">ME-OCT</a>
+              <a href="OCT_basics.html">OCT basics</a>
+              <a href="OCT_development.html">OCT development</a>
+              <a href="OCT_realisation.html">Technical realization of ME-OCT</a>
+              <a id="active" href="core_functions.html">Core functions of ME-OCT</a>
+              <a href="tour_of_ear.html">Middle ear tour with OCT</a>
+            </div>
+          </div>
+          <div class="subnav">
+            <a href="#" class="subnav_dropbtn">Interactive altas<span class="dropdown-icon">&#9662;</span></a>
+            <div class="dropdown-content" id="interactive_dropdown">
+              <a href="fusion.html">OCT/CT image fusion</a>
+              <a href="case1-axial.html">Normal ear</a>
+              <a href="case2-axial.html">Traumatic middle ear injury</a>
+              <a href="case3-axial.html">Cholesteatoma</a>
+            </div>
+          </div>
+          <a href="publication.html">Publications</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="menubar">
+          <i id="menu-bar" class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <h1 class="title_h1">Current clinical workflow in otology</h1>
+      <h2 class="subtitle">Existing tools lack the precision for confident diagnoses</h2>
+      <p class="paragraph" id="fisrtWord">
+        Middle ear disorders are typically diagnosed through a variety of methods, each contributing to a comprehensive
+        understanding of the condition. This complex process typically involves a collaborative, multidisciplinary
+        effort among audiologists, otolaryngologists, and sometimes radiologists. Their joint expertise is pivotal in
+        ensuring that patients receive comprehensive evaluations and personalised treatment plans, both of which are
+        essential for the effective management and improved outcomes of those afflicted with these conditions.
+      </p>
+      <p class="paragraph">
+        The diagnostic process often begins with an optical examination of the tympanic membrane (TM) using an otoscope
+        or microscope. This is supplemented by air and bone audiometry, as well as functional tests such as tympanometry
+        and wide-band ear-canal power reflectance measurements. These functional tests assess the mechanical response of
+        the middle ear. However, it is important to note that despite their extensive application, these tests offer
+        limited selectivity and specificity in diagnosing a majority of middle ear disorders, with otitis media being a
+        notable exception. When imaging is indicated, the primary non-invasive option currently available is computed
+        tomography (CT). However, CT scans have limitations in resolving middle ear structures like the ossicles at
+        times, rendering them of limited diagnostic value except for certain specific diseases. This gap in diagnostic
+        capabilities means that clinicians sometimes face challenges in reaching conclusive diagnosis, not due to a lack
+        of expertise, but because of the constraints imposed by the current technological tools at their disposal.
+      </p>
+    </div>
+    <br />
+    <div id="main_wrapper" class="tour_side">
+      <div id="sidebar">
+        <ul>
+          <li><a href="me_oct.html">ME-OCT</a></li>
+          <li><a href="OCT_basics.html">OCT basics</a></li>
+          <li><a href="OCT_development.html">OCT development</a></li>
+          <li><a href="OCT_realisation.html">Technical realization of ME-OCT</a></li>
+          <li><a href="core_functions.html">Core functions of ME-OCT</a></li>
+          <li><a class="active" href="tour_of_ear.html">Middle ear tour with OCT</a></li>
+        </ul>
+      </div>
+      <div class="fig_content" id="tour_1">
+        <figure class="cap_fig_container">
+          <img id="tour_1_img" src="images/ear_tour/01_clinical_painpoint.jpg" alt="" />
+        </figure>
+      </div>
+    </div>
+    <br />
+    <h1 class="title_h1">Structural imaging</h1>
+    <h2 class="subtitle">Morphological diagnostic</h2>
+    <p class="paragraph">
+      Our facility is a specialized tertiary care clinic that caters to an adult demographic, primarily receiving
+      referrals from community ENTs throughout the maritime provinces of Canada. In our practice, we have adopted ME-OCT
+      as an resaerch tool to supplement diagnostic information where feasible.
+    </p>
+    <p class="paragraph">
+      Here is how we use the hand-held OCT system in our clinic. The process involves inserting the imaging handpiece
+      into the patient's ear, akin to using an otoscope, which in this case, is for a healthy volunteer. As we explore
+      the "patient"'s middle ear, a clear view of the middle ear structures appears on the left with a umbo in the
+      center, and the tympanic membrane on either side. You can also catch a glimpse of other anatomical landmarks such
+      as ossicles and supporting ligaments. In the case where 2D image is insufficient to identify the cause of
+      conductive hearing loss. we can continue our investigation in 3D where more precise measurements can be made with
+      accurate representation of the anatomical structure.
+    </p>
+    <div id="overlay" onclick="hideOverlay()"></div>
+
+    <div id="box_wrapper">
+      <div id="video_container">
+        <video controls>
+          <source src="images/ear_tour/02_structural imaging demo(web720).mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    <h1 class="title_h1">4D imaging of middle ear (Valsalva)</h1>
+    <h2 class="subtitle">Capturing middle ear dynamics</h2>
+    <p class="paragraph">
+      One of the benefits of fast scanning is that we can capture dynamic parameters. Some of these influences middle
+      ear function. Here, OCT can detect pressure change induced displacement of the middle ear as the eardrum produces
+      a known and repeatable physical response when air forces through the sinuses and Eustachian tube during Valsalva.
+    </p>
+
+    <div id="box_wrapper">
+      <div id="video_container">
+        <video controls>
+          <source src="images/ear_tour/03_4D valsalva demo(web720).mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    <h1 class="title_h1">OCT Doppler vibrometry (OCT-DV)</h1>
+    <h2 class="subtitle">Structure specific mobility measurements</h2>
+    <p class="paragraph">
+      OCT-DV introduces a novel approach to capturing the dynamics of ear structures. As mentioned early, the signal of
+      interest in OCT is called A-line, which contains the vibration signature of a given structure. When we set a
+      sample into periodic motion by sending pure tone stimulus. The measured vibration signature will change
+      accordingly. This change can be isolated and decoded by processing the differences in sequential A-lines at each
+      pixel, allowing for a precise analysis of induced changes at given frequencies. This vibrational information can
+      be directly displayed on top of the structural image. As shown in this video, OCT captures the sound-induced
+      velocity change at the umbo by sweeping through a range of pure tones at different frequencies where the screen on
+      the right shows the otoscopic view of the ear. The blue line indicates the cross-section on the left screen, and
+      the cross-hair provides the visual confirmation that we are centred at umbo. As we step through different tones,
+      we can see the resulting A-line shifts slightly due to the stimulus. Following the measurement, we automatically
+      calculate the stimulus-induced vibration response where we have a normalised pressure velocity on the y-axis and
+      frequencies of interest on the x-axis.
+    </p>
+    <div id="box_wrapper">
+      <div id="video_container">
+        <video controls>
+          <source src="images/ear_tour/04_Doppler demo(web720).mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    <p class="paragraph">
+      In conclusion, ME-OCT enables structural and functional analysis of the middle ear space through the TM, providing
+      high resolution vibrometry information that cannot be obtained from standard auditory testing. Recent studies have
+      highlighted the advantages of OCT both independently and as a complement to current otology diagnostic tools. Its
+      various applications, such as stapes fixation detection, otitis media evaluation, antibiotic treatment monitoring,
+      and effusion classification, could help bridge the gap between the limitations of existing clinical diagnostic
+      tools and the need for more accurate and precise diagnoses
+    </p>
+
+    <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/design elements/lego(square).png" />
+    <script src="https://kit.fontawesome.com/68e9d88b8c.js" crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <title>Interactive ME-OCT Altas</title>
+  </head>
+  <body>
+    <header>
+      <div id="navbar" class="navbar">
+        <div>
+          <img class="logo" src="images/design elements/logo(transparent).png" alt="logo" />
+        </div>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="otology.html">Hearing diagnostics</a>
+          <div class="subnav">
+            <a href="#" id="active" class="subnav_dropbtn">ME-OCT<span class="dropdown-icon">&#9662;</span></a>
+            <div class="dropdown-content" id="oct_dropdown">
+              <a href="me_oct.html">ME-OCT</a>
+              <a id="active" href="OCT_basics.html">OCT basics</a>
+              <a href="OCT_development.html">OCT development</a>
+              <a href="OCT_realisation.html">Technical realization of ME-OCT</a>
+              <a href="core_functions.html">Core functions of ME-OCT</a>
+              <a href="tour_of_ear.html">Middle ear tour with OCT</a>
+            </div>
+          </div>
+          <div class="subnav">
+            <a href="#" class="subnav_dropbtn">Interactive altas<span class="dropdown-icon">&#9662;</span></a>
+            <div class="dropdown-content" id="interactive_dropdown">
+              <a href="fusion.html">OCT/CT image fusion</a>
+              <a href="case1-axial.html">Normal ear</a>
+              <a href="case2-axial.html">Traumatic middle ear injury</a>
+              <a href="case3-axial.html">Cholesteatoma</a>
+            </div>
+          </div>
+          <a href="publication.html">Publications</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="menubar">
+          <i id="menu-bar" class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <h1 class="title_h1">OCT technology</h1>
+      <h2 class="subtitle">Fundamental technical principle</h2>
+      <p class="paragraph" id="fisrtWord">
+        As indicated by its acronym, optical coherence tomography (OCT) is a technology that incorporates several key
+        principles:
+        <li id="bullet_point"><u>O</u>ptical: It employs light waves for imaging.</li>
+        <li id="bullet_point">
+          <u>C</u>oherence: The technique utilizes the principle of low-coherence interferometry.
+        </li>
+        <li id="bullet_point">
+          <u>T</u>omography: OCT provides cross-sectional information about the sample being imaged.
+        </li>
+      </p>
+      <p class="paragraph">
+        In a classic
+        <a href="https://en.wikipedia.org/wiki/Michelson_interferometer" target="_blank" class="paragraph_inline"
+          >Michelson interferometer</a
+        >
+        setup shown here, when a narrowband light source emits a coherent beam that is split into two paths by a beam
+        splitter. One beam is reflected off a fixed reference mirror, while the other reflects off a movable sample
+        mirror. The difference in the optical path lengths of the two beams, denoted as Δz, changes as a result of
+        translational movement of the sample mirror. The beams are recombined at the beam splitter, which results an
+        interference pattern that is then detected by a photodetector. This interference pattern is essentially the
+        superposition of light reflected from both the reference mirror and the sample mirror. When the peaks of the two
+        light waves align, constructive interference occurs, leading to an increase in intensity. Conversely, when there
+        is a mismatch such that the peaks of one wave align with the troughs of another, destructive interference
+        occurs, resulting in a reduction or cancellation of intensity.
+      </p>
+    </div>
+    <div id="main_wrapper">
+      <div id="sidebar">
+        <ul>
+          <li><a href="me_oct.html">ME-OCT</a></li>
+          <li><a class="active" href="OCT_basics.html">OCT basics</a></li>
+          <li><a href="OCT_development.html">OCT development</a></li>
+          <li><a href="OCT_realisation.html">Technical realization of ME-OCT</a></li>
+          <li><a href="core_functions.html">Core functions of ME-OCT</a></li>
+          <li><a href="tour_of_ear.html">Middle ear tour with OCT</a></li>
+        </ul>
+      </div>
+      <div class="fig_content" id="interferometry_1">
+        <figure class="cap_fig_container">
+          <img id="interferometry_img" src="images/oct_basics/01_TD_OCT_LDV.gif" alt="" />
+          <figcaption class="fig_caption" id="interferometry_cap">
+            Interferometry extracts information from the interference of superimposed waves from two arms.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <p class="paragraph">
+      Elaborating on the principle of low-coherence interferometry, OCT uses utilises low-coherence or partially
+      coherent light to localise structures by correlating interfering light that is back-scattered from the sample arm,
+      \(E_s\), with the light reflected from the reference arm, \(E_r\).
+    </p>
+    <div id="main_wrapper">
+      <div class="fig_content" id="td_oct">
+        <figure class="cap_fig_container">
+          <img id="td_oct_img" src="images/oct_basics/02_TD_OCT.jpg" alt="" />
+        </figure>
+      </div>
+    </div>
+    <br />
+    <p class="paragraph">
+      In OCT, a photodetector measures the intensity of the interfered light \(I_o\), which is proportional to the total
+      electrical field as described by its relationship \( I = |E|^2 \).
+    </p>
+    <p class="paragraph" style="text-align: center">
+      \( I_0 \sim \langle E_r E_r^* \rangle + \langle E_s E_s^* \rangle + E_s E_r^* e^{-i2k(\Delta l)} + E_r E_s^*
+      e^{-i2k(\Delta l)} \)
+    </p>
+    <p class="paragraph">
+      The term \( E_r E_r^* \), often referred to as the "DC" term, is the time average of the square of the electric
+      fields or irradiance of the light from the reference arm and represents the dominant component in the detector
+      current. The expression \( E_r E_r^* \) is independent of sample reflectivity and optical pathlength difference \(
+      \Delta l \). The autocorrelation term \( E_s E_s^* \), describes the interference caused by multiple reflectors
+      present within the sample. In conventional OCT, this interference is a source of unwanted artifacts, but it can be
+      minimized by ensuring that the reference intensity is much higher than the sample intensity. The terms of
+      interest, the cross-correlation term \( E_s E_r^* e^{-i2k(\Delta l)} + E_r E_s^* e^{-i2k(\Delta l)} \), depend on
+      the intensity in the sample and reference arms, the path length difference between the sample and reference arms,
+      and the sample reflectivity. To ensure that this desired term is larger than the undesired autocorrelation term \(
+      E_s E_s^* \), the system is designed such that \( |E_r| \gg |E_s| \). Some authors describe the relative increase
+      in the cross-correlation term as compared to the autocorrelation term in terms of a “gain” applied to the sample
+      signal by the reference arm signal.
+    </p>
+
+    <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
