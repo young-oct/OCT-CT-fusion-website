@@ -79,7 +79,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](HTML/images/fusion/01_fused_demo.gif)
+[![Product Name Screen Shot][product-screenshot]](https://stock.adobe.com/search?k=cat&asset_id=84666330)
 
 # OCT-CT-fusion-website
 
