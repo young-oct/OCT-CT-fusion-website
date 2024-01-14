@@ -104,9 +104,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 - [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 - [![JQuery][JQuery.com]][JQuery-url] -->
 
-- [![JavaScript][JavaScript.com]][JavaScript-url]
-- [![CSS][CSS.com]][CSS-url]
-- [![HTML][HTML.com]][HTML-url]
+- [![CSS][CSS-shield]][CSS-url]
+- [![JavaScript][JavaScript-shield]][JavaScript-url]
+- [![HTML][HTML-shield]][HTML-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -244,3 +244,9 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
+[CSS-shield]: https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[CSS-url]: https://www.w3.org/Style/CSS/Overview.en.html
+[JavaScript-shield]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[JavaScript-url]: https://www.javascript.com
+[HTML-shield]: https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[HTML-url]: https://www.w3.org/html/
