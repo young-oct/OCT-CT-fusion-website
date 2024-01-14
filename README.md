@@ -230,7 +230,7 @@ I
 [stars-url]: https://github.com/young-oct/OCT-CT-fusion-website
 [issues-shield]: https://img.shields.io/github/issues/young-oct/OCT-CT-fusion-website.svg?style=for-the-badge
 [issues-url]: https://github.com/young-oct/OCT-CT-fusion-website/issues
-[license-shield]: https://img.shields.io/github/license/young-oct/OCT-CT-fusion-website.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 [license-url]: https://github.com/young-oct/OCT-CT-fusion-website/blob/dev/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/junzhe-young-wang/
