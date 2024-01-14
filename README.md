@@ -266,7 +266,6 @@ Project Link: [https://github.com/young-oct/OCT-CT-fusion-website](https://githu
 <!-- * [Malven's Grid Cheatsheet](https://grid.malven.co/) -->
 
 - [Img Shields](https://shields.io)
-<!-- * [GitHub Pages](https://pages.github.com) -->
 - [Font Awesome](https://fontawesome.com)
 - [Siebenlab](http://www.siebenlab.com/)
 - [Interactive Web-based CT Temporal Bone Module](http://uwmsk.org/temporalbone/index.html)
@@ -316,7 +315,3 @@ Project Link: [https://github.com/young-oct/OCT-CT-fusion-website](https://githu
 [JavaScript-url]: https://www.javascript.com
 [HTML-shield]: https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [HTML-url]: https://www.w3.org/html/
-
-```
-
-```
