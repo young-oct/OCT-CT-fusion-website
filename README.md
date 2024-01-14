@@ -79,6 +79,8 @@
 
 ## About The Project
 
+<!-- Reference-style (two parts)-->
+
 [![Product Name Screen Shot][product-screenshot]](HTML/images/fusion/01_fused_demo.gif)
 
 [product-screenshot]: HTML/images/fusion/01_fused_demo.gif
