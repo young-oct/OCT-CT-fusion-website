@@ -153,9 +153,65 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+  <p xmlns:cc="http://creativecommons.org/ns#">
+    This work &copy;
+    <span class="current-year" id="termYear"></span> by
+    <a
+      id="TermOfUse-namelink"
+      rel="cc:attributionURL dct:creator"
+      property="cc:attributionName"
+      href="https://www.linkedin.com/in/junzhe-young-wang/"
+      >Junzhe "Young" Wang</a
+    >
+    is licensed under
+    <a
+      href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+      target="_blank"
+      rel="license noopener noreferrer"
+      style="display: inline-block"
+      >CC BY-NC-SA 4.0<img
+        style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
+        src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img
+        style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
+        src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img
+        style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
+        src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /><img
+        style="height: 1rem !important; margin-left: 0.25rem; vertical-align: text-top"
+        src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" /></a
+    >, with support from
+    <a
+      rel="cc:attributionURL dct:creator"
+      property="cc:attributionName"
+      href="https://www.dal.ca/faculty/school-biomedical-engineering/our-people/our-faculty-atok/RobAdamson.html"
+      ><span style="white-space: nowrap">Dr. Robert Adamson</span></a
+    >. The normal anatomy of the middle ear and a selection of pathological cases are provided by the courtesy of
+    <a
+      rel="cc:attributionURL dct:creator"
+      property="cc:attributionName"
+      href="https://medicine.dal.ca/departments/department-sites/surgery/divisions/otolaryngology/our-people/faculty/david-p--morris.html"
+      ><span style="white-space: nowrap">Dr. David P Morris</span></a
+    >
+    and
+    <a rel="cc:attributionURL dct:creator"
+      property="cc:attributionName"
+      href="https://medicine.dal.ca/departments/department-sites/surgery/divisions/otolaryngology/our-people/faculty/nael-shoman.html"
+      ><span style="white-space: nowrap">Dr. Nael Shoman</span></a
+    >.
+  </p>
+  <p >You do not need to seek permission to use the provided media:</p>
+  <div >
+    <ul>
+      <li>Give appropriate credit/attribution;</li>
+      <li>The use for non-commercial;</li>
+      <li>You do not copyright the material.</li>
+    </ul>
+  </div>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+  <p >
+    For usage beyond the scope of the CC BY-NC-SA 4.0 license or to request high-resolution content, please contact us via email 
+    at 
+     <a href="mailto:junzhe.wang@dal.ca">junzhe.wang@dal.ca</i></a> or <a id="TermOfUse-namelink" href="mailto:rob.adamson@dal.ca">rob.adamson@dal.ca</i></a>. 
+  </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
