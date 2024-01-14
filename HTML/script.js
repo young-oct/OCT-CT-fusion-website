@@ -448,6 +448,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const footerHTML = doc.querySelector(".footer").outerHTML;
       const legendsHTML = doc.querySelector(".legends").outerHTML;
       const termHTML = doc.querySelector(".TermOfUse").outerHTML;
+      // const
 
       // Insert the footer and legends into their respective placeholders in the current document
       document.getElementById("footer-placeholder").innerHTML = footerHTML;
@@ -670,6 +671,12 @@ class SwitchButton {
     }
   }
 }
+function initializeSwitchButton(buttonId, viewer) {
+  if (document.getElementById(buttonId)) {
+    return new SwitchButton(buttonId, viewer);
+  }
+  return null; // or handle the absence of the element as needed
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const c1_coronalViewer = new fusedViewer(
@@ -755,15 +762,15 @@ document.addEventListener("DOMContentLoaded", () => {
   c2_sagittalViewer.init();
   c3_sagittalViewer.init();
 
-  const c1_coronal_switchButton = new SwitchButton("c1_coronal_switchButton", c1_coronalViewer);
-  const c2_coronal_switchButton = new SwitchButton("c2_coronal_switchButton", c2_coronalViewer);
-  const c3_coronal_switchButton = new SwitchButton("c3_coronal_switchButton", c3_coronalViewer);
+  const c1_coronal_switchButton = initializeSwitchButton("c1_coronal_switchButton", c1_coronalViewer);
+  const c2_coronal_switchButton = initializeSwitchButton("c2_coronal_switchButton", c2_coronalViewer);
+  const c3_coronal_switchButton = initializeSwitchButton("c3_coronal_switchButton", c3_coronalViewer);
 
-  const c1_axial_switchButton = new SwitchButton("c1_axial_switchButton", c1_axialViewer);
-  const c2_axial_switchButton = new SwitchButton("c2_axial_switchButton", c2_axialViewer);
-  const c3_axial_switchButton = new SwitchButton("c3_axial_switchButton", c3_axialViewer);
+  const c1_axial_switchButton = initializeSwitchButton("c1_axial_switchButton", c1_axialViewer);
+  const c2_axial_switchButton = initializeSwitchButton("c2_axial_switchButton", c2_axialViewer);
+  const c3_axial_switchButton = initializeSwitchButton("c3_axial_switchButton", c3_axialViewer);
 
-  const c1_sagittal_switchButton = new SwitchButton("c1_sagittal_switchButton", c1_sagittalViewer);
-  const c2_sagittal_switchButton = new SwitchButton("c2_sagittal_switchButton", c2_sagittalViewer);
-  const c3_sagittal_switchButton = new SwitchButton("c3_sagittal_switchButton", c3_sagittalViewer);
+  const c1_sagittal_switchButton = initializeSwitchButton("c1_sagittal_switchButton", c1_sagittalViewer);
+  const c2_sagittal_switchButton = initializeSwitchButton("c2_sagittal_switchButton", c2_sagittalViewer);
+  const c3_sagittal_switchButton = initializeSwitchButton("c3_sagittal_switchButton", c3_sagittalViewer);
 });
