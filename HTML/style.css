@@ -804,6 +804,7 @@ u {
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 #oct_dev {
   width: 100%;
@@ -2026,4 +2027,9 @@ iframe {
 #policy {
   margin: 0.25rem auto;
   width: 90%;
+}
+
+#name-link {
+  color: black;
+  text-decoration: underline;
 }
