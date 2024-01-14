@@ -206,7 +206,7 @@ CONTACT
 
 ## Contact
 
-Young Wang - [linkedin-shield][linkedin-url] - junzhe.wang@dal.ca
+Young Wang - [![LinkedIn][linkedin-shield]][linkedin-url] - junzhe.wang@dal.ca
 
 Project Link: [https://github.com/young-oct/OCT-CT-fusion-website](https://github.com/young-oct/OCT-CT-fusion-website)
 
