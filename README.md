@@ -202,13 +202,15 @@ This work is licensed under the [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-n
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-CONTACT
-
 ## Contact
 
+For any inquiries or further information regarding this educational module, please don't hesitate to contact me at junzhe.wang@dal.ca.
+Contact us for any clarification, suggestions, or discussions related to this project.
+
+<!--
 Young Wang - [![LinkedIn][linkedin-shield]][linkedin-url] - junzhe.wang@dal.ca
 
-Project Link: [https://github.com/young-oct/OCT-CT-fusion-website](https://github.com/young-oct/OCT-CT-fusion-website)
+Project Link: [https://github.com/young-oct/OCT-CT-fusion-website](https://github.com/young-oct/OCT-CT-fusion-website) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
