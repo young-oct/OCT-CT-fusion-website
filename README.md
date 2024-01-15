@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="/HTML/images/readme/index.jpg" alt="Logo" width="300">
+    <img src="/images/readme/index.jpg" alt="Logo" width="300">
   </a>
 
 <h3 align="center">OCT CT fusion website</h3>
@@ -292,7 +292,7 @@ Project Link: [https://github.com/young-oct/OCT-CT-fusion-website](https://githu
 [license-url]: https://github.com/young-oct/OCT-CT-fusion-website/blob/dev/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/junzhe-young-wang/
-[product-screenshot]: HTML/images/fusion/01_fused_demo.gif
+[product-screenshot]: images/fusion/01_fused_demo.gif
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
