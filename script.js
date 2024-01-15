@@ -448,6 +448,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const footerHTML = doc.querySelector(".footer").outerHTML;
       const legendsHTML = doc.querySelector(".legends").outerHTML;
       const termHTML = doc.querySelector(".TermOfUse").outerHTML;
+      document.getElementById("google-placeholder").innerHTML = doc.querySelector(".google-analytics").outerHTML;
 
       // Insert the footer and legends into their respective placeholders in the current document
       document.getElementById("footer-placeholder").innerHTML = footerHTML;
@@ -459,6 +460,9 @@ window.addEventListener("DOMContentLoaded", () => {
       for (let i = 0; i < currentYearElements.length; i++) {
         currentYearElements[i].textContent = new Date().getFullYear();
       }
+      // Execute the Google Analytics script
+      const gaScript = doc.querySelector(".google-analytics script");
+      eval(gaScript.textContent);
     })
     .catch((error) => {
       console.error("Error fetching the template:", error);
