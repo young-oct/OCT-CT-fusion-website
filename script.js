@@ -107,10 +107,11 @@ function hideOverlay() {
   enlargedImages.forEach(function (mediaElement) {
     mediaElement.classList.remove("enlarged");
     mediaElement.style.transform = ""; // Reset the transform property
-  });
-  // Pause all videos
-  videos.forEach(function (video) {
-    video.pause();
+
+    // Pause all videos
+    videos.forEach(function (video) {
+      video.pause();
+    });
   });
 
   overlay.style.display = "none";
