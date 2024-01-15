@@ -1478,7 +1478,6 @@ input:checked + .slider-round:before {
 .infoOverlay_style {
   position: absolute;
   bottom: 2.5%;
-  z-index: 100;
   right: 1.5%;
   height: 1.5rem;
   width: 4rem;
@@ -1486,18 +1485,15 @@ input:checked + .slider-round:before {
   color: white;
   z-index: 1;
 
-  /* padding: 0.5 1rem 1rem 1rem; */
-  /* border: #29abe2 0.1rem solid; */
-  padding-right: 1rem;
-  padding-left: 1rem;
-  /* text-align: center; */
-  align-items: center;
+  padding: 0 1rem; /* Simplified padding */
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 1rem;
   font-size: 0.8rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
+  /* Removed commented out properties */
 }
 
 .orientation-container {
