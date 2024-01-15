@@ -1476,37 +1476,6 @@ input:checked + .slider-round:before {
 /* Styles the index number box */
 
 .infoOverlay_style {
-<<<<<<< HEAD
-    position: absolute;
-    bottom: 10%; /* Adjusted to a percentage for better responsiveness */
-    right: 30%; /* Adjusted to a percentage for better responsiveness */
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0.3125rem 0.625rem;
-    border-radius: 0.3125rem;
-    font-size: 1rem;
-    width: 8rem;
-    height: 2rem;
-
-
-}
-
-.expandable-text {
-
-    cursor: pointer;
-    position: relative; /* Required for absolute positioning of pseudo-element */
-    text-align: left;
-
-    position: absolute;
-    bottom: 15%; /* Adjusted to a percentage for better responsiveness */
-    right: 30%; /* Adjusted to a percentage for better responsiveness */
-    color: white;
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 1rem;
-=======
   position: absolute;
   bottom: 2.5%;
   z-index: 100;
@@ -1516,7 +1485,6 @@ input:checked + .slider-round:before {
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
   z-index: 1;
->>>>>>> dev
 
   /* padding: 0.5 1rem 1rem 1rem; */
   /* border: #29abe2 0.1rem solid; */
