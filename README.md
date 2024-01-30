@@ -210,6 +210,8 @@ Before diving into the project, ensure you have Visual Studio Code or a comparab
 - [ ] 2023.12.15 Pre-alpha version release
 - [ ] 2023.12.18 Alpha version release
 - [ ] 2024.01.14 Beta version release
+- [ ] 2024.01.30 Included Terms of use
+
 <!-- - [ ] Nested Feature -->
 
 See the [open issues](https://github.com/young-oct/OCT-CT-fusion-website/issues) for a full list of proposed features (and known issues).

@@ -2025,6 +2025,11 @@ iframe {
   width: 90%;
 }
 
+#terms {
+  margin: 0.25rem auto;
+  width: 90%;
+}
+
 #name-link {
   color: black;
   text-decoration: underline;
