@@ -325,7 +325,6 @@ ol li::before {
 }
 .footer-externals a {
   color: #333;
-  border-left: #333 0.1rem solid;
   padding-left: 0.25rem;
   /* float: right; */
 }
@@ -2023,6 +2022,7 @@ iframe {
 #policy {
   margin: 0.25rem auto;
   width: 90%;
+  border-left: #333 0.1rem solid;
 }
 
 #terms {
