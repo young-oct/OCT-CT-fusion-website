@@ -528,7 +528,7 @@ class fusedViewer {
     // Set the initial value of the slider
     const rangeSlider = document.getElementById("myRange");
     if (rangeSlider) {
-      rangeSlider.value = 0; // Starts at the first image (index 0)
+      rangeSlider.value = Math.floor((this.totalImages - 1) / 2); // Set initial value to the middle index
       this.updateImageIndex(); // Update display to show "1" instead of "0"
     }
   }
