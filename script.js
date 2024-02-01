@@ -646,9 +646,11 @@ class SwitchButton {
       const checkbox = this.switchContainer.querySelector('input[type="checkbox"]');
 
       if (checkbox) {
+        checkbox.checked = !this.isOriginal; // Set the initial state of the checkbox based on isOriginal
+
         checkbox.addEventListener("change", () => {
           console.log("label toggled");
-          this.isOriginal = checkbox.checked; // Set isOriginal based on the checkbox state
+          this.isOriginal = !checkbox.checked; // Update isOriginal based on the checkbox state
           const newPath = this.isOriginal ? this.viewer.originalImagePath : this.viewer.alternateImagePath;
           this.viewer.updateImagePath(newPath);
 
