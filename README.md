@@ -211,6 +211,7 @@ Before diving into the project, ensure you have Visual Studio Code or a comparab
 - [ ] 2023.12.18 Alpha version release
 - [ ] 2024.01.14 Beta version release
 - [ ] 2024.01.30 Included Terms of use
+- [ ] 2024.01.31 Update case II images annotation (draft)
 
 <!-- - [ ] Nested Feature -->
 
