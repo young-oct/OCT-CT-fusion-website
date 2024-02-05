@@ -576,6 +576,18 @@ class fusedViewer {
       }
     });
 
+    // Keyboard navigation
+    window.addEventListener("keydown", (event) => {
+      event.preventDefault(); // Prevent scrolling when over the image
+
+      if (event.key === "ArrowLeft" || event.key === "ArrowDown") {
+        this.imageIndex = Math.min(this.imageIndex + 1, this.totalImages - 1);
+      } else if (event.key === "ArrowRight" || event.key === "ArrowUp") {
+        this.imageIndex = Math.max(this.imageIndex - 1, 0);
+      }
+      this.updateImage();
+    });
+
     window.addEventListener("mousemove", (event) => {
       const rect = imageElement.getBoundingClientRect();
       if (
