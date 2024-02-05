@@ -548,12 +548,26 @@ class fusedViewer {
       ) {
         event.preventDefault(); // Prevent scrolling when over the image
         body.style.overflow = "hidden"; // Disable scrolling
+        //When event.deltaY < 0 (scrolling up), this.imageIndex is increased.
 
         if (event.deltaY < 0) {
-          this.imageIndex = Math.max(this.imageIndex - 1, 0);
-        } else {
+          //
           this.imageIndex = Math.min(this.imageIndex + 1, this.totalImages - 1);
+
+          // this.imageIndex = Math.max(this.imageIndex - 1, 0);
+        } else {
+          // this.imageIndex = Math.min(this.imageIndex + 1, this.totalImages - 1);
+          this.imageIndex = Math.max(this.imageIndex - 1, 0);
         }
+
+        // //When event.deltaY < 0 (scrolling up), this.imageIndex is decresed.
+
+        // if (event.deltaY < 0) {
+
+        //   this.imageIndex = Math.max(this.imageIndex - 1, 0);
+        // } else {
+        //   this.imageIndex = Math.min(this.imageIndex + 1, this.totalImages - 1);
+        // }
         this.updateImage();
         // console.log("imageIndex updated to:", this.imageIndex);
         //image index goes over by 1//
