@@ -2034,3 +2034,12 @@ iframe {
   color: black;
   text-decoration: underline;
 }
+
+#special {
+  top: 0;
+}
+
+#thanks {
+  margin-top: 0.25rem;
+  margin-left: 4rem;
+}
