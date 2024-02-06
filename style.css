@@ -2040,6 +2040,10 @@ iframe {
 }
 
 #thanks {
-  margin-top: 0.25rem;
-  margin-left: 4rem;
+  /* margin-top: 0.25rem; */
+  /* margin-left: 4rem; */
+  font-size: 0.9rem;
+  line-height: 1.45rem;
+  margin-left: 4%;
+  margin-right: 4%;
 }
