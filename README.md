@@ -214,7 +214,7 @@ Before diving into the project, ensure you have Visual Studio Code or a comparab
 - [ ] 2024.01.31 Update case II images annotation (draft)
 - [ ] 2024.02.01 Update case I images annotation (draft)
 - [ ] 2024.02.02 Update case III images annotation (draft)
-
+- [ ] 2024.02.18 Fixed case I annotation errors (draft)
 <!-- - [ ] Nested Feature -->
 
 See the [open issues](https://github.com/young-oct/OCT-CT-fusion-website/issues) for a full list of proposed features (and known issues).
