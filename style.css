@@ -2049,10 +2049,10 @@ iframe {
 }
 
 #canvascontainer {
-  border: 0.25rem solid red;
+  /* border: 0.25rem solid red; */
 
-  margin-left: 5.5vw;
-  margin-right: 5.5vw;
+  margin-left: 12.5vw;
+  margin-right: 12.5vw;
   margin-top: 1rem;
   margin-bottom: 1rem; /* spacing between paragraphs */
 
@@ -2061,45 +2061,60 @@ iframe {
   /* margin: auto; Center the container itself */
   justify-content: center; /* Horizontally center content */
 }
+#scene_canvas {
+  border-radius: 0.5rem;
+}
 
 .controls_button {
   position: absolute;
   /* bottom: 0.5rem;
   left: 1rem; */
-  border: #29abe2 0.1rem solid;
-  font-size: 1.05rem;
-  line-height: 1.75rem;
+  /* border: #29abe2 0.1rem solid; */
+  font-size: 1.25rem;
+
   border-radius: 0.5rem;
-  margin-left: 0.5rem;
-  color: black;
-  background-color: #29abe2;
-  color: white;
+  padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+  /* margin-left: 0.5rem; */
+  /* background-color: #29abe2; */
+  /* color: white; */
   /* padding-left: 0.5rem;
   padding-right: 0.5rem; */
-  width: 4rem;
+  width: 3rem;
   align-items: center; /* this make the elements aligns cross axis aka vertically */
   /* justify-content: space-between; */
   text-align: center;
   right: 1rem;
 
-  border: #29abe2 0.1rem solid;
   color: #29abe2;
   background-color: black;
+  border: #29abe2 0.1rem solid;
 }
 .controls_button:hover {
-  color: black;
   background-color: #29abe2;
   color: white;
+  border: #29abe2 0.1rem solid;
 }
 
 #resetButton {
   bottom: 0.5rem;
 }
 
-#rotateButton {
+/* #rotateButton {
   top: 0.5rem;
-}
+} */
 
 #captureButton {
-  top: 45%;
+  bottom: 3rem;
+}
+#icon {
+  color: red;
+}
+
+#rotateaxisxy {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+#rotateaxisxy_img {
+  width: 75%;
 }

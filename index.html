@@ -113,14 +113,38 @@
         modality alone.
       </p>
     </div>
+    <div class="content">
+      <h1 class="title_h1">Exploration of middle ear anatomy</h1>
+      <h2 class="subtitle">A 3D anatomical journey</h2>
+      <p class="paragraph" id="fisrtWord">
+        In this interactive 3D rendering of middle ear OCT images (case by the courtesy of
+        <a
+          id="name-link"
+          href="https://www.dal.ca/faculty/school-biomedical-engineering/our-people/our-faculty-atok/RobAdamson.html"
+          ><span style="white-space: nowrap">Dr. Robert Adamson</span></a
+        >), you're invited to navigate and explore the anatomical structures within. Here, one can appreciate the
+        delicate features and intricate arrangement of those structures, including the tympanic membrane (eardrum),
+        ossicles (tiny bones), and the promontory (bony protrusion).
+
+        <!-- </p>
+      ogical cases by the courtesy of
+        <a
+          id="name-link"
+          href="https://medicine.dal.ca/departments/department-sites/surgery/divisions/otolaryngology/our-people/faculty/david-p--morris.html"
+          ><span style="white-space: nowrap">Dr. David P Morris</span></a
+        > -->
+      </p>
+    </div>
 
     <div id="canvascontainer">
-      <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis molestias aliquid, quos quaerat culpa minus
-      nam corrupti magni? Id temporibus obcaecati quisquam illum quia quo velit laboriosam iusto nam autem. -->
-      <canvas id="bg"></canvas>
-      <button class="controls_button" id="rotateButton">rotate</button>
-      <button class="controls_button" id="resetButton">reset</button>
-      <button class="controls_button" id="captureButton">capture</button>
+      <canvas id="scene_canvas"></canvas>
+      <!-- <button class="controls_button" id="rotateButton"><i class="fa-solid fa-arrows-left-right"></i></button> -->
+      <button class="controls_button" id="resetButton"><i class="fa-solid fa-rotate-left"></i></button>
+      <!-- <button class="controls_button" id="captureButton">capture</button> -->
+      <button class="controls_button" id="captureButton"><i class="fas fa-camera"></i></button>
+      <div id="rotateaxisxy">
+        <img id="rotateaxisxy_img" src="images/design elements/rotateaxisxy_120494.png" alt="" />
+      </div>
     </div>
     <script type="module" src="/main.js"></script>
 
