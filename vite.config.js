@@ -39,10 +39,36 @@ export default defineConfig({
     // Configure source map generation
     sourcemap: false,
 
-    // Modify rollup options to include STL file in the output directory
+    // Modify rollup options to include all HTML files in the output directory
     rollupOptions: {
       input: {
-        main: "index.html",
+        // Specify all HTML files here
+        index: "index.html",
+        "case1-axial": "case1-axial.html",
+        "case1-coronal": "case1-coronal.html",
+        "case1-sagittal": "case1-sagittal.html",
+        "case2-axial": "case2-axial.html",
+        "case2-coronal": "case2-coronal.html",
+        "case2-sagittal": "case2-sagittal.html",
+        "case3-axial": "case3-axial.html",
+        "case3-coronal": "case3-coronal.html",
+        "case3-sagittal": "case3-sagittal.html",
+        contact: "contact.html",
+        core_functions: "core_functions.html",
+        fusion: "fusion.html",
+        me_oct: "me_oct.html",
+        OCT_basics: "OCT_basics.html",
+        OCT_development: "OCT_development.html",
+        OCT_realisation: "OCT_realisation.html",
+        otology: "otology.html",
+        policy: "policy.html",
+        publication: "publication.html",
+        template: "template.html",
+        terms: "terms.html",
+        tour_of_ear: "tour_of_ear.html",
+        // Add script.js as an entry point
+        main: "main.js",
+        script: "script.js",
       },
       output: {
         // Ensure your STL file is included in the output directory
