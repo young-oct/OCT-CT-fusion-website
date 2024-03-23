@@ -195,15 +195,15 @@ Wang J, Couvreur F, Farrell J, et al. Fusion of middle ear optical coherence tom
             <span class="close">&times;</span>
             <h2 id="modal-title">Share</h2>
             <div class="share-buttons">
-              <button class="share-btn" onclick="shareEmail()"><i class="fa-solid fa-envelope"></i></button>
-              <button class="share-btn" onclick="shareLinkedIn()">
+              <button class="share-btn" id="shareEmail"><i class="fa-solid fa-envelope"></i></button>
+              <button type="button" class="share-btn" id="shareLinkedIn">
                 <i class="fa-brands fa-linkedin"></i>
               </button>
-              <button class="share-btn" onclick="shareTwitter()"><i class="fa-brands fa-x-twitter"></i></button>
+              <button class="share-btn" id="shareTwitter"><i class="fa-brands fa-x-twitter"></i></button>
             </div>
             <div class="share-link">
               <input type="text" id="shareLink" readonly />
-              <button onclick="copyToClipboard()"><i class="fa-solid fa-copy"></i> Copy</button>
+              <button class="copyToClipboard" data-element-id="shareLink"><i class="fa-solid fa-copy"></i> Copy</button>
             </div>
           </div>
         </div>

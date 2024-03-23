@@ -7,11 +7,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
   document.getElementById("expand").addEventListener("click", expandAll);
   document.getElementById("contract").addEventListener("click", contractAll);
   // document.getElementById("toggleYear").addEventListener("click", toggleYear);
+});
 
-  document.getElementById("shareEmail").addEventListener("click", shareEmail);
-  document.getElementById("shareTwitter").addEventListener("click", shareTwitter);
-  document.getElementById("shareLinkedIn").addEventListener("click", shareLinkedIn);
-  document.getElementById("copyToClipboard").addEventListener("click", copyToClipboard);
+document.querySelectorAll(".share-btn").forEach((btn) => {
+  if (btn.id === "shareLinkedIn") {
+    btn.addEventListener("click", shareLinkedIn);
+  } else if (btn.id === "shareEmail") {
+    btn.addEventListener("click", shareEmail);
+  } else if (btn.id === "shareTwitter") {
+    btn.addEventListener("click", shareTwitter);
+  }
+});
+
+document.querySelectorAll(".copyToClipboard").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    var elementId = btn.getAttribute("data-element-id");
+    copyToClipboard(elementId);
+  });
 });
 
 // Function to toggle the display of the publication list for a given year
@@ -286,22 +298,18 @@ export function shareLinkedIn() {
 }
 
 export function copyToClipboard(elementId) {
-  var copyText = document.getElementById(elementId);
-  copyText.select(); // Select the text field
-  copyText.setSelectionRange(0, 99999); // For mobile devices
+  console.log("copyToClipboard called");
 
-  if (navigator.clipboard && window.isSecureContext) {
-    // Navigator clipboard is available
+  if (!elementId) return;
+
+  var copyText = document.getElementById(elementId);
+  if (copyText) {
     navigator.clipboard
       .writeText(copyText.value)
-      .then(function () {
-        // console.log("Content copied to clipboard");
-      })
-      .catch(function (error) {
-        console.error("Could not copy text: ", error);
-      });
+      .then(() => console.log("Content copied to clipboard"))
+      .catch((err) => console.error("Could not copy text: ", err));
   } else {
-    document.execCommand("copy");
+    console.error("Element with ID '" + elementId + "' not found.");
   }
 }
 
