@@ -1,8 +1,14 @@
 // ----- Utility Functions -----
 // import "/css/style.css";
 
+// Attach event listeners to your spans
+window.addEventListener('DOMContentLoaded', (event) => {
+  document.getElementById('expand').addEventListener('click', expandAll);
+  document.getElementById('contract').addEventListener('click', contractAll);
+});
+
 // Function to toggle the display of the publication list for a given year
-function toggleYear(id) {
+export function toggleYear(id) {
   var element = document.getElementById(id);
   var yearDiv = element.previousElementSibling;
 
@@ -16,7 +22,7 @@ function toggleYear(id) {
 }
 
 // Expands all the publication lists
-function expandAll() {
+export function expandAll() {
   var allYears = document.querySelectorAll(".publications");
   allYears.forEach(function (year) {
     year.style.display = "block";
@@ -25,7 +31,7 @@ function expandAll() {
 }
 
 // Contracts all the publication lists
-function contractAll() {
+export function contractAll() {
   var allYears = document.querySelectorAll(".publications");
   allYears.forEach(function (year) {
     year.style.display = "none";
@@ -803,3 +809,5 @@ document.addEventListener("DOMContentLoaded", () => {
   const c2_sagittal_switchButton = initializeSwitchButton("c2_sagittal_switchButton", c2_sagittalViewer);
   const c3_sagittal_switchButton = initializeSwitchButton("c3_sagittal_switchButton", c3_sagittalViewer);
 });
+
+

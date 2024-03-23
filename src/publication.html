@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/png" href="/images/design elements/lego(square).png" />
     <script src="https://kit.fontawesome.com/68e9d88b8c.js" crossorigin="anonymous"></script>
+    <script type="module" src="/js/script.js"></script>
     <title>Interactive ME-OCT Altas</title>
   </head>
   <body>
@@ -59,7 +60,8 @@
     <div class="content">
       <h1 id="pubpage_title" class="title_h1">Publications to date</h1>
       <div id="expand-collapse" class="expand-collapse">
-        <span onclick="expandAll()">Expand All</span> | <span onclick="contractAll()">Contract All</span>
+        <!-- <span onclick="expandAll()">Expand All</span> | <span onclick="contractAll()">Contract All</span> -->
+        <span id="expand">Expand All</span> | <span id="contract">Contract All</span>
       </div>
       <ul class="publication-list">
         <li>
@@ -234,8 +236,6 @@
     <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
     <div id="footer-placeholder"></div>
 
-    <script type="module" src="/js/script.js">
-      import { expandAll, contractAll } from '/js/script.js';
-    </script>
+    
   </body>
 </html>
