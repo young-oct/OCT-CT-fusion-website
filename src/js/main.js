@@ -1,8 +1,6 @@
 import * as THREE from "three";
-import "/css/style.css";
 
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-// import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader";
 
 // you will need three things https://www.youtube.com/watch?v=Q7AOvWpIVHU&t=232s&ab_channel=Fireship
@@ -32,7 +30,6 @@ let originalMeshRotation;
 const loader = new STLLoader();
 loader.load(
   "/models/ear.stl",
-  // "/models/ear.stl",
   function (geometry) {
     const material = new THREE.MeshPhysicalMaterial({
       color: 0xffffff,

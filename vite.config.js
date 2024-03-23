@@ -1,14 +1,11 @@
 import { defineConfig } from "vite";
 import fs from "fs";
 import path from "path";
-
+//
 export default defineConfig({
-  // The base path for your application
-  // **Explicitly set base path for clarity:**
-  // base: "./",
-
-  // **Adjust root path if necessary:**
-  root: "./src",
+  root: "src",
+  base: "/",
+  publicDir: "../public",
 
   // Development server configuration
   server: {
@@ -27,11 +24,11 @@ export default defineConfig({
     // Adjust the chunk size warning limit as needed
     chunkSizeWarningLimit: 1000,
 
-    // Output directory
-    outDir: "dist",
-
     // Ensure that assets are served relative to the current directory
-    assetsDir: "./",
+    assetsDir: "",
+    //Output directory
+
+    outDir: "../dist", // Specify the output directory for your build
 
     // Enable/disable minification
     minify: true,
@@ -56,8 +53,8 @@ export default defineConfig({
             .map((file) => [path.basename(file, ".html"), `src/${file}`])
         ),
         // Add script.js as an entry point
-        main: "/js/main.js",
-        script: "/js/script.js",
+        main: "js/main.js",
+        script: "js/script.js",
       },
       output: {
         // Ensure your JS files are included in the output directory
