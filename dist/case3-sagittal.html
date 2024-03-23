@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC7JFN3N2Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-NC7JFN3N2Y");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/design elements/lego(square).png" />
+    <script src="https://kit.fontawesome.com/68e9d88b8c.js" crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <title>Interactive ME-OCT Altas</title>
+    <script type="module" crossorigin src="/modulepreload-polyfill-B5Qt9EMX.js"></script>
+    <script type="module" crossorigin src="/script.6myqYHwe.js"></script>
+    <link rel="stylesheet" crossorigin href="/style-C1rjKLYW.css">
+  </head>
+  <body>
+    <header>
+      <div id="navbar" class="navbar">
+        <div>
+          <img class="logo" src="images/design elements/logo(transparent).png" alt="logo" />
+        </div>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="otology.html">Hearing diagnostics</a>
+          <div class="subnav">
+            <a href="#" class="subnav_dropbtn">ME-OCT<span class="dropdown-icon">&#9662;</span></a>
+            <div class="dropdown-content" id="oct_dropdown">
+              <a href="me_oct.html">ME-OCT</a>
+              <a href="OCT_basics.html">OCT basics</a>
+              <a href="OCT_development.html">OCT development</a>
+              <a href="OCT_realisation.html">Technical realization of ME-OCT</a>
+              <a href="core_functions.html">Core functions of ME-OCT</a>
+              <a href="tour_of_ear.html">Middle ear tour with OCT</a>
+            </div>
+          </div>
+          <div class="subnav">
+            <a href="#" id="active" class="subnav_dropbtn"
+              >Interactive altas<span class="dropdown-icon">&#9662;</span></a
+            >
+            <div class="dropdown-content" id="interactive_dropdown">
+              <a href="fusion.html">OCT/CT image fusion</a>
+              <a href="case1-axial.html">Normal ear</a>
+              <a href="case2-axial.html">Traumatic middle ear injury</a>
+              <a id="active" href="case3-axial.html">Cholesteatoma</a>
+            </div>
+          </div>
+          <a href="publication.html">Publications</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="menubar">
+          <i id="menu-bar" class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <h1 class="title_h1">Case III: cholesteatoma (L) - sagittal view</h1>
+      <h2 class="case_title">Case description</h2>
+      <p class="paragraph" id="fisrtWord">
+        A 51-year-old male patient with previous surgery for
+        <span style="white-space: nowrap">cholesteatoma<b> (Ch)</b></span
+        >in his right ear was brought in for follow-up imaging and a hyperintensity was noted in the diffusion-weighted
+        <span style="white-space: nowrap">magnetic resonance image<b> (MRI)</b></span> in his left, unoperated ear. Upon
+        endoscopic examination of the left ear, the
+        <span style="white-space: nowrap">tympanic membrane<b> (TM)</b></span>
+        with flares of keratin debris at the
+        <span style="white-space: nowrap">pars flaccida<b> (PF)</b></span>
+        revealing the early stages of an attic cholesteatoma. In the endoscopic image, the
+        <span style="white-space: nowrap">malleus<b> (M)</b></span>
+        handle and
+        <span style="white-space: nowrap">umbo<b> (U)</b></span>
+        are clearly visible, and the posterosuperior aspect of the
+        <span style="white-space: nowrap">tympanic membrane<b> (TM)</b></span> is bulging out. The patient has also
+        developed a moderate conductive hearing loss in his left ear as shown in the audiogram.
+      </p>
+    </div>
+
+    <div class="blue_box">
+      <h2 class="box-title">Diagnostic imaging</h2>
+      <h3 class="box-sub-title">(click image to enlarge)</h3>
+
+      <div class="main_wrapper" id="case_group_img">
+        <i class="arrow left-arrow fa-solid fa-arrow-left"></i>
+        <div id="overlay" onclick="hideOverlay()"></div>
+        <div class="fig_content" id="case_fig">
+          <figure class="cap_fig_container">
+            <img class="enlarge_img" id="case_img" src="images/case III/01_case III otoscopy.png" alt="" />
+            <figcaption class="fig_caption" id="case_img_cap">otoscopic image</figcaption>
+          </figure>
+        </div>
+        <div class="fig_content" id="case_fig">
+          <figure class="cap_fig_container">
+            <img class="enlarge_img" id="case_img" src="images/case III/02_case III audiogram.jpg" alt="" />
+            <figcaption class="fig_caption" id="case_img_cap">audiogram</figcaption>
+          </figure>
+        </div>
+        <div class="fig_content" id="case_fig">
+          <figure class="cap_fig_container">
+            <img class="enlarge_img" id="case_img" src="images/case III/03_case III CT(S).jpg" alt="" />
+            <figcaption class="fig_caption" id="case_img_cap">CT (sagittal view)</figcaption>
+          </figure>
+        </div>
+        <div class="fig_content" id="case_fig">
+          <figure class="cap_fig_container">
+            <img class="enlarge_img" id="case_img" src="images/case III/04_case III 3D OCT.jpg" alt="" />
+            <figcaption class="fig_caption" id="case_img_cap">OCT (3D view)</figcaption>
+          </figure>
+          <i class="arrow right-arrow fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="fused_container">
+      <div class="side_container">
+        <div class="side_top">
+          <figure class="cap_fig_container" id="fused">
+            <a href="case3-axial.html">
+              <img
+                class="fused_side_img"
+                src="images/03_37_20230322(L)/axial_FOV(25)/original/image_00000.jpg"
+                alt="case3-axial" />
+            </a>
+            <figcaption class="fig_caption" id="fused_top_cap">click to axial view</figcaption>
+          </figure>
+        </div>
+        <div class="side_bottom">
+          <figure class="cap_fig_container" id="fused">
+            <a href="case3-coronal.html">
+              <img
+                class="fused_side_img"
+                src="images/03_37_20230322(L)/coronal_FOV(25)/original/image_00000.jpg"
+                alt="case3-coronal" />
+            </a>
+            <figcaption class="fig_caption" id="fused_bottom_cap">click to coronal view</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="main_container">
+        <div class="range-slider-container">
+          <input type="range" min="1" max="100" value="50" class="range-slider" id="myRange" />
+        </div>
+        <div class="orientation-container">
+          <img class="orientation-img" src="images/design elements/ARS arrow(S).png" alt="" />
+        </div>
+
+        <div id="c3_sagittalinfoOverlay" class="infoOverlay_style"></div>
+        <div class="switch-container" id="c3_sagittal_switchButton">
+          <label class="switch">
+            <input type="checkbox" />
+            <div class="slider-round"></div>
+          </label>
+        </div>
+
+        <i id="download_icon" class="fa-solid fa-cloud-arrow-down"></i>
+        <div id="downloadModal" class="downloadmodal">
+          <div class="download-modal-content">
+            <span class="download-close">&times;</span>
+            <h2 class="download-heading">Download image</h2>
+            <h2 class="downloadModal-title">Term of use</h2>
+            <div id="term-placeholder"></div>
+
+            <h2 class="downloadModal-title">How to atribute</h2>
+            <p class="attribution-text">For presentations / print</p>
+
+            <div class="attribution">
+              <textarea id="attributionText" readonly>
+Wang J, Couvreur F, Farrell J, et al. Fusion of middle ear optical coherence tomography (OCT) and co-registered middle ear computed tomography (CT) in three ears. </textarea
+              >
+              <button id="attributionCopy" onclick="copyToClipboard('attributionText')">
+                <i class="fa-solid fa-copy"></i> Copy
+              </button>
+            </div>
+            <div class="download-container">
+              <button id="downloadBtn">Download</button>
+            </div>
+          </div>
+        </div>
+
+        <i id="share_icon" class="fa-solid fa-arrow-up-right-from-square"></i>
+        <div id="shareModal" class="modal" style="display: none">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Share</h2>
+            <div class="share-buttons">
+              <button class="share-btn" onclick="shareEmail()"><i class="fa-solid fa-envelope"></i></button>
+              <button class="share-btn" onclick="shareLinkedIn()">
+                <i class="fa-brands fa-linkedin"></i>
+              </button>
+              <button class="share-btn" onclick="shareTwitter()"><i class="fa-brands fa-x-twitter"></i></button>
+            </div>
+            <div class="share-link">
+              <input type="text" id="shareLink" readonly />
+              <button onclick="copyToClipboard()"><i class="fa-solid fa-copy"></i> Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="c3_sagittalViewer" class="fusedviewer_style">
+          <img
+            id="c3_sagittalImage"
+            class="fusedimage_style"
+            src="images/03_37_20230322(L)/sagittal_FOV(25)/original/image_00000.jpg"
+            alt="case 3 sagittal CT/OCT fuse" />
+        </div>
+      </div>
+      <div class="note_container">
+        <h2 class="findings_title">Clinical findings</h2>
+        <p class="findings-paragraph">
+          The OCT, CT and fused coronal views along with the axial view image all show clear evidence of
+          <span style="white-space: nowrap">tympanic membrane<b> (TM)</b></span> thickening and retraction and of the
+          contact between the TM and the inflamed mucosa over the
+          <span style="white-space: nowrap">cochlear promontory<b> (CP)</b></span
+          >. The keratinous outer layers of the <span style="white-space: nowrap">cholesteatoma<b> (Ch)</b></span
+          >visible from the ear canal create a hyper-reflective layer overlaying a less reflective inner layer. This has
+          previously been reported as a distinctive feature of
+          <span style="white-space: nowrap">cholesteatoma<b> (Ch)</b></span
+          >in OCT imaging that can be used to differentiate
+          <span style="white-space: nowrap">cholesteatoma<b> (Ch)</b></span
+          >from inflamed mucosa. Additionally, comparison between the OCT and CT images and allow us to see that the OCT
+          image delineates the inferior edge of the <span style="white-space: nowrap">cholesteatoma<b> (Ch)</b></span
+          >sac in the mesotympanum. The OCT image shows a region of inflamed mucosa superior to the <b> TM</b> with a
+          uniform appearance distinct from the more irregular intensity distribution of the
+          <span style="white-space: nowrap">cholesteatoma<b> (CH)</b></span
+          >. The most inferior portion of the <b> TM</b> is of normal thickness with no evidence of inflammation.
+          Mucosal inflammation can also be seen near the
+          <span style="white-space: nowrap">facial nerve<b> (FN)</b></span
+          >.
+        </p>
+      </div>
+    </div>
+    <div id="legends-wrapper">
+      <div id="legends-placeholder"></div>
+    </div>
+
+    <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
+    <div id="footer-placeholder"></div>
+  </body>
+</html>
