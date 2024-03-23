@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 //
 export default defineConfig({
-  root: "src",
+  root: "./src",
   base: "/",
   publicDir: "../public",
 
@@ -53,8 +53,8 @@ export default defineConfig({
             .map((file) => [path.basename(file, ".html"), `src/${file}`])
         ),
         // Add script.js as an entry point
-        main: "js/main.js",
-        script: "js/script.js",
+        main: "/js/main.js",
+        script: "/js/script.js",
       },
       output: {
         // Ensure your JS files are included in the output directory
@@ -62,6 +62,12 @@ export default defineConfig({
         dir: "dist",
         entryFileNames: "[name].[hash].js",
       },
+    },
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+      // Add more aliases as needed
     },
   },
 });

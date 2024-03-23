@@ -1,5 +1,5 @@
 // ----- Utility Functions -----
-import "/css/style.css";
+// import "/css/style.css";
 
 // Function to toggle the display of the publication list for a given year
 function toggleYear(id) {
