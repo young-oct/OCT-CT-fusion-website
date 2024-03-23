@@ -375,7 +375,7 @@ ol li::before {
   text-align: pretty;
 }
 
-.overlay {
+#overlay {
   display: none; /* Hidden by default */
   position: fixed; /* Position it to cover the whole screen */
   top: 0;
