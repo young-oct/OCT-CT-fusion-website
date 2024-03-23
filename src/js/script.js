@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   console.log("called");
   document.getElementById("expand").addEventListener("click", expandAll);
   document.getElementById("contract").addEventListener("click", contractAll);
+
   // document.getElementById("toggleYear").addEventListener("click", toggleYear);
 });
 
@@ -27,16 +28,41 @@ document.querySelectorAll(".copyToClipboard").forEach((btn) => {
 });
 
 // Function to toggle the display of the publication list for a given year
+// export function toggleYear(id) {
+//   var element = document.getElementById(id);
+//   var yearDiv = element.previousElementSibling;
+
+//   if (element.style.display === "none" || element.style.display === "") {
+//     element.style.display = "block";
+//     yearDiv.textContent = yearDiv.textContent.replace("+", "-");
+//   } else {
+//     element.style.display = "none";
+//     yearDiv.textContent = yearDiv.textContent.replace("-", "+");
+//   }
+// }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Other initialization code...
+
+  document.querySelectorAll(".toggle-year-trigger").forEach((element) => {
+    element.addEventListener("click", function () {
+      var id = this.getAttribute("data-target-id");
+      toggleYear(id);
+    });
+  });
+
+  // Other code...
+});
+
 export function toggleYear(id) {
   var element = document.getElementById(id);
-  var yearDiv = element.previousElementSibling;
 
   if (element.style.display === "none" || element.style.display === "") {
     element.style.display = "block";
-    yearDiv.textContent = yearDiv.textContent.replace("+", "-");
+    this.textContent = this.textContent.replace("+", "-"); // 'this' refers to the clicked element
   } else {
     element.style.display = "none";
-    yearDiv.textContent = yearDiv.textContent.replace("-", "+");
+    this.textContent = this.textContent.replace("-", "+"); // 'this' refers to the clicked element
   }
 }
 
@@ -125,7 +151,7 @@ function calculateScaleFactor(imageElement) {
 }
 
 // Function to hide overlay and reset image size
-function hideOverlay() {
+export function hideOverlay() {
   var overlay = document.getElementById("overlay");
   var enlargedImages = document.querySelectorAll(".enlarged");
   var videos = document.querySelectorAll("video");
