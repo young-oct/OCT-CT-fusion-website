@@ -268,6 +268,8 @@ Project Link: [https://github.com/young-oct/OCT-CT-fusion-website](https://githu
 
 ## Acknowledgments
 
+Special thanks to Sam Fresia for working alongside me to debug the code.
+
 <!-- * [Choose an Open Source License](https://choosealicense.com) -->
 <!-- * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet) -->
 <!-- * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/) -->
