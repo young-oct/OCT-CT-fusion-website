@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC7JFN3N2Y"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+    
+          gtag("config", "G-NC7JFN3N2Y");
+        </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/design elements/lego(square).png"
+    />
+    <script
+      src="https://kit.fontawesome.com/68e9d88b8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+</script>
+    <title>Interactive ME-OCT Altas</title>
+  </head>
+  <body>
+    <header>
+      <div id="navbar" class="navbar">
+        <div>
+          <img
+            class="logo"
+            src="images/design elements/logo(transparent).png"
+            alt="logo"/>
+        </div>
+        <div class="navlinks">
+          <a  href="index.html">Home</a>
+          <a href="otology.html">Hearing diagnostics</a>
+          <div class="subnav">
+            <a href="#"
+            class="subnav_dropbtn">ME-OCT<span class="dropdown-icon">&#9662;</span></a>
+            <div class="dropdown-content" id = "oct_dropdown">
+                <a href="me_oct.html">ME-OCT</a>
+              <a href="OCT_basics.html">OCT basics</a>
+              <a href="OCT_development.html">OCT development</a>
+              <a href="OCT_realisation.html">Technical realization of ME-OCT</a>
+              <a href="core_functions.html">Core functions of ME-OCT</a>
+              <a href="tour_of_ear.html">Middle ear tour with OCT</a>
+            </div>
+          </div>
+          <div class="subnav">
+            <a href="#" id = "active"
+            class="subnav_dropbtn">Interactive altas<span class="dropdown-icon">&#9662;</span></a>
+            <div class="dropdown-content" id = "interactive_dropdown">
+            <a id="active"
+            href="fusion.html">OCT/CT image fusion</a>
+              <a href="case1-axial.html">Normal ear</a>
+              <a href="case2-axial.html">Traumatic middle ear injury</a>
+              <a href="case3-axial.html">Cholesteatoma</a>
+            </div>
+          </div>
+          <a href="publication.html">Publications</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="menubar">
+          <i id="menu-bar" class="fa-solid fa-bars"></i>
+        </div> 
+      </div>
+    </header>
+    <div class="content">
+      <h1 class="title_h1">
+        Middle ear OCT/CT image co-registration and fusion</h1>
+      <h2 class="subtitle">Combine the best of two modalities for better middle ear imaging</h2>
+      <p class="paragraph" id ="fisrtWord">
+      High resolution computed tomography (CT) imaging is a mainstay of modern middle ear diagnostics, 
+      long serving as the preferred non-invasive visualization modality for diagnosing most middle ear pathologies and for surgical planning. 
+      Middle ear optical coherence tomography (ME-OCT) is an emerging, 
+      point-of-care diagnostic technology capable of providing volumetric images of the middle ear space through the intact tympanic membrane without exposing the patient to ionizing radiation.  
+      These two imaging modalities are complementary in several respects. 
+    </p>
+      <p class="paragraph">
+        CT enables visualization of osseous structures anywhere in the middle ear without suffering from shadowing artefacts. 
+        However, CT is non-realtime, exposes the patient to ionizing radiation, has difficulty resolving fine soft tissue structures and delivers lower resolution than optical imaging. 
+        In contrast, ME-OCT images using light and so does not expose the patient to ionizing radiation. 
+        ME-OCT provides video-rate real-time images, 
+        and can resolve fine soft tissue structures like the tympanic membrane. 
+        However, being a line-of-sight modality, ME-OCT imaging can be obstructed by bone or soft tissue thicker than approximately 1mm and so it is limited to the field of view visible through the tympanic membrane. 
+        ME-OCT also exhibits artefacts from shadowing and multiple scattering that do not affect CT images. 
+        Both technologies are capable of producing images with high geometric fidelity to the patient anatomy and so CT and OCT images of the same anatomy can be co-registered through rigid transformations.   
+       </p>
+    </div>
+    <div id = "main_wrapper">
+      <div id = "sidebar">
+        <ul>
+          <li><a class="active" href="me_oct.html">OCT/CT image fusion</a></li>
+          <li><a href="case1-axial.html">Normal ear</a></li>
+          <li><a href="case2-axial.html">Traumatic middle ear injury</a></li>
+          <li><a href="case3-axial.html">Cholesteatoma</a></li>
+      </ul>
+      </div>
+      <div class = "fig_content" id = "fusion_1">
+        <figure class="cap_fig_container">
+          <img id = "fusion_1_img"
+          src="images/fusion/01_fused_demo.gif" alt="">
+        </figure>
+      </div>
+    </div>
+    <br />
+
+    <p class="paragraph">
+      One might naturally contemplate the possibility of harnessing the merits of two imaging modalities.  
+      This process, known as imaging co-registration and fusion, 
+      combines the wide FOV and excellent bony delineation of CT with the high spatial resolution and soft tissue contrast of OCT to generate better ME images than with either modality alone. 
+      Generally, image registration involves establishing a mathematical relationship between two related images, 
+      while fusion concentrates on presenting the combined image intuitively for clear interpretation. 
+     </p>
+     <p class="paragraph">
+      This technique has significantly improved clinical Hearing diagnostics by combining images from different modalities (i.e., CT and MRI) or varying fields of view. 
+      It is particularly beneficial in tasks like evaluating cochlear implant (CI) placement, 
+      localising cholesteatoma, and diagnosing otitis media. Beyond otology, 
+      it has also proven useful in a wider medical practice.
+     </p>
+
+     <h1 class="title_h1">Case selection and high-resolution CT acquisitionn</h1>
+     <h2 class="subtitle">Three cases with conductive hearing loss</h2>
+     <p class="paragraph">
+      In our interactive ME-OCT atlas, 
+      we present a superimposed comparison of volumetric images taken with both OCT and high-resolution clinical CT in the same patient's ear. 
+      The co-registered and fused CT and OCT images allow for a direct assessment of each modality's strengths and limitations. 
+      We showcase images from three cases from patietns provided by the courtesy of Dr. David P Morris and 
+      Dr. Nael Shoman: a normal ear, 
+      an ear with traumatic injury, 
+      and an ear with chronic cholesteatoma. 
+      Each patient was refered to our clinic for conductive hearing loss and had already received high-resolution CT scans as a part of their standard medical care.
+      The study was performed at a hospital tertiary otology clinic under approval from the hospital’s research ethics board. 
+      Informed consent was obtained in accordance with the Helsinki Declaration. 
+      High-resolution CT images without contrast were acquired by scanning the head axially from the skull vertex to the base. 
+      Details of the CT scanning configurations are summarized here. 
+     </p>
+     <div id = "main_wrapper">
+      <div class = "fig_content" id = "fusion_2">
+        <figure class="cap_fig_container">
+          <img id = "fusion_2_img"
+          src="images/fusion/02_case_selection.jpg" alt="">
+        </figure>
+      </div>
+    </div>
+    <br>
+     <h1 class="title_h1">ME-OCT acquisition</h1>
+     <h2 class="subtitle">Point-of-care, real-time structural visualization</h2>
+     <p class="paragraph">
+      Prior to OCT measurement, 
+      patients had their ear canals cleared of any cerumen or other debris.  
+      With patient and clinician both sitting, as shown in <a class="paragraph_inline"
+      href="tour_of_ear.html">middle ear tour with OCT</a>,  
+      the clinician inserted the OCT handpiece speculum into the ear canal, 
+      centered the image on the tympanic membrane (TM) under otoscopic guidance and pressed a foot pedal button to initiate the collection of volumetric data.  
+      During acquisition, the OCT beam was scanned over the TM surface in a spiral fashion to collect 262,000 image lines distributed roughly uniformly over the TM in 4.5 seconds.  
+      Data was processed offline using a custom offline denoising algorithm to remove artifacts and noise within the OCT and corrected the geometrical distortion introduced during the acquisition and then exported to DICOM format.
+     </p>
+     <h1 class="title_h1">Image fusion and evaluation</h1>
+    <h2 class="subtitle">Provide clinical benefits without interrupting existing workflow</h2>
+    <p class="paragraph">
+      The OCT and CT DICOM datasets were then imported 
+      into the software package <a class="paragraph_inline"
+       href="https://www.slicer.org/">3D Slicer</a> for co-registration and fusion. 
+      Processing consisted of the following steps:    
+    <ol>
+      <li>The CT volume was original to create a region of interest (ROI) that contained the OCT volume.</li>
+      <li>Non-isotropic voxels from the CT dataset were converted to isotropic voxels. </li>
+      <li>The OCT amplitude data was log-compressed and mapped to a 0-255 greyscale range. </li>
+      <li>Align the orientation, including the axial, coronal, and sagittal views of OCT to those of CT with rigid transformation in 3D slicers by matching corresponding structures within both sets of images.</li>
+      <li>A semi-automated, intrinsic, rigid registration was performed using the <a class="paragraph_inline"
+        href="https://www.slicerigt.org/wp/">SlicerIGT</a> module (fiducial registration wizard) of 3D Slicer to co-register the OCT and CT data sets. 
+        Pairs of anatomical landmarks (≥3) which were visible in both CT and OCT images were manually identified.</li>
+      <li>Fused images were generated by overlaying semi-transparent color OCT images onto the greyscale CT images. </li>
+    </ol>
+    </p>
+<p class="paragraph">
+  For each ear, we independently co-registered CT and OCT images six times. 
+  We estimated the registration accuracy using the root mean square error (RMSE) between the selected landmark pairs that are visible in both CT and OCT images. 
+  The reproducibility of co-registration was quantified using the <a class="paragraph_inline" href="https://en.wikipedia.org/wiki/Hausdorff_distance#:~:text=The%20Hausdorff%20distance%20is%20the,point%20in%20the%20other%20set.">Hausdorff distance</a>
+  and <a class="paragraph_inline"
+  href="https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient">Dice similarity coefficient (DSC)</a> of the six independently generated fused images with the results shown below.
+</p>
+<div id = "main_wrapper">
+  <div id="overlay" onclick="hideOverlay()"></div>
+
+  <div class = "fig_content" id = "fusion_3">
+    <figure class="cap_fig_container">
+      <img class="enlarge_img"
+      id = "fusion_3_img"
+      src="images/fusion/03_fusion_results.jpg" alt="">
+      <figcaption class="fig_caption" id = "fusion_3_img_cap">
+      co-registration accuracy and reproducibility (click table to enlarge)
+</figcaption>
+    </figure>
+  </div>
+</div>
+<br>
+<p class="paragraph">
+  We began the registration process by identifying corresponding anatomical landmarks in both CT and OCT images. 
+  Subsequently, we aligned the axial, coronal, and sagittal planes of CT and OCT images by fixing CT orientation while adjusting the OCT orientation through rigid transformation, 
+  so that these landmarks were consistently positioned across the same planes in their respective images. 
+  The landmarks used were the scutum, annulus, umbo and prominent features on the cochlear promontory, 
+  as these structures exhibit a high level of similarity between CT and OCT in both coronal and axial views. 
+  For each patient, six independent co-registrations were performed, yielding an average Root Mean Square Error (RMSE) of \(0.100 \pm 0.035\) mm between the landmark pairs across co-registrations. 
+  Following threshold-based segmentation of the fused images per patient, 
+  the average maximum Hausdorff distance across the six co-registrations was calculated to be \(0.935 \pm 0.245\) mm, 
+  whereas the average Hausdorff distance was \(0.005 \pm 0.001\) mm. 
+  The Dice Similarity Coefficient (DSC) for the segmented volumes registered at \(0.994 \pm 0.002\). 
+  The high similarity between the segmentations indicates this method can reliability fuse the temporal bone CT with middle ear OCT images.</p>
+
+  <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
+  <div id="footer-placeholder"></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
