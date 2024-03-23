@@ -2,9 +2,16 @@
 // import "/css/style.css";
 
 // Attach event listeners to your spans
-window.addEventListener('DOMContentLoaded', (event) => {
-  document.getElementById('expand').addEventListener('click', expandAll);
-  document.getElementById('contract').addEventListener('click', contractAll);
+window.addEventListener("DOMContentLoaded", (event) => {
+  console.log("called");
+  document.getElementById("expand").addEventListener("click", expandAll);
+  document.getElementById("contract").addEventListener("click", contractAll);
+  // document.getElementById("toggleYear").addEventListener("click", toggleYear);
+
+  document.getElementById("shareEmail").addEventListener("click", shareEmail);
+  document.getElementById("shareTwitter").addEventListener("click", shareTwitter);
+  document.getElementById("shareLinkedIn").addEventListener("click", shareLinkedIn);
+  document.getElementById("copyToClipboard").addEventListener("click", copyToClipboard);
 });
 
 // Function to toggle the display of the publication list for a given year
@@ -256,11 +263,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //  function for sharing via email
-function shareEmail() {
+export function shareEmail() {
   var shareURL = "mailto:?subject=Check out this site&body=" + encodeURIComponent(window.location.href);
   window.open(shareURL, "_blank");
 }
-function shareTwitter() {
+export function shareTwitter() {
   var text = "Check out this site";
   var shareURL =
     "https://twitter.com/intent/tweet?text=" +
@@ -269,14 +276,16 @@ function shareTwitter() {
     encodeURIComponent(window.location.href);
   window.open(shareURL, "_blank");
 }
-function shareLinkedIn() {
+export function shareLinkedIn() {
+  console.log("shareLinkedIn function called");
+
   var currentUrl = window.location.href; // Gets the current URL
   var shareURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(currentUrl);
 
   window.open(shareURL, "_blank");
 }
 
-function copyToClipboard(elementId) {
+export function copyToClipboard(elementId) {
   var copyText = document.getElementById(elementId);
   copyText.select(); // Select the text field
   copyText.setSelectionRange(0, 99999); // For mobile devices
@@ -809,5 +818,3 @@ document.addEventListener("DOMContentLoaded", () => {
   const c2_sagittal_switchButton = initializeSwitchButton("c2_sagittal_switchButton", c2_sagittalViewer);
   const c3_sagittal_switchButton = initializeSwitchButton("c3_sagittal_switchButton", c3_sagittalViewer);
 });
-
-

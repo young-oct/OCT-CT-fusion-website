@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/png" href="images/design elements/lego(square).png" />
     <script src="https://kit.fontawesome.com/68e9d88b8c.js" crossorigin="anonymous"></script>
+    <script type="module" src="/js/script.js"></script>
+
     <script
       type="text/javascript"
       async
@@ -197,7 +199,7 @@ Wang J, Couvreur F, Farrell J, et al. Fusion of middle ear optical coherence tom
             <h2 id="modal-title">Share</h2>
             <div class="share-buttons">
               <button class="share-btn" onclick="shareEmail()"><i class="fa-solid fa-envelope"></i></button>
-              <button class="share-btn" onclick="shareLinkedIn()">
+              <button type="button" class="share-btn" id="shareLinkedIn">
                 <i class="fa-brands fa-linkedin"></i>
               </button>
               <button class="share-btn" onclick="shareTwitter()"><i class="fa-brands fa-x-twitter"></i></button>
@@ -243,6 +245,5 @@ Wang J, Couvreur F, Farrell J, et al. Fusion of middle ear optical coherence tom
 
     <i id="backToTopBtn" class="fa-solid fa-circle-arrow-up"></i>
     <div id="footer-placeholder"></div>
-    <script type="module" src="/js/script.js"></script>
   </body>
 </html>
