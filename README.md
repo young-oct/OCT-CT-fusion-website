@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="/images/readme/index.jpg" alt="Logo" width="300">
+    <img src="dist/images/readme/index.jpg" alt="Logo" width="300">
   </a>
 
 <h3 align="center">OCT CT fusion website</h3>
@@ -215,6 +215,7 @@ Before diving into the project, ensure you have Visual Studio Code or a comparab
 - [ ] 2024.02.01 Update case I images annotation (draft)
 - [ ] 2024.02.02 Update case III images annotation (draft)
 - [ ] 2024.02.18 Fixed case I annotation errors (draft)
+- [ ] 2024.03.22 Included a 3D ME-OCT model
 <!-- - [ ] Nested Feature -->
 
 See the [open issues](https://github.com/young-oct/OCT-CT-fusion-website/issues) for a full list of proposed features (and known issues).
