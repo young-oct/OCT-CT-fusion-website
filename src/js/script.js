@@ -1,5 +1,5 @@
 // ----- Utility Functions -----
-import "./js/style.css";
+import "/css/style.css";
 
 // Function to toggle the display of the publication list for a given year
 function toggleYear(id) {
@@ -712,71 +712,71 @@ document.addEventListener("DOMContentLoaded", () => {
     "c1_coronalViewer",
     "c1_coronalImage",
     "c1_coronalinfoOverlay",
-    "/public/images/03_06_20230206(L)/coronal_FOV(25)/original",
-    "/public/images/03_06_20230206(L)/coronal_FOV(25)/annotated"
+    "/images/03_06_20230206(L)/coronal_FOV(25)/original",
+    "/images/03_06_20230206(L)/coronal_FOV(25)/annotated"
   );
 
   const c2_coronalViewer = new fusedViewer(
     "c2_coronalViewer",
     "c2_coronalImage",
     "c2_coronalinfoOverlay",
-    "/public/images/03_23_20230309(R)/coronal_FOV(25)/original",
-    "/public/images/03_23_20230309(R)/coronal_FOV(25)/annotated"
+    "/images/03_23_20230309(R)/coronal_FOV(25)/original",
+    "/images/03_23_20230309(R)/coronal_FOV(25)/annotated"
   );
   const c3_coronalViewer = new fusedViewer(
     "c3_coronalViewer",
     "c3_coronalImage",
     "c3_coronalinfoOverlay",
-    "/public/images/03_37_20230322(L)/coronal_FOV(25)/original",
-    "/public/images/03_37_20230322(L)/coronal_FOV(25)/annotated"
+    "/images/03_37_20230322(L)/coronal_FOV(25)/original",
+    "/images/03_37_20230322(L)/coronal_FOV(25)/annotated"
   );
 
   const c1_axialViewer = new fusedViewer(
     "c1_axialViewer",
     "c1_axialImage",
     "c1_axialinfoOverlay",
-    "/public/images/03_06_20230206(L)/axial_FOV(25)/original",
-    "/public/images/03_06_20230206(L)/axial_FOV(25)/annotated"
+    "/images/03_06_20230206(L)/axial_FOV(25)/original",
+    "/images/03_06_20230206(L)/axial_FOV(25)/annotated"
   );
 
   const c2_axialViewer = new fusedViewer(
     "c2_axialViewer",
     "c2_axialImage",
     "c2_axialinfoOverlay",
-    "/public/images/03_23_20230309(R)/axial_FOV(25)/original",
-    "/public/images/03_23_20230309(R)/axial_FOV(25)/annotated"
+    "/images/03_23_20230309(R)/axial_FOV(25)/original",
+    "/images/03_23_20230309(R)/axial_FOV(25)/annotated"
   );
 
   const c3_axialViewer = new fusedViewer(
     "c3_axialViewer",
     "c3_axialImage",
     "c3_axialinfoOverlay",
-    "/public/images/03_37_20230322(L)/axial_FOV(25)/original",
-    "/public/images/03_37_20230322(L)/axial_FOV(25)/annotated"
+    "/images/03_37_20230322(L)/axial_FOV(25)/original",
+    "/images/03_37_20230322(L)/axial_FOV(25)/annotated"
   );
 
   const c1_sagittalViewer = new fusedViewer(
     "c1_sagittalViewer",
     "c1_sagittalImage",
     "c1_sagittalinfoOverlay",
-    "/public/images/03_06_20230206(L)/sagittal_FOV(25)/original",
-    "/public/images/03_06_20230206(L)/sagittal_FOV(25)/annotated"
+    "/images/03_06_20230206(L)/sagittal_FOV(25)/original",
+    "/images/03_06_20230206(L)/sagittal_FOV(25)/annotated"
   );
 
   const c2_sagittalViewer = new fusedViewer(
     "c2_sagittalViewer",
     "c2_sagittalImage",
     "c2_sagittalinfoOverlay",
-    "/public/images/03_23_20230309(R)/sagittal_FOV(25)/original",
-    "/public/images/03_23_20230309(R)/sagittal_FOV(25)/annotated"
+    "/images/03_23_20230309(R)/sagittal_FOV(25)/original",
+    "/images/03_23_20230309(R)/sagittal_FOV(25)/annotated"
   );
 
   const c3_sagittalViewer = new fusedViewer(
     "c3_sagittalViewer",
     "c3_sagittalImage",
     "c3_sagittalinfoOverlay",
-    "/public/images/03_37_20230322(L)/sagittal_FOV(25)/original",
-    "/public/images/03_37_20230322(L)/sagittal_FOV(25)/annotated"
+    "/images/03_37_20230322(L)/sagittal_FOV(25)/original",
+    "/images/03_37_20230322(L)/sagittal_FOV(25)/annotated"
   );
 
   c1_coronalViewer.init();

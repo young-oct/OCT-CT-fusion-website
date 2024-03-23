@@ -4,7 +4,11 @@ import path from "path";
 
 export default defineConfig({
   // The base path for your application
-  base: "./",
+  // **Explicitly set base path for clarity:**
+  // base: "./",
+
+  // **Adjust root path if necessary:**
+  root: "./src",
 
   // Development server configuration
   server: {
@@ -52,8 +56,8 @@ export default defineConfig({
             .map((file) => [path.basename(file, ".html"), `src/${file}`])
         ),
         // Add script.js as an entry point
-        main: "src/main.js",
-        script: "src/script.js",
+        main: "/js/main.js",
+        script: "/js/script.js",
       },
       output: {
         // Ensure your JS files are included in the output directory

@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import "./js/style.css";
+import "/css/style.css";
 
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 // import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -31,7 +31,8 @@ let originalMeshRotation;
 
 const loader = new STLLoader();
 loader.load(
-  "models/ear.stl",
+  "/models/ear.stl",
+  // "/models/ear.stl",
   function (geometry) {
     const material = new THREE.MeshPhysicalMaterial({
       color: 0xffffff,
