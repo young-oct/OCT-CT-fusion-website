@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="/images/readme/index.jpg" alt="Logo" width="300">
+    <img src="dist/images/readme/index.jpg" alt="Logo" width="300">
   </a>
 
 <h3 align="center">OCT CT fusion website</h3>
