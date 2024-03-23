@@ -1,5 +1,9 @@
 import * as THREE from "three";
+<<<<<<< HEAD
 import "./style/style.css";
+=======
+import "/style.css";
+>>>>>>> 73352e8ce0ceb099774cc1f6e050a36e156dd5f9
 
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 // import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
