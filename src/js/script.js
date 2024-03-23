@@ -153,6 +153,8 @@ function calculateScaleFactor(imageElement) {
 // Function to hide overlay and reset image size
 export function hideOverlay() {
   var overlay = document.getElementById("overlay");
+  overlay.style.display = "none";
+
   var enlargedImages = document.querySelectorAll(".enlarged");
   var videos = document.querySelectorAll("video");
 
@@ -172,6 +174,20 @@ export function hideOverlay() {
   document.querySelector(".left-arrow").style.display = "none";
   document.querySelector(".right-arrow").style.display = "none";
 }
+
+// Add this event listener in your DOMContentLoaded --- this mkaes sure when it clicks out, it disables. ---important
+document.addEventListener("DOMContentLoaded", function () {
+  var overlay = document.getElementById("overlay");
+
+  overlay.addEventListener("click", function (event) {
+    // Check if the clicked element is the overlay itself, not its children
+    if (event.target === overlay) {
+      hideOverlay();
+    }
+  });
+
+  // ... your existing initialization code
+});
 
 // Function to navigate elements when arrow clicked
 function navigateMedia(direction) {
