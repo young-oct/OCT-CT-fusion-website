@@ -6,6 +6,7 @@ import path from "path";
 export default defineConfig({
   root: path.resolve(__dirname, "src"),
   base: "/OCT-CT-fusion-website/",
+  // base: '/',
   publicDir: path.resolve(__dirname, "public"),
 
   // Development server configuration
@@ -14,7 +15,6 @@ export default defineConfig({
     host: "localhost",
     https: false,
   },
-
   // Production build configuration
   build: {
     chunkSizeWarningLimit: 1000,
