@@ -42,27 +42,24 @@ document.querySelectorAll(".copyToClipboard").forEach((btn) => {
 // }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Other initialization code...
-
   document.querySelectorAll(".toggle-year-trigger").forEach((element) => {
     element.addEventListener("click", function () {
       var id = this.getAttribute("data-target-id");
-      toggleYear(id);
+      toggleYear.call(this, id); // Call toggleYear with 'this' referring to the clicked element
     });
   });
-
-  // Other code...
 });
 
 export function toggleYear(id) {
   var element = document.getElementById(id);
+  var toggler = this; // Store a reference to 'this' outside the event listener function
 
   if (element.style.display === "none" || element.style.display === "") {
     element.style.display = "block";
-    this.textContent = this.textContent.replace("+", "-"); // 'this' refers to the clicked element
+    toggler.textContent = this.textContent.replace("+", "-"); // 'this' refers to the clicked element
   } else {
     element.style.display = "none";
-    this.textContent = this.textContent.replace("-", "+"); // 'this' refers to the clicked element
+    toggler.textContent = this.textContent.replace("-", "+"); // 'this' refers to the clicked element
   }
 }
 
