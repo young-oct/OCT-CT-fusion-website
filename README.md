@@ -47,7 +47,7 @@ synthesized from middle ear optical coherence tomography (OCT) and temporal bone
 <a href="https://github.com/github_username/repo_name">View Demo</a> -->
 <!-- · -->
 
-<a href="https://young-oct.github.io/OCT-CT-fusion-website/">Demo website</a>
+<a href="https://earlab.ca">Demo website</a>
 ·
 <a href="https://github.com/young-oct/OCT-CT-fusion-website/issues">Report bug</a>
 ·
