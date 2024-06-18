@@ -1984,7 +1984,7 @@ iframe {
   resize: none;
 }
 
-#attributionCopy:hover,
+.copyToClipboard:hover,
 #downloadBtn:hover {
   background-color: #007bff;
 }
