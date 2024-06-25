@@ -508,6 +508,12 @@ window.addEventListener("DOMContentLoaded", () => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, "text/html");
 
+      // Update the current year in all elements with the class "current-year"
+      const currentYearElements = doc.getElementsByClassName("current-year");
+      for (let i = 0; i < currentYearElements.length; i++) {
+        currentYearElements[i].textContent = new Date().getFullYear();
+      }
+
       // Get the footer and legends content from the parsed HTML
       const footerHTML = doc.querySelector(".footer").outerHTML;
       const legendsHTML = doc.querySelector(".legends").outerHTML;
@@ -517,12 +523,6 @@ window.addEventListener("DOMContentLoaded", () => {
       document.getElementById("footer-placeholder").innerHTML = footerHTML;
       document.getElementById("legends-placeholder").innerHTML = legendsHTML;
       document.getElementById("term-placeholder").innerHTML = termHTML;
-
-      // Update the current year in all elements with the class "current-year"
-      const currentYearElements = document.getElementsByClassName("current-year");
-      for (let i = 0; i < currentYearElements.length; i++) {
-        currentYearElements[i].textContent = new Date().getFullYear();
-      }
     })
     .catch((error) => {
       console.error("Error fetching the template:", error);
