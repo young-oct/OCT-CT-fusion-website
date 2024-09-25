@@ -286,7 +286,7 @@ Special thanks to Sam Fresia for working alongside me to debug the code.
 <!-- * [React Icons](https://react-icons.github.io/react-icons/search) -->
 
 ## Citation
-'''
+```
 @misc{Wang:2024,
   Author = {Junzhe Wang and Robert Adamson},
   Title = {Interactive ME-OCT Atlas},
@@ -295,8 +295,7 @@ Special thanks to Sam Fresia for working alongside me to debug the code.
   Journal = {figshare repository},
   Howpublished = {\url{https://doi.org/10.6084/m9.figshare.26867023.v1}}
 }
-'''
-
+```
 <!-- * [Choose an Open Source License](https://choosealicense.com) -->
 <!-- * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet) -->
 <!-- * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/) -->
